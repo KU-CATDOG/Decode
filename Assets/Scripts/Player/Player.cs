@@ -13,8 +13,13 @@ public class Player : MonoBehaviour
     private LayerMask jumpable;
     private Rigidbody2D rb;
     private Collider2D col;
-    public float speed = 1.0f;
-    private float jumpSpeed = 10f;
+
+    [SerializeField]
+    private float speed = 5.0f;
+    [SerializeField]
+    private float jumpSpeed = 7f;
+    public float health;
+    private float maxHealth = 10f;
 
     private float _coolTime = 1f;
     private bool coolDown = false;
@@ -54,6 +59,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -118,12 +124,12 @@ public class Player : MonoBehaviour
 
     private void Attack(Define.MouseEvent evt)
     {
-        if(evt == Define.MouseEvent.LClick && !coolDown)
+        if(evt == Define.MouseEvent.LClick && !coolDown)    // 마우스 좌클릭
         {
             Debug.Log("LClick");
             StartCoroutine(coolTime(_coolTime));
         }
-        else if(evt == Define.MouseEvent.RClick)
+        else if(evt == Define.MouseEvent.RClick)            // 마우스 우클릭
         {
             Debug.Log("RClick");
 
@@ -139,6 +145,16 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(time);
         //InputManager.Instance.MouseAction += Attack;
         coolDown = false;
+    }
+
+    public void GetDamaged(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Debug.Log("Player Dead");
+            //gameObject.SetActive(false);
+        }
     }
 
 }
