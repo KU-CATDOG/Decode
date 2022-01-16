@@ -17,13 +17,29 @@ public class Melee : Enemy
     {
         Queue<IEnumerator> nextRoutines = new Queue<IEnumerator>();
 
-        if (FindObjectOfType<Player>() != null)
+        if (CheckPlayer())
         {
-            nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(3.0f)));
-            //nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
+            if(DistToPlayer() < 1.5f) // 플레이어가 공격 범위안에 들어왔다
+            {
+                nextRoutines.Enqueue(NewActionRoutine(AttackRoutine(AttackDamage)));
+            }
+            else
+            {
+                nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(3.0f)));
+            }
         }
         else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
 
         return nextRoutines;
+    }
+
+    private IEnumerator AttackRoutine(float dmg)
+    {
+        if (CheckPlayer())
+        {
+            player.GetDamaged(dmg);
+            yield return new WaitForSeconds(1f);
+        }
+        else yield return null;
     }
 }

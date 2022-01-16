@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private float jumpSpeed = 7f;
     public float health;
     private float maxHealth = 10f;
+    private bool isInvincible = false;
 
     private float _coolTime = 1f;
     private bool coolDown = false;
@@ -149,12 +150,18 @@ public class Player : MonoBehaviour
 
     public void GetDamaged(float damage)
     {
-        health -= damage;
+        if (!isInvincible)
+        {
+            health -= damage;
+            Debug.Log("Player dmg taken: " + damage);
+
+        }
         if (health <= 0)
         {
             Debug.Log("Player Dead");
             //gameObject.SetActive(false);
         }
+
     }
 
 }

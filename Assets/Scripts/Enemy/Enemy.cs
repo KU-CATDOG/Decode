@@ -53,7 +53,7 @@ public abstract class Enemy : MonoBehaviour
     public virtual void GetDamaged(float damage)
     {
         Health -= damage;
-        Debug.Log("Enemy hp -" + damage);
+        Debug.Log("Enemy dmg taken: " + damage);
         if (Health <= 0)
         {
             Destroy(gameObject);
@@ -92,5 +92,14 @@ public abstract class Enemy : MonoBehaviour
     protected Vector3 GetPlayerPos()    // 플레이어 벡터3 반환; 먼저 살아있는지 확인해야함
     {
         return player.transform.position;
+    }
+    protected float DistToPlayer()
+    {
+        return Vector3.Distance(GetObjectPos(), GetPlayerPos());
+    }
+    protected bool CheckPlayer()
+    {
+        if (FindObjectOfType<Player>() != null) return true;
+        else return false;
     }
 }
