@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+public abstract class Enemy : Changable
 {
     protected Coroutine CurrentRoutine { get; private set; }
     private Queue<IEnumerator> nextRoutines = new Queue<IEnumerator>();
-
+    
     public float Health { get; protected set; }
     public float MaxHealth { get; protected set; }
     public float AttackDamage { get; protected set; }
@@ -18,6 +18,9 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Start()
     {
+        changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed};
+        dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
+        dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MovementSpeed");
         player = FindObjectOfType<Player>();
         rb = GetComponent<Rigidbody2D>();
     }

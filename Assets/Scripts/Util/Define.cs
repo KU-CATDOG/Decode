@@ -9,4 +9,12 @@ public class Define
         LClick,
         RClick
     }
+
+    public enum ChangableValue
+    {
+        Hp,
+        Mp,
+        Speed,
+        Rotation
+    }
 }

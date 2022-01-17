@@ -22,8 +22,7 @@ public class Player : MonoBehaviour
     private float maxHealth = 10f;
     private bool isInvincible = false;
 
-    private float _coolTime = 1f;
-    private bool coolDown = false;
+    private Weapon weapon;
 
     private void OnEnable()
     {
@@ -58,6 +57,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        weapon = GetComponentInChildren<Weapon>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         health = maxHealth;
@@ -125,27 +125,7 @@ public class Player : MonoBehaviour
 
     private void Attack(Define.MouseEvent evt)
     {
-        if(evt == Define.MouseEvent.LClick && !coolDown)    // 마우스 좌클릭
-        {
-            Debug.Log("LClick");
-            StartCoroutine(coolTime(_coolTime));
-        }
-        else if(evt == Define.MouseEvent.RClick)            // 마우스 우클릭
-        {
-            Debug.Log("RClick");
-
-        }
-
-
-    }
-
-    IEnumerator coolTime(float time)
-    {
-        //InputManager.Instance.MouseAction -= Attack;
-        coolDown = true;
-        yield return new WaitForSeconds(time);
-        //InputManager.Instance.MouseAction += Attack;
-        coolDown = false;
+        StartCoroutine(weapon.AttackRoutine(evt));
     }
 
     public void GetDamaged(float damage)
