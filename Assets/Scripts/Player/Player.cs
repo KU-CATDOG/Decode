@@ -20,7 +20,10 @@ public class Player : MonoBehaviour
     private float jumpSpeed = 7f;
     public float health;
     private float maxHealth = 10f;
+    [SerializeField]
+    private float rollSpeed = 7f;
     private bool isInvincible = false;
+    private bool isPlayerLookRight = true;
 
     private Weapon weapon;
 
@@ -66,7 +69,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 cursorDir = InputManager.Instance.CursorPos - transform.position;
+        float cursorAngle = Mathf.Atan2(cursorDir.y, cursorDir.x) * Mathf.Rad2Deg;
+        bool isCursorRight = cursorAngle < 90 && cursorAngle > -90;
+        PlayerLookAt(isCursorRight);
+        Debug.Log(isPlayerLookRight);
+
+
     }
 
     private void FixedUpdate()
@@ -120,8 +129,32 @@ public class Player : MonoBehaviour
 
     private void Roll()
     {
-        
+        if (isControllable)
+        {
+            StartCoroutine(RollRoutine(0.5f, horizontal != 0 ? (horizontal > 0) : isPlayerLookRight));
+        }
     }
+
+    IEnumerator RollRoutine(float time, bool rollDir)
+    {
+        SetPlayerControllable(false);
+        Debug.Log("Roll");
+        isInvincible = true;
+
+        for (float t = 0; t < time; t += Time.deltaTime)
+        {
+            rb.velocity = new Vector2(rollSpeed * (rollDir ? 1 : -1), rb.velocity.y);
+            yield return null;
+        }
+        SetPlayerControllable(true);
+        isInvincible = false;
+    }
+
+    private void PlayerLookAt(bool isRight)
+    {
+        isPlayerLookRight = isRight;
+    }
+
 
     private void Attack(Define.MouseEvent evt)
     {

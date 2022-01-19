@@ -18,6 +18,9 @@ public class InputManager : Singleton<InputManager>
 
     public Action<Define.MouseEvent> MouseAction = null;
 
+    public Vector3 CursorPos { get { return Camera.main.ScreenToWorldPoint(Input.mousePosition); } }
+
+
 
     // Start is called before the first frame update
     void Start()
