@@ -11,6 +11,7 @@ public class Melee : Enemy
         AttackDamage = 5f;
         MovementSpeed = 1f;
         Range = 5f;
+        Interval = 1.0f;
     }
 
     protected override Queue<IEnumerator> DecideNextRoutine()
@@ -37,8 +38,8 @@ public class Melee : Enemy
     {
         if (CheckPlayer())
         {
-            player.GetDamaged(dmg);
-            yield return new WaitForSeconds(1f);
+            GameManager.Instance.GetDamaged(dmg);
+            yield return new WaitForSeconds(Interval);
         }
         else yield return null;
     }

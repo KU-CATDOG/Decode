@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     private float maxHealth = 10f;
     [SerializeField]
     private float rollSpeed = 7f;
-    private bool isInvincible = false;
+    public bool isInvincible = false;
     private bool isPlayerLookRight = true;
 
     private Weapon weapon;
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         float cursorAngle = Mathf.Atan2(cursorDir.y, cursorDir.x) * Mathf.Rad2Deg;
         bool isCursorRight = cursorAngle < 90 && cursorAngle > -90;
         PlayerLookAt(isCursorRight);
-        Debug.Log(isPlayerLookRight);
+        //Debug.Log(isPlayerLookRight);
 
 
     }
@@ -161,20 +161,6 @@ public class Player : MonoBehaviour
         StartCoroutine(weapon.AttackRoutine(evt));
     }
 
-    public void GetDamaged(float damage)
-    {
-        if (!isInvincible)
-        {
-            health -= damage;
-            Debug.Log("Player dmg taken: " + damage);
 
-        }
-        if (health <= 0)
-        {
-            Debug.Log("Player Dead");
-            //gameObject.SetActive(false);
-        }
-
-    }
 
 }
