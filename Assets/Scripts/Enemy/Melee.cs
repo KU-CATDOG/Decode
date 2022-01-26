@@ -26,7 +26,7 @@ public class Melee : Enemy
             }
             else
             {
-                nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(3.0f)));
+                nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(MovementSpeed)));
             }
         }
         else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
