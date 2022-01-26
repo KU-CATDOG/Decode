@@ -21,7 +21,7 @@ public abstract class Enemy : Changable
     {
         changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed};
         dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
-        dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MovementSpeed");
+        dict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MovementSpeed");
         player = FindObjectOfType<Player>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -53,7 +53,7 @@ public abstract class Enemy : Changable
     {
         yield return action;
         CurrentRoutine = null;
-    }
+    }/*
     public virtual void GetDamaged(float damage)
     {
         Health -= damage;
@@ -62,7 +62,7 @@ public abstract class Enemy : Changable
         {
             Destroy(gameObject);
         }
-    }
+    }*/
     protected IEnumerator MoveRoutine(Vector3 destination, float time) // 지정된 좌표로 움직인다
     {
         yield return MoveRoutine(destination, time, AnimationCurve.Linear(0, 0, 1, 1));
