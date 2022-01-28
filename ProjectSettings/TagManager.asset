@@ -42,3 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor/Wall
+    uniqueID: 87306469
+    locked: 0
+  - name: Boss
+    uniqueID: 3230824223
+    locked: 0
+  - name: Player
+    uniqueID: 3223497045
+    locked: 0
+  - name: Mob
+    uniqueID: 1711605907
+    locked: 0

@@ -10,6 +10,8 @@ public abstract class Enemy : Changable
     public float Health { get; protected set; }
     public float MaxHealth { get; protected set; }
     public float AttackDamage { get; protected set; }
+    public float MP { get; protected set; }
+    public float MaxMP { get; protected set; }
     public float MovementSpeed { get; protected set; }
     public float Range { get; protected set; }
     public float Interval { get; protected set; }
@@ -19,11 +21,15 @@ public abstract class Enemy : Changable
 
     protected virtual void Start()
     {
-        changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed};
-        dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
-        dict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MovementSpeed");
+        //changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed};
+        //dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
+        //dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
+        //dict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MovementSpeed");
         player = FindObjectOfType<Player>();
         rb = GetComponent<Rigidbody2D>();
+
+        //FIXME
+        //Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
     private void Update()
     {
@@ -53,16 +59,7 @@ public abstract class Enemy : Changable
     {
         yield return action;
         CurrentRoutine = null;
-    }/*
-    public virtual void GetDamaged(float damage)
-    {
-        Health -= damage;
-        Debug.Log("Enemy dmg taken: " + damage);
-        if (Health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }*/
+    }
     protected IEnumerator MoveRoutine(Vector3 destination, float time) // 지정된 좌표로 움직인다
     {
         yield return MoveRoutine(destination, time, AnimationCurve.Linear(0, 0, 1, 1));

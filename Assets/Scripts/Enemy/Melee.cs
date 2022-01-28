@@ -10,7 +10,7 @@ public class Melee : Enemy
         MaxHealth = Health = 10f;
         AttackDamage = 5f;
         MovementSpeed = 1f;
-        Range = 5f;
+        Range = 1.5f;     // 공격 범위
         Interval = 1.0f;
     }
 
@@ -20,7 +20,7 @@ public class Melee : Enemy
 
         if (CheckPlayer())
         {
-            if(DistToPlayer() < 1.5f) // 플레이어가 공격 범위안에 들어왔다
+            if(DistToPlayer() < Range) // 플레이어가 공격 범위안에 들어왔다
             {
                 nextRoutines.Enqueue(NewActionRoutine(AttackRoutine(AttackDamage)));
             }

@@ -13,7 +13,7 @@ public class Range : Enemy
         MaxHealth = Health = 5f;
         AttackDamage = 7f;
         MovementSpeed = 0.7f;
-        Range = 15f;
+        Range = 15f;        // 공격 범위
         Interval = 3.0f;
     }
 
