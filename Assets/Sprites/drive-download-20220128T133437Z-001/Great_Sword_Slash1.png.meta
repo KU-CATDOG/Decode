@@ -107,12 +107,12 @@ TextureImporter:
       name: Great_Sword_Slash1_0
       rect:
         serializedVersion: 2
-        x: 376
-        y: 6141
-        width: 402
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,12 +128,12 @@ TextureImporter:
       name: Great_Sword_Slash1_1
       rect:
         serializedVersion: 2
-        x: 1398
-        y: 6141
-        width: 399
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,12 +149,12 @@ TextureImporter:
       name: Great_Sword_Slash1_2
       rect:
         serializedVersion: 2
-        x: 2424
-        y: 6141
-        width: 398
-        height: 577
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,12 +170,12 @@ TextureImporter:
       name: Great_Sword_Slash1_3
       rect:
         serializedVersion: 2
-        x: 3446
-        y: 6141
-        width: 384
-        height: 626
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: Great_Sword_Slash1_4
       rect:
         serializedVersion: 2
-        x: 4481
-        y: 6141
-        width: 301
-        height: 706
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,12 +212,12 @@ TextureImporter:
       name: Great_Sword_Slash1_5
       rect:
         serializedVersion: 2
-        x: 418
-        y: 5115
-        width: 270
-        height: 752
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: Great_Sword_Slash1_6
       rect:
         serializedVersion: 2
-        x: 1486
-        y: 5115
-        width: 238
-        height: 742
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: Great_Sword_Slash1_7
       rect:
         serializedVersion: 2
-        x: 2417
-        y: 5115
-        width: 325
-        height: 683
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: Great_Sword_Slash1_8
       rect:
         serializedVersion: 2
-        x: 3383
-        y: 5115
-        width: 374
-        height: 620
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,12 +296,12 @@ TextureImporter:
       name: Great_Sword_Slash1_9
       rect:
         serializedVersion: 2
-        x: 4376
-        y: 5115
-        width: 417
-        height: 564
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,12 +317,12 @@ TextureImporter:
       name: Great_Sword_Slash1_10
       rect:
         serializedVersion: 2
-        x: 268
-        y: 4090
-        width: 437
-        height: 511
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,12 +338,12 @@ TextureImporter:
       name: Great_Sword_Slash1_11
       rect:
         serializedVersion: 2
-        x: 1276
-        y: 4090
-        width: 455
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,12 +359,12 @@ TextureImporter:
       name: Great_Sword_Slash1_12
       rect:
         serializedVersion: 2
-        x: 2308
-        y: 4090
-        width: 448
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,12 +380,12 @@ TextureImporter:
       name: Great_Sword_Slash1_13
       rect:
         serializedVersion: 2
-        x: 3540
-        y: 4090
-        width: 294
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,12 +401,12 @@ TextureImporter:
       name: Great_Sword_Slash1_14
       rect:
         serializedVersion: 2
-        x: 4593
-        y: 4090
-        width: 392
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -422,12 +422,12 @@ TextureImporter:
       name: Great_Sword_Slash1_15
       rect:
         serializedVersion: 2
-        x: 499
-        y: 3068
-        width: 528
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -443,12 +443,12 @@ TextureImporter:
       name: Great_Sword_Slash1_16
       rect:
         serializedVersion: 2
-        x: 1524
-        y: 3068
-        width: 441
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -464,12 +464,12 @@ TextureImporter:
       name: Great_Sword_Slash1_17
       rect:
         serializedVersion: 2
-        x: 2547
-        y: 3068
-        width: 251
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -485,12 +485,12 @@ TextureImporter:
       name: Great_Sword_Slash1_18
       rect:
         serializedVersion: 2
-        x: 3390
-        y: 3068
-        width: 412
-        height: 535
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -506,12 +506,12 @@ TextureImporter:
       name: Great_Sword_Slash1_19
       rect:
         serializedVersion: 2
-        x: 4317
-        y: 3068
-        width: 483
-        height: 507
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -527,12 +527,12 @@ TextureImporter:
       name: Great_Sword_Slash1_20
       rect:
         serializedVersion: 2
-        x: 233
-        y: 2042
-        width: 437
-        height: 591
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -548,12 +548,12 @@ TextureImporter:
       name: Great_Sword_Slash1_21
       rect:
         serializedVersion: 2
-        x: 1328
-        y: 2042
-        width: 336
-        height: 644
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -569,12 +569,12 @@ TextureImporter:
       name: Great_Sword_Slash1_22
       rect:
         serializedVersion: 2
-        x: 2431
-        y: 2042
-        width: 230
-        height: 679
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -590,12 +590,12 @@ TextureImporter:
       name: Great_Sword_Slash1_23
       rect:
         serializedVersion: 2
-        x: 3477
-        y: 2042
-        width: 185
-        height: 711
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -611,12 +611,12 @@ TextureImporter:
       name: Great_Sword_Slash1_24
       rect:
         serializedVersion: 2
-        x: 4485
-        y: 2042
-        width: 197
-        height: 725
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -632,12 +632,12 @@ TextureImporter:
       name: Great_Sword_Slash1_25
       rect:
         serializedVersion: 2
-        x: 380
-        y: 1020
-        width: 238
-        height: 707
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -653,12 +653,12 @@ TextureImporter:
       name: Great_Sword_Slash1_26
       rect:
         serializedVersion: 2
-        x: 1398
-        y: 1020
-        width: 301
-        height: 665
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -674,12 +674,12 @@ TextureImporter:
       name: Great_Sword_Slash1_27
       rect:
         serializedVersion: 2
-        x: 2424
-        y: 1020
-        width: 342
-        height: 616
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -695,12 +695,12 @@ TextureImporter:
       name: Great_Sword_Slash1_28
       rect:
         serializedVersion: 2
-        x: 3449
-        y: 1020
-        width: 367
-        height: 574
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -716,12 +716,12 @@ TextureImporter:
       name: Great_Sword_Slash1_29
       rect:
         serializedVersion: 2
-        x: 4471
-        y: 1020
-        width: 388
-        height: 539
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -737,12 +737,12 @@ TextureImporter:
       name: Great_Sword_Slash1_30
       rect:
         serializedVersion: 2
-        x: 376
-        y: 0
-        width: 401
-        height: 506
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -750,6 +750,90 @@ TextureImporter:
       bones: []
       spriteID: 286839a932e1f2f4da9ce67586b67718
       internalID: 169110208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757f1701b5165634181b43e71c93c467
+      internalID: 950031868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0474536116e4fa24f95847e0232e08cf
+      internalID: -1389174728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_33
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3da25cec8ec19b44afef604d3d5495d
+      internalID: -119080692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_34
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb3f153e1b71014ebccd74b1d859aed
+      internalID: 1482731104
       vertices: []
       indices: 
       edges: []
@@ -766,6 +850,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Great_Sword_Slash1_7: -279768042
+      Great_Sword_Slash1_31: 950031868
       Great_Sword_Slash1_30: 169110208
       Great_Sword_Slash1_11: 81721847
       Great_Sword_Slash1_12: 903306526
@@ -792,10 +877,13 @@ TextureImporter:
       Great_Sword_Slash1_0: -1572312942
       Great_Sword_Slash1_2: -43384608
       Great_Sword_Slash1_17: 870115249
+      Great_Sword_Slash1_32: -1389174728
       Great_Sword_Slash1_14: 1532516640
       Great_Sword_Slash1_23: -1629992375
       Great_Sword_Slash1_25: -2024948894
       Great_Sword_Slash1_15: -32382600
+      Great_Sword_Slash1_34: 1482731104
+      Great_Sword_Slash1_33: -119080692
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

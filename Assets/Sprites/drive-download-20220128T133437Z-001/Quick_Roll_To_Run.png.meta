@@ -107,12 +107,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_0
       rect:
         serializedVersion: 2
-        x: 279
-        y: 6141
-        width: 283
-        height: 464
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,12 +128,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_1
       rect:
         serializedVersion: 2
-        x: 1321
-        y: 6141
-        width: 280
-        height: 464
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,12 +149,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_2
       rect:
         serializedVersion: 2
-        x: 2375
-        y: 6141
-        width: 276
-        height: 406
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,12 +170,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_3
       rect:
         serializedVersion: 2
-        x: 3400
-        y: 6141
-        width: 297
-        height: 388
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_4
       rect:
         serializedVersion: 2
-        x: 4397
-        y: 6141
-        width: 350
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,12 +212,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_5
       rect:
         serializedVersion: 2
-        x: 254
-        y: 5115
-        width: 416
-        height: 319
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_6
       rect:
         serializedVersion: 2
-        x: 1258
-        y: 5115
-        width: 448
-        height: 301
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_7
       rect:
         serializedVersion: 2
-        x: 2273
-        y: 5115
-        width: 451
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_8
       rect:
         serializedVersion: 2
-        x: 3295
-        y: 5115
-        width: 427
-        height: 259
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,12 +296,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_9
       rect:
         serializedVersion: 2
-        x: 4331
-        y: 5115
-        width: 412
-        height: 235
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,12 +317,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_10
       rect:
         serializedVersion: 2
-        x: 208
-        y: 4090
-        width: 441
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,12 +338,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_11
       rect:
         serializedVersion: 2
-        x: 1213
-        y: 4090
-        width: 468
-        height: 223
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,12 +359,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_12
       rect:
         serializedVersion: 2
-        x: 2224
-        y: 4090
-        width: 455
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,12 +380,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_13
       rect:
         serializedVersion: 2
-        x: 3249
-        y: 4090
-        width: 441
-        height: 252
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,12 +401,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_14
       rect:
         serializedVersion: 2
-        x: 4285
-        y: 4090
-        width: 420
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -422,12 +422,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_15
       rect:
         serializedVersion: 2
-        x: 216
-        y: 3068
-        width: 384
-        height: 315
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -443,12 +443,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_16
       rect:
         serializedVersion: 2
-        x: 1276
-        y: 3068
-        width: 336
-        height: 322
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -464,12 +464,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_17
       rect:
         serializedVersion: 2
-        x: 2357
-        y: 3068
-        width: 262
-        height: 325
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -485,12 +485,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_18
       rect:
         serializedVersion: 2
-        x: 3435
-        y: 3068
-        width: 238
-        height: 322
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -506,12 +506,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_19
       rect:
         serializedVersion: 2
-        x: 4485
-        y: 3068
-        width: 260
-        height: 294
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -527,12 +527,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_20
       rect:
         serializedVersion: 2
-        x: 412
-        y: 2042
-        width: 279
-        height: 263
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -548,12 +548,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_21
       rect:
         serializedVersion: 2
-        x: 1444
-        y: 2042
-        width: 287
-        height: 221
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -569,12 +569,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_22
       rect:
         serializedVersion: 2
-        x: 2476
-        y: 2042
-        width: 255
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -590,12 +590,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_23
       rect:
         serializedVersion: 2
-        x: 3505
-        y: 2042
-        width: 241
-        height: 238
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -611,12 +611,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_24
       rect:
         serializedVersion: 2
-        x: 4523
-        y: 2042
-        width: 245
-        height: 266
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -632,12 +632,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_25
       rect:
         serializedVersion: 2
-        x: 425
-        y: 1020
-        width: 245
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -653,12 +653,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_26
       rect:
         serializedVersion: 2
-        x: 1426
-        y: 1020
-        width: 231
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -674,12 +674,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_27
       rect:
         serializedVersion: 2
-        x: 2396
-        y: 1020
-        width: 244
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -695,12 +695,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_28
       rect:
         serializedVersion: 2
-        x: 3380
-        y: 1020
-        width: 258
-        height: 333
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -716,12 +716,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_29
       rect:
         serializedVersion: 2
-        x: 4383
-        y: 1020
-        width: 280
-        height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -737,12 +737,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_30
       rect:
         serializedVersion: 2
-        x: 279
-        y: 0
-        width: 290
-        height: 365
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -758,12 +758,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_31
       rect:
         serializedVersion: 2
-        x: 1321
-        y: 0
-        width: 269
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -779,12 +779,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_32
       rect:
         serializedVersion: 2
-        x: 2375
-        y: 0
-        width: 234
-        height: 410
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -800,12 +800,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_33
       rect:
         serializedVersion: 2
-        x: 3389
-        y: 0
-        width: 242
-        height: 432
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -821,12 +821,12 @@ TextureImporter:
       name: Quick_Roll_To_Run_34
       rect:
         serializedVersion: 2
-        x: 4384
-        y: 0
-        width: 279
-        height: 453
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
