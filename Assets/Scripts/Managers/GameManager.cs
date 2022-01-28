@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager>
         if (!player.isInvincible)
         {
             player.health -= damage;
-            //Debug.Log("Player dmg taken: " + damage);
+            Debug.Log("Player dmg taken: " + damage);
 
         }
         if (player.health <= 0)

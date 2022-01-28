@@ -21,10 +21,10 @@ public abstract class Enemy : Changable
 
     protected virtual void Start()
     {
-        changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed};
-        dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
-        dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
-        dict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MovementSpeed");
+        //changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed};
+        //dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
+        //dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
+        //dict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MovementSpeed");
         player = FindObjectOfType<Player>();
         rb = GetComponent<Rigidbody2D>();
 

@@ -18,6 +18,9 @@ public class Firefly : Enemy
         MaxMP = 100f;
         Range = 10f;    // 시야 범위
         MovementSpeed = 1f;
+
+        changableValues = new Define.ChangableValue[1] { Define.ChangableValue.Mp };
+        dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
     }
     private void FixedUpdate()  //FIXME
     {
