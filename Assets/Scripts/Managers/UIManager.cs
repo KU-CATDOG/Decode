@@ -5,8 +5,9 @@ using UnityEngine;
 public class UIManager : Singleton<UIManager>
 {
     /// UI에서 사용되는 값 마다의 색상
+    [HideInInspector]
     public Color[] ColorOfValues;
-    void Start()
+    void Awake()
     {
         ColorOfValues = new Color[System.Enum.GetValues(typeof(Define.ChangableValue)).Length];
         ColorOfValues[(int)Define.ChangableValue.Hp] = Color.red;

@@ -12,6 +12,12 @@ public class Melee : Enemy
         MaxMovementSpeed = 10f;
         Range = 1.5f;     // 공격 범위
         Interval = 1.0f;
+        changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed };
+        dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
+        maxDict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("MaxHealth");
+        //dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
+        dict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MovementSpeed");
+        maxDict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MaxMovementSpeed");
         base.Start();
     }
 

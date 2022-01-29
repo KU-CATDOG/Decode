@@ -11,7 +11,6 @@ public class Firefly : Enemy
 
     protected override void Start()
     {
-        base.Start();
         MaxHealth = Health = 1f;
         AttackDamage = 5f;
         MP = 0f;
@@ -21,6 +20,8 @@ public class Firefly : Enemy
 
         changableValues = new Define.ChangableValue[1] { Define.ChangableValue.Mp };
         dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
+        maxDict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MaxMP");
+        base.Start();
     }
     private void FixedUpdate()  //FIXME
     {

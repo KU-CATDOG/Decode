@@ -5,7 +5,8 @@ using UnityEngine;
 public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래스를 상속해야 한다.
 {
     private Canvas canvas;
-    protected Define.ChangableValue[] changableValues;  // 변경 가능한 값의 종류
+    [HideInInspector]
+    public Define.ChangableValue[] changableValues;  // 변경 가능한 값의 종류
     protected Bar[] barofChangableValues; // UI 바
     [SerializeField]
     private Bar defaultBar;

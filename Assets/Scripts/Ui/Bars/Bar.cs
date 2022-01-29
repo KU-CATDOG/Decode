@@ -52,5 +52,6 @@ public class Bar : MonoBehaviour
     private void Update()
     {
         transform.position = Camera.main.WorldToScreenPoint(parent.position + Vector3.up * (parent.localScale.y+1));
+        BarSlider.value = val / MaxVal;
     }
 }
