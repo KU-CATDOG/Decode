@@ -20,6 +20,6 @@ public class Define
 
     public enum ChangeType
     {
-        Add
+        Add,
     }
 }

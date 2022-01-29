@@ -11,14 +11,17 @@ public class Bar : MonoBehaviour
     private Text valueNameText;
     private Text valuePerMaxValueText;
     private Slider BarSlider;
-    private Image BarFill;
+    public Image BarBackGround { get; set; }
+    public Image BarFill { get; set; }
     private void Awake()
     {
         BarSlider = GetComponent<Slider>();
         Text[] txts = GetComponentsInChildren<Text>();
         valueNameText = txts[0];
         valuePerMaxValueText = txts[1];
-        BarFill = GetComponentInChildren<Image>();
+        Image[] images = GetComponentsInChildren<Image>();
+        BarBackGround = images[0];
+        BarFill = images[1];
     }
     public float Value
     {
@@ -49,5 +52,6 @@ public class Bar : MonoBehaviour
     private void Update()
     {
         transform.position = Camera.main.WorldToScreenPoint(parent.position + Vector3.up * (parent.localScale.y+1));
+        BarSlider.value = val / MaxVal;
     }
 }
