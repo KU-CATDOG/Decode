@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Bar : MonoBehaviour
 {
     public float MaxVal { get; set; }
-    public Transform parent { get; set; }
+    public Transform Parent { get; set; }
+    public Changable ParentChangable { get; set; }
     private float val;
     private Text valueNameText;
     private Text valuePerMaxValueText;
@@ -51,7 +52,9 @@ public class Bar : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = Camera.main.WorldToScreenPoint(parent.position + Vector3.up * (parent.localScale.y+1));
+        transform.position = Camera.main.WorldToScreenPoint(Parent.position + Vector3.up * (Parent.localScale.y+1));
         BarSlider.value = val / MaxVal;
+        val = (float)ParentChangable.dict[ValueName].GetValue(ParentChangable);
+        valuePerMaxValueText.text = $"{val}/{MaxVal}";
     }
 }

@@ -11,8 +11,8 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
     [SerializeField]
     private Bar defaultBar;
     public int Selected { get; private set; } = 0;
-    protected Dictionary<Define.ChangableValue, System.Reflection.PropertyInfo> dict = new Dictionary<Define.ChangableValue,System.Reflection.PropertyInfo>(); //ChangableValue와  그에 해당하는 property로 구성된 dictionary  
-    protected Dictionary<Define.ChangableValue, System.Reflection.PropertyInfo> maxDict = new Dictionary<Define.ChangableValue, System.Reflection.PropertyInfo>(); // ChangableValue와 그에 해당하는 Max값 Property로 구성된 dictionary
+    public Dictionary<Define.ChangableValue, System.Reflection.PropertyInfo> dict = new Dictionary<Define.ChangableValue,System.Reflection.PropertyInfo>(); //ChangableValue와  그에 해당하는 property로 구성된 dictionary  
+    public Dictionary<Define.ChangableValue, System.Reflection.PropertyInfo> maxDict = new Dictionary<Define.ChangableValue, System.Reflection.PropertyInfo>(); // ChangableValue와 그에 해당하는 Max값 Property로 구성된 dictionary
     /// <summary>
     /// 값을 변경하기 위해 외부에서 호출되는 함수
     /// 중간발표 이후 수정
@@ -51,7 +51,8 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
         for(int i = 0; i<changableValues.Length; i++)
         {
             barofChangableValues[i] = Instantiate(defaultBar, canvas.transform);
-            barofChangableValues[i].parent = transform;
+            barofChangableValues[i].Parent = transform;
+            barofChangableValues[i].ParentChangable = this;
             if (Selected != i)
                 barofChangableValues[i].gameObject.SetActive(false);
             barofChangableValues[i].ValueName = changableValues[i];
