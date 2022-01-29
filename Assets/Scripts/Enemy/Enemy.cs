@@ -13,6 +13,7 @@ public abstract class Enemy : Changable
     public float MP { get; protected set; }
     public float MaxMP { get; protected set; }
     public float MovementSpeed { get; protected set; }
+    public float MaxMovementSpeed { get; protected set; }
     public float Range { get; protected set; }
     public float Interval { get; protected set; }
 
@@ -21,10 +22,13 @@ public abstract class Enemy : Changable
 
     protected virtual void Start()
     {
-        //changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed};
-        //dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
+        changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Speed};
+        dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
+        maxDict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("MaxHealth");
         //dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
-        //dict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MovementSpeed");
+        dict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MovementSpeed");
+        maxDict[Define.ChangableValue.Speed] = typeof(Enemy).GetProperty("MaxMovementSpeed");
+        InitializeBars();
         player = FindObjectOfType<Player>();
         rb = GetComponent<Rigidbody2D>();
 

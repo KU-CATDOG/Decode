@@ -94,7 +94,6 @@ public class Knight : Enemy
     public bool HaveLance { get; set; }
     protected override void Start()
     {
-        base.Start();
         attackRoutines = new IEnumerator[4] { NormalAttack(), Rush(), ThrowLance(), ShortRush() };
         attackSpeed = 0.5f;
         MaxHealth = Health = 50f * 3;
@@ -103,6 +102,7 @@ public class Knight : Enemy
         Range = 3.0f;
         lance = GetComponentInChildren<KnightLance>();
         rbLance = lance.GetComponent<Rigidbody2D>();
+        base.Start();
     }
     protected override Queue<IEnumerator> DecideNextRoutine()
     {
