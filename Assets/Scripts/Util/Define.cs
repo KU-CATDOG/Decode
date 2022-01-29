@@ -17,4 +17,9 @@ public class Define
         Speed,
         Rotation
     }
+
+    public enum ChangeType
+    {
+        Add
+    }
 }

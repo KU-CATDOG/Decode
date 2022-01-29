@@ -16,16 +16,11 @@ public abstract class Weapon : MonoBehaviour
     {
         hb = GetComponentInChildren<HitBox>();
     }
-    protected void Start()
+    protected virtual void Start()
     {
         int numOfValues = System.Enum.GetValues(typeof(Define.ChangableValue)).Length;
         curCoolTime = 0;
         magnitudeOfChange = new float[numOfValues];
-        magnitudeOfChange[(int)Define.ChangableValue.Hp] = 5;
-        magnitudeOfChange[(int)Define.ChangableValue.Mp] = 5;
-        magnitudeOfChange[(int)Define.ChangableValue.Rotation] = 15;
-        magnitudeOfChange[(int)Define.ChangableValue.Speed] = 5;
-
     }
     protected void Update()
     {

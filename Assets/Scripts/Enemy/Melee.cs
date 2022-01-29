@@ -6,12 +6,13 @@ public class Melee : Enemy
 {
     protected override void Start()
     {
-        base.Start();
         MaxHealth = Health = 10f;
         AttackDamage = 5f;
         MovementSpeed = 1f;
+        MaxMovementSpeed = 10f;
         Range = 1.5f;     // 공격 범위
         Interval = 1.0f;
+        base.Start();
     }
 
     protected override Queue<IEnumerator> DecideNextRoutine()
