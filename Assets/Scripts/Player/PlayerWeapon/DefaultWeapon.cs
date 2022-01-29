@@ -7,10 +7,10 @@ public class DefaultWeapon : Weapon // 값의 더하기, 빼기를 구현하는 무기
     protected override void Start()
     {
         base.Start();
-        magnitudeOfChange[(int)Define.ChangableValue.Hp] = 5;
-        magnitudeOfChange[(int)Define.ChangableValue.Mp] = 5;
+        magnitudeOfChange[(int)Define.ChangableValue.Hp] = -5;
+        magnitudeOfChange[(int)Define.ChangableValue.Mp] = -5;
         magnitudeOfChange[(int)Define.ChangableValue.Rotation] = 15;
-        magnitudeOfChange[(int)Define.ChangableValue.Speed] = 5;
+        magnitudeOfChange[(int)Define.ChangableValue.Speed] = -5;
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {

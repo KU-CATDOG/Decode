@@ -185,6 +185,7 @@ public class Player : MonoBehaviour
 
     private void Attack(Define.MouseEvent evt)
     {
+        anim.SetTrigger("Attack");
         StartCoroutine(weapon.AttackRoutine(evt));
     }
 
