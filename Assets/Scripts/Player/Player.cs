@@ -13,17 +13,19 @@ public class Player : MonoBehaviour
     private LayerMask jumpable;
     private Rigidbody2D rb;
     private Collider2D col;
+    private Animator anim;
 
     [SerializeField]
     private float speed = 5.0f;
     [SerializeField]
-    private float jumpSpeed = 7f;
+    private float jumpSpeed = 10f;
     public float health;
     private float maxHealth = 10f;
     [SerializeField]
     private float rollSpeed = 7f;
     public bool isInvincible = false;
     private bool isPlayerLookRight = true;
+    private bool rolling = false;
 
     private Weapon weapon;
 
@@ -34,8 +36,8 @@ public class Player : MonoBehaviour
         InputManager.Instance.OnJumpKeyDown += () => { Jump(); isJumpKeyDown = true; } ;
         InputManager.Instance.OnSpaceKeyDown += Roll;
 
-        InputManager.Instance.OnLeftKeyUp += () => { horizontal = 0; };
-        InputManager.Instance.OnRightKeyUp += () => { horizontal = 0; };
+        InputManager.Instance.OnLeftKeyUp += () => { horizontal = 0; anim.SetBool("Running", false); };
+        InputManager.Instance.OnRightKeyUp += () => { horizontal = 0; anim.SetBool("Running", false); };
         InputManager.Instance.OnJumpKeyUp += () => { isJumpKeyDown = false; };
 
         InputManager.Instance.MouseAction += Attack;
@@ -49,8 +51,8 @@ public class Player : MonoBehaviour
         InputManager.Instance.OnJumpKeyDown -= () => { Jump(); isJumpKeyDown = true; };
         InputManager.Instance.OnSpaceKeyDown -= Roll;
 
-        InputManager.Instance.OnLeftKeyUp -= () => { horizontal = 0; };
-        InputManager.Instance.OnRightKeyUp -= () => { horizontal = 0; };
+        InputManager.Instance.OnLeftKeyUp -= () => { horizontal = 0; anim.SetBool("Running", false); };
+        InputManager.Instance.OnRightKeyUp -= () => { horizontal = 0; anim.SetBool("Running", false); };
         InputManager.Instance.OnJumpKeyUp -= () => { isJumpKeyDown = false; };
 
         InputManager.Instance.MouseAction -= Attack;
@@ -63,6 +65,7 @@ public class Player : MonoBehaviour
         weapon = GetComponentInChildren<Weapon>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
         health = maxHealth;
     }
 
@@ -94,6 +97,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        anim.SetBool("Landed", IsGrounded());
+    }
+
+
     public void SetPlayerControllable(bool _isControllable)
     {
         isControllable = _isControllable;
@@ -101,6 +110,7 @@ public class Player : MonoBehaviour
         if (!isControllable)
         {
             horizontal = 0;
+            anim.SetBool("Running", false);
         }
     }
 
@@ -116,6 +126,7 @@ public class Player : MonoBehaviour
         if (isControllable)
         {
             horizontal = direction.x;
+            anim.SetBool("Running", true);
         }
     }
 
@@ -124,6 +135,7 @@ public class Player : MonoBehaviour
         if(isControllable && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+            anim.SetTrigger("Jump");
         }
     }
 
@@ -138,7 +150,8 @@ public class Player : MonoBehaviour
     IEnumerator RollRoutine(float time, bool rollDir)
     {
         SetPlayerControllable(false);
-        Debug.Log("Roll");
+        anim.SetTrigger("Roll");
+        rolling = true;
         isInvincible = true;
 
         for (float t = 0; t < time; t += Time.deltaTime)
@@ -148,10 +161,24 @@ public class Player : MonoBehaviour
         }
         SetPlayerControllable(true);
         isInvincible = false;
+        anim.SetTrigger("RollEnd");
+        rolling = false;
     }
 
     private void PlayerLookAt(bool isRight)
     {
+        //if (IsGrounded())
+        //{
+        //    GetComponent<SpriteRenderer>().flipX = horizontal == 0 ? !isRight : horizontal < 0;
+        //}
+        //else
+        //{
+        //    GetComponent<SpriteRenderer>().flipX = !isRight;
+        //}
+        if (!rolling)
+        {
+            GetComponent<SpriteRenderer>().flipX = horizontal == 0 ? !isRight : horizontal < 0;
+        }
         isPlayerLookRight = isRight;
     }
 

@@ -1,0 +1,892 @@
+fileFormatVersion: 2
+guid: 25d21bd34280f7e49af59c50cab75ec8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 230
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6bcabc867aca141b34df2f37338308
+      internalID: 1475852051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2dc3417e6cdc240acff71d98b61590
+      internalID: 581652363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a359f83be20b74f82ee44fd97831d8
+      internalID: 1975347871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd126e51705e94b438d9e743cc7fca6c
+      internalID: -1238772752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6101.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44532337e2c1ca34fbbd5d277f611264
+      internalID: -1514419906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e6bdadcb748c94c89bfe593b5bc10b
+      internalID: -1755475162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03193d592f1f064eb06cb543203cd0e
+      internalID: 355502725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aff8bd9e58a0f94e84b76963ca7ddde
+      internalID: 782563526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bc7015d633f8f44912258169186da3
+      internalID: 1193299349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5085.143
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a3db20d0217a744a2ce614005e6de6
+      internalID: -1843735894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85e052716c5bde4cb5716c0fdfe6ba4
+      internalID: -1799161036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5184e397f2c656f43a108a05c55bd168
+      internalID: 184841117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cca1c1ec71a30043985d0677483341c
+      internalID: -1598682284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb92bf5994c8ad4389cf9674a2687f6
+      internalID: -1467625139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4069.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048bee28ef40f2c4e936bcc9c435be55
+      internalID: -1748296812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f57b037fd52244bb787a8c44a9f885
+      internalID: -1284780927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfcb3a3b19f7a2e40b84b3527a2240ce
+      internalID: 1449448402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_17
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc365b7f3ce1b3e45a167ec4ec2620aa
+      internalID: 1067297648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465deafc5b666a1499b9125318505f74
+      internalID: -1625082587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_19
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3053.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14790399ca29b3449ed2acb61eeb9bf
+      internalID: 1434571197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4758deeda3cb14dbe9ced722d67001
+      internalID: 781960887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2203943992dd5a44bdc953c306aa89d
+      internalID: 474155720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4e7f13ac8be81458deb6d5d8b50ab8
+      internalID: -1211927905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_23
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1915ae72819404b8125fa095c7f83f
+      internalID: -201659554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_24
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2037.1428
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7944f184e1c7642a26197f3b3737fd
+      internalID: 2125618762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6129a38e464d34baf3475db3a5bf17
+      internalID: 1072927196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f5cd580e92ee746a9289b2365cf308
+      internalID: 413717535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_27
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac62c64f9f3b8f4cbc1a514fce0abd5
+      internalID: 1567323411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef26a149c407ae243896ce7319aa35c0
+      internalID: -844213060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_29
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1021.1429
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e5fa854f1677a458835503f8f52692
+      internalID: -1656303137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2674c02a40c9cf541912f8a9f8dbe2e2
+      internalID: 1267802884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27c5d94b9e1dc94c99e5795d974a751
+      internalID: 1406487078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fedfbdbd0b9e743ac484b59c09d324
+      internalID: -623924613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_33
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fad019b58e92c84daf1eff80a8c40c4
+      internalID: 1060664827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quick_Roll_To_Run_34
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5.1428833
+        width: 1024
+        height: 1016.8571
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaece8c65bea8e04a83217a8a187f669
+      internalID: 1486002483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Quick_Roll_To_Run_24: 2125618762
+      Quick_Roll_To_Run_15: -1284780927
+      Quick_Roll_To_Run_23: -201659554
+      Quick_Roll_To_Run_2: 1975347871
+      Quick_Roll_To_Run_20: 781960887
+      Quick_Roll_To_Run_10: -1799161036
+      Quick_Roll_To_Run_19: 1434571197
+      Quick_Roll_To_Run_8: 1193299349
+      Quick_Roll_To_Run_0: 1475852051
+      Quick_Roll_To_Run_22: -1211927905
+      Quick_Roll_To_Run_17: 1067297648
+      Quick_Roll_To_Run_13: -1467625139
+      Quick_Roll_To_Run_4: -1514419906
+      Quick_Roll_To_Run_7: 782563526
+      Quick_Roll_To_Run_18: -1625082587
+      Quick_Roll_To_Run_27: 1567323411
+      Quick_Roll_To_Run_9: -1843735894
+      Quick_Roll_To_Run_29: -1656303137
+      Quick_Roll_To_Run_14: -1748296812
+      Quick_Roll_To_Run_3: -1238772752
+      Quick_Roll_To_Run_16: 1449448402
+      Quick_Roll_To_Run_25: 1072927196
+      Quick_Roll_To_Run_33: 1060664827
+      Quick_Roll_To_Run_31: 1406487078
+      Quick_Roll_To_Run_32: -623924613
+      Quick_Roll_To_Run_12: -1598682284
+      Quick_Roll_To_Run_28: -844213060
+      Quick_Roll_To_Run_1: 581652363
+      Quick_Roll_To_Run_11: 184841117
+      Quick_Roll_To_Run_34: 1486002483
+      Quick_Roll_To_Run_5: -1755475162
+      Quick_Roll_To_Run_6: 355502725
+      Quick_Roll_To_Run_26: 413717535
+      Quick_Roll_To_Run_30: 1267802884
+      Quick_Roll_To_Run_21: 474155720
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,892 @@
+fileFormatVersion: 2
+guid: ad3a4a2bca0d1bb4dafc3e9bf6f91c56
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 230
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7e5e8caaa2dd04ca2642c5c7a8547d
+      internalID: -1572312942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3b59dd9b991fe48a38672200eacd04
+      internalID: 878797747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a751e4b2d4900074994a2eff28364902
+      internalID: -43384608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb643c081837164795cdce8df650641
+      internalID: 686374258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6126.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55133192a9b1f9e4d9a1666d03d7f954
+      internalID: 1752532890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fabb35a2283a84ba7d088dd2fbb032
+      internalID: 1154705935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84baff91dffb9204b89acc569af7ac52
+      internalID: -813355205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2734b91e97c0a4f89e81980f35e677
+      internalID: -279768042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28895aa6ac9f6fa469225f5c2d20d455
+      internalID: -1086714084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5105.857
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037077514918fc54486a09783e2d1343
+      internalID: 831544627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e2e3f3f832fcf4a849ca668b5b1f34
+      internalID: 1562001849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d2747901e2a214194e2537122d99e2
+      internalID: 81721847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab380e06c6b2d64b9ed5279e709985c
+      internalID: 903306526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402d5c61e9cd02b46bc7a6a5147272e3
+      internalID: -625953467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4084.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24a1afd680ef594e88a352cff367d2a
+      internalID: 1532516640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a625bf3ec6644bc4a8052ca84774bb58
+      internalID: -32382600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac19e39315aa1054c91b15320bcc9e70
+      internalID: 95578335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_17
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1bfabe1bd56a8429fc79d0fa55df16
+      internalID: 870115249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1313aa0b20393d46a25394cc1a81340
+      internalID: -197886017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_19
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3063.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0168564b38a724b84bc744b6e5f72b
+      internalID: 566767860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d124829539ca7a46a9958551c33113c
+      internalID: 1608442330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6d188f8c8170e459293caaf8567eb6
+      internalID: -493909280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4614d6194fbad3e40914fe8f0737dc92
+      internalID: -2113083328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_23
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1146a3033e0ee4a939323a5cdbe096
+      internalID: -1629992375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_24
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2042.8572
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e414384ce88214e9f7c5513c9c694d
+      internalID: -1640680912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c4215dc35448d4e84e1855eaa18e04
+      internalID: -2024948894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fe83618d33a91468781dcba4c8a93c
+      internalID: -122130407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_27
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe07b3d4ea33c94e9d8e9630b635bb7
+      internalID: -1543249808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c021a5f0ddb3c0a4fa9ebd1a12cdf16d
+      internalID: 1259039195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_29
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1021.8571
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033edb986afbb9e499cc65bc7123c95e
+      internalID: 98731276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286839a932e1f2f4da9ce67586b67718
+      internalID: 169110208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757f1701b5165634181b43e71c93c467
+      internalID: 950031868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0474536116e4fa24f95847e0232e08cf
+      internalID: -1389174728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_33
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3da25cec8ec19b44afef604d3d5495d
+      internalID: -119080692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great_Sword_Slash1_34
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0.8571167
+        width: 1024
+        height: 1021.1429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb3f153e1b71014ebccd74b1d859aed
+      internalID: 1482731104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Great_Sword_Slash1_7: -279768042
+      Great_Sword_Slash1_31: 950031868
+      Great_Sword_Slash1_30: 169110208
+      Great_Sword_Slash1_11: 81721847
+      Great_Sword_Slash1_12: 903306526
+      Great_Sword_Slash1_24: -1640680912
+      Great_Sword_Slash1_29: 98731276
+      Great_Sword_Slash1_21: -493909280
+      Great_Sword_Slash1_6: -813355205
+      Great_Sword_Slash1_27: -1543249808
+      Great_Sword_Slash1_8: -1086714084
+      Great_Sword_Slash1_4: 1752532890
+      Great_Sword_Slash1_13: -625953467
+      Great_Sword_Slash1_22: -2113083328
+      Great_Sword_Slash1_16: 95578335
+      Great_Sword_Slash1_26: -122130407
+      Great_Sword_Slash1_1: 878797747
+      Great_Sword_Slash1_5: 1154705935
+      Great_Sword_Slash1_20: 1608442330
+      Great_Sword_Slash1_18: -197886017
+      Great_Sword_Slash1_10: 1562001849
+      Great_Sword_Slash1_3: 686374258
+      Great_Sword_Slash1_9: 831544627
+      Great_Sword_Slash1_19: 566767860
+      Great_Sword_Slash1_28: 1259039195
+      Great_Sword_Slash1_0: -1572312942
+      Great_Sword_Slash1_2: -43384608
+      Great_Sword_Slash1_17: 870115249
+      Great_Sword_Slash1_32: -1389174728
+      Great_Sword_Slash1_14: 1532516640
+      Great_Sword_Slash1_23: -1629992375
+      Great_Sword_Slash1_25: -2024948894
+      Great_Sword_Slash1_15: -32382600
+      Great_Sword_Slash1_34: 1482731104
+      Great_Sword_Slash1_33: -119080692
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
