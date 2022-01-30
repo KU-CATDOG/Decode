@@ -5,10 +5,8 @@ using UnityEngine;
 public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래스를 상속해야 한다.
 {
     private Canvas canvas;
-    [HideInInspector]
     private List<Define.ChangableValue> changableValues = new List<Define.ChangableValue>();  // 변경 가능한 값의 종류
     protected Bar[] barofChangableValues; // UI 바
-    [SerializeField]
     private Bar defaultBar;
     private int selected = 0;
     private Dictionary<Define.ChangableValue, System.Reflection.PropertyInfo> dict = new Dictionary<Define.ChangableValue,System.Reflection.PropertyInfo>(); //ChangableValue와  그에 해당하는 property로 구성된 dictionary  
@@ -98,7 +96,11 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
             barofChangableValues[i].BarFill.color = UIManager.Instance.ColorOfValues[(int)changableValues[i]];
         }
     }
-    
+    protected void Awake()
+    {
+        defaultBar = Tool.AssetLoader.LoadPrefab<GameObject>("UI/Bar").GetComponent<Bar>();
+    }
+
 
 
 
