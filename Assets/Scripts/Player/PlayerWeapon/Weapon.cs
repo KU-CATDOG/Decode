@@ -31,7 +31,8 @@ public abstract class Weapon : MonoBehaviour
     }
     //충돌판정은 상속받은 class에서 각 무기에 맞게 구현함
     protected abstract void OnTriggerEnter2D(Collider2D collision);
-    /*{
+    /*EXAMPLE CODE
+     * {
 
         hb.gameObject.setActive(false);
         if(normalAttack){

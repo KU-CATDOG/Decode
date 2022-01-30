@@ -18,11 +18,8 @@ public class Snail : Enemy
         Range = 1.5f;    // 공격 범위
         MovementSpeed = 1f;
         Interval = 1.0f;
-        changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Mp };
-        dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
-        maxDict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("MaxHealth");
-        dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
-        maxDict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MaxMP");
+        ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
+        ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxMP"), typeof(Enemy).GetProperty("MP"));
         base.Start();
     }
     private void FixedUpdate()  //FIXME

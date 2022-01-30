@@ -6,10 +6,9 @@ public class HpDoor : Enemy
 {
     protected override void Start()
     {
-        base.Start();
         MaxHealth = Health = 10f;
-        changableValues = new Define.ChangableValue[1] { Define.ChangableValue.Hp };
-        dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
+        ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
+        base.Start();
     }
 
     protected override Queue<IEnumerator> DecideNextRoutine()

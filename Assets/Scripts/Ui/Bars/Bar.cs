@@ -54,7 +54,7 @@ public class Bar : MonoBehaviour
     {
         transform.position = Camera.main.WorldToScreenPoint(Parent.position + Vector3.up * (Parent.localScale.y+1));
         BarSlider.value = val / MaxVal;
-        val = (float)ParentChangable.dict[ValueName].GetValue(ParentChangable);
+        val = (float)ParentChangable.GetValue[ValueName].GetValue(ParentChangable);
         valuePerMaxValueText.text = $"{val}/{MaxVal}";
     }
 }
