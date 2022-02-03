@@ -6,10 +6,12 @@ public class HpDoor : Enemy
 {
     protected override void Start()
     {
-        base.Start();
         MaxHealth = Health = 10f;
         changableValues = new Define.ChangableValue[1] { Define.ChangableValue.Hp };
         dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
+        maxDict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("MaxHealth");
+        base.Start();
+
     }
 
     protected override Queue<IEnumerator> DecideNextRoutine()
@@ -19,9 +21,8 @@ public class HpDoor : Enemy
         return nextRoutines;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Update()
     {
-        Debug.Log(Health);
         if (Health <= 0)
         {
             Destroy(gameObject);

@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         weapon = GetComponentInChildren<Weapon>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
