@@ -6,12 +6,11 @@ public class MpDoor : Enemy
 {
     protected override void Start()
     {
-        base.Start();
         MaxHealth = Health = 1000f;
         MaxMP = MP = 10f;
-        changableValues = new Define.ChangableValue[2] { Define.ChangableValue.Hp, Define.ChangableValue.Mp };
-        dict[Define.ChangableValue.Hp] = typeof(Enemy).GetProperty("Health");
-        dict[Define.ChangableValue.Mp] = typeof(Enemy).GetProperty("MP");
+        ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
+        ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxMP"), typeof(Enemy).GetProperty("MP"));
+        base.Start();
     }
 
     protected override Queue<IEnumerator> DecideNextRoutine()
