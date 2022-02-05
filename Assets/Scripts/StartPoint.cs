@@ -7,6 +7,7 @@ public class StartPoint : MonoBehaviour
     [SerializeField] private string prevScene;
 
     private Player player;
+    private GameObject dataConsole;
 
     void Start()
     {
@@ -16,6 +17,12 @@ public class StartPoint : MonoBehaviour
         {
             player.transform.position = this.transform.position;
         }
+        else if(GameManager.Instance.prevScene == "dataConsole")
+        {
+            dataConsole = GameObject.Find("DataConsole");
+            player.transform.position = dataConsole.transform.position;
+        }
+        
     }
 
 }
