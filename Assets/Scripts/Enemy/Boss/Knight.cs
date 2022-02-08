@@ -241,10 +241,11 @@ public class Knight : Enemy
         {
             LookAt(player.transform.position);
             animator.SetTrigger("Throwing");
-            yield return new WaitForSeconds(0.8f);
+            yield return new WaitForSeconds(0.6f);
             Debug.Log("ThrowLance");
             Vector2 throwVec = new Vector2(player.transform.position.x - transform.position.x, 0).normalized;
             lance.gameObject.SetActive(true);
+            lance.transform.localPosition = Vector2.zero;
             rbLance.velocity = throwVec * (50.0f);
             lance.transform.parent = null;
             HaveLance = false;
