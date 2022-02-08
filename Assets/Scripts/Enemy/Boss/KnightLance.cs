@@ -24,7 +24,8 @@ public class KnightLance : MonoBehaviour
         Knight knight;
         if(drop && (knight = collision.GetComponent<Knight>()))
         {
-            /// 창 줍는 모션, 애니메이션 적용을 리소스 나오면 추가해야됨
+            knight.animator.SetBool("HaveWeapon", true);
+            knight.animator.SetTrigger("EndAction");
             transform.parent = collision.transform;
             knight.HaveLance = true;
             drop = false;

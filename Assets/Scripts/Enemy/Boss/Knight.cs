@@ -94,9 +94,11 @@ public class Knight : Enemy
     private bool isRushing = false;
     private bool isLongRange = true;
     private float longRange;
+    public Animator animator { get; private set; }
     public bool HaveLance { get; set; }
     protected override void Start()
     {
+        animator = GetComponent<Animator>();
         ShortRangeAttackRoutines = new System.Func<IEnumerator>[2] { ShortRush, NormalAttack };
         LongRangeAttackRoutines = new System.Func<IEnumerator>[2] { Rush, ThrowLance };
         attackSpeed = 0.5f;
@@ -123,7 +125,7 @@ public class Knight : Enemy
                 ret.Enqueue(NewActionRoutine(ShortRangeAttackRoutines[Random.Range(0,2)]()));
                 isLongRange = Random.Range(0, 2) == 0;
             }
-            if ( isLongRange && DistToPlayer() < longRange)
+            else if ( isLongRange && DistToPlayer() < longRange)
             {
                 ret.Enqueue(NewActionRoutine(LongRangeAttackRoutines[Random.Range(0,2)]()));
                 isLongRange = Random.Range(0, 2) == 0;
@@ -144,6 +146,17 @@ public class Knight : Enemy
         if (isRushing && collision.tag == "Player")
         {
             GameManager.Instance.GetDamaged(10f);
+        }
+        if(collision.tag == "Floor")
+        {
+            rb.gravityScale = 0;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.tag == "Floor")
+        {
+            rb.gravityScale = 1f;
         }
     }
 
@@ -176,13 +189,15 @@ public class Knight : Enemy
         if (CheckPlayer())
         {
             LookAt(player.transform.position);
-            Debug.Log("Normal");
+            animator.SetTrigger("Stabbing");
+            yield return new WaitForSeconds(0.5f);
+            animator.SetTrigger("EndAction");
+            yield return new WaitUntil(() => animator.IsInTransition(0));
             GameManager.Instance.GetDamaged(AttackDamage);
             if(Random.value < 0.3f)
             {
                 yield return ShortRush();
             }
-            yield return new WaitForSeconds(0.5f);
         }
     }
     /// <summary>
@@ -194,7 +209,6 @@ public class Knight : Enemy
         if (CheckPlayer())
         {
             Debug.Log("RUSH");
-            yield return new WaitForSeconds(1.0f);
             RaycastHit2D left;
             RaycastHit2D right;
             LayerMask wall = LayerMask.GetMask("Wall");
@@ -202,11 +216,16 @@ public class Knight : Enemy
             right = Physics2D.Raycast(transform.position, new Vector2(1, 0), Mathf.Infinity, wall);
             Vector2 rushVec = left.distance > right.distance ? new Vector2(-left.distance,0) : new Vector2(right.distance,0);
             LookDir(rushVec);
+            animator.SetTrigger("DashReady");
+            yield return new WaitForSeconds(2.0f);
+            animator.SetTrigger("Dashing");
             rb.velocity = rushVec;
             isRushing = true;
             yield return new WaitForSeconds(0.9f);
             isRushing = false;
             rb.velocity = Vector2.zero;
+            animator.SetTrigger("EndAction");
+            yield return new WaitUntil(() => animator.IsInTransition(0));
         }
     }
     /// <summary>
@@ -220,19 +239,25 @@ public class Knight : Enemy
     {
         if (CheckPlayer())
         {
+            LookAt(player.transform.position);
+            animator.SetTrigger("Throwing");
+            yield return new WaitForSeconds(0.8f);
             Debug.Log("ThrowLance");
             Vector2 throwVec = new Vector2(player.transform.position.x - transform.position.x, 0).normalized;
-            LookAt(player.transform.position);
             lance.gameObject.SetActive(true);
-            rbLance.velocity = throwVec * (10.0f);
+            rbLance.velocity = throwVec * (50.0f);
             lance.transform.parent = null;
             HaveLance = false;
-            yield return new WaitForSeconds(2.0f);
+            animator.SetBool("HaveWeapon", false);
+            animator.SetTrigger("Walking");
+            yield return new WaitUntil(() => animator.IsInTransition(0));
             while (!HaveLance) // 창을 줍는 로직은 Lance에서 구현
             {
                 yield return null;
                 rb.velocity = throwVec * MovementSpeed;
             }
+            animator.SetTrigger("EndAction");
+            yield return new WaitUntil(() => animator.IsInTransition(0));
             rb.velocity = Vector2.zero;
             yield return Rush();
         }
@@ -246,14 +271,17 @@ public class Knight : Enemy
     {
         if (CheckPlayer())
         {
-            Debug.Log("ShortRush");
             LookAt(player.transform.position);
+            animator.SetTrigger("DashReady");
             yield return new WaitForSeconds(1.0f);
+            animator.SetTrigger("FastDash");
             isRushing = true;
             float rushDistance = 5.0f; // 기획에 따라 변경
             float rushTime = 0.5f; // 기획에 따라 변경
             rb.velocity = new Vector2(transform.right.x * rushDistance / rushTime, 0);
             yield return new WaitForSeconds(rushTime);
+            animator.SetTrigger("EndAction");
+            yield return new WaitUntil(() => animator.IsInTransition(0));
             isRushing = false;
             rb.velocity = Vector2.zero;
         }
@@ -267,5 +295,18 @@ public class Knight : Enemy
     private void LookDir(Vector2 dir)
     {
         transform.rotation = Quaternion.Euler(Vector3.up * (90f + -90f * dir.x / Mathf.Abs(dir.x)));
+    }
+
+    protected new IEnumerator MoveTowardPlayer(float speedMultiplier)     // 플레이어를 향해 움직인다
+    {
+        animator.SetTrigger("Walking");
+        LookAt(player.transform.position);
+        Vector2 direction = Vector2.right * (GetPlayerPos().x < GetObjectPos().x ? -1 : 1);
+        rb.velocity = direction * MovementSpeed;
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitUntil(() => (!isLongRange && DistToPlayer() < Range || isLongRange && DistToPlayer() < longRange));
+        animator.SetTrigger("EndAction");
+        yield return new WaitUntil(() => animator.IsInTransition(0));
+        rb.velocity = Vector2.zero;
     }
 }
