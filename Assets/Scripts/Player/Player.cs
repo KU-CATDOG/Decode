@@ -167,14 +167,6 @@ public class Player : MonoBehaviour
 
     private void PlayerLookAt(bool isRight)
     {
-        //if (IsGrounded())
-        //{
-        //    GetComponent<SpriteRenderer>().flipX = horizontal == 0 ? !isRight : horizontal < 0;
-        //}
-        //else
-        //{
-        //    GetComponent<SpriteRenderer>().flipX = !isRight;
-        //}
         if (!rolling)
         {
             GetComponent<SpriteRenderer>().flipX = horizontal == 0 ? !isRight : horizontal < 0;
@@ -185,8 +177,12 @@ public class Player : MonoBehaviour
 
     private void Attack(Define.MouseEvent evt)
     {
-        anim.SetTrigger("Attack");
-        StartCoroutine(weapon.AttackRoutine(evt));
+        if (isControllable)
+        {
+            anim.SetTrigger("Attack");
+            StartCoroutine(weapon.AttackRoutine(evt));
+        }
+
     }
 
 
