@@ -25,7 +25,7 @@ public class InputManager : Singleton<InputManager>
     // Start is called before the first frame update
     void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update called in GameManager

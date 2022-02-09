@@ -18,9 +18,8 @@ public class HpDoor : Enemy
         return nextRoutines;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Update()
     {
-        Debug.Log(Health);
         if (Health <= 0)
         {
             Destroy(gameObject);

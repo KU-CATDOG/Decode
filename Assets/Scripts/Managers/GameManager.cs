@@ -5,10 +5,12 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public Player player;
+    public string prevScene;
 
     void Start()
     {
         //FIXME
+        DontDestroyOnLoad(gameObject);
         player = FindObjectOfType<Player>();
     }
 

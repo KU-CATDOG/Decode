@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] private GameObject text;
+    [SerializeField] private GameObject defaultText;
+    private GameObject text;
     private GameObject door;
     private GameObject player;
+    private Canvas canvas;
+
 
     void Awake()
     {
+        canvas = FindObjectOfType<Canvas>();
         door = transform.parent.gameObject;
         player = GameObject.Find("Player");
+        text = Instantiate(defaultText, canvas.transform);
+        text.gameObject.SetActive(false);
     }
 
     private void OnTriggerStay2D(Collider2D other)
