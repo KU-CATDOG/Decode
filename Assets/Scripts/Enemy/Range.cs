@@ -27,9 +27,11 @@ public class Range : Enemy
             {
                 nextRoutines.Enqueue(NewActionRoutine(ShootRoutine(AttackDamage)));
             }
-            else
+            else    // 몬스터 움직임
             {
-                nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(3.0f)));
+                if(GetComponent<Rigidbody2D>().velocity.y >= 0) 
+                    nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(MovementSpeed)));
+                else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
             }
         }
         else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));

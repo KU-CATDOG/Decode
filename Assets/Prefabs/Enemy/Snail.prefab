@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5241088843380107757}
   - component: {fileID: 5241088843380107756}
   - component: {fileID: 5241088843380107758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snail
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -146,4 +146,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034d8dbff250cc64e88d01996f76c7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultBar: {fileID: 5190685695736655087, guid: ac89a15752d29a3478a94cad84320602, type: 3}

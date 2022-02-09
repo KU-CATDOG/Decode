@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4333044506947853653}
   - component: {fileID: 4333044506947853652}
   - component: {fileID: 4333044506947853674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Range
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -146,5 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58cd4f1c85013ac40a4f4677aa6ed968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultBar: {fileID: 5190685695736655087, guid: ac89a15752d29a3478a94cad84320602, type: 3}
   bullet: {fileID: 3829142887171085859, guid: b4177e03122b93b4db28ff6e90eaac74, type: 3}

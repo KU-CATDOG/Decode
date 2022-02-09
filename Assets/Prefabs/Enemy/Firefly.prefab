@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4461728634654220655}
   - component: {fileID: 4461728634654220654}
   - component: {fileID: 4461728634654220643}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Firefly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -146,4 +146,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526d73b4f22395544b701365eea2f17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultBar: {fileID: 5190685695736655087, guid: ac89a15752d29a3478a94cad84320602, type: 3}
