@@ -8,6 +8,7 @@ public class Snail : Enemy
     private bool trigger = false;
     private float timer = 0f;
     private float shield = 0f;
+    private bool stunned = false;
 
     protected override void Start()
     {
@@ -29,18 +30,28 @@ public class Snail : Enemy
         {
             MP += 10f;
             timer = 0f;
-            Debug.Log(MP);
+            //Debug.Log(MP);
         }
 
-        //TODO : 플레이어의 공격으로 MP가 0이 되면 보호막이 없어지고 2초동안 기절
-        
+        if (onHit && MP == 0)
+        {
+            onHit = false;
+            stunned = true;
+            if(shield >= 0)
+            {
+                Health -= shield;
+                shield = 0;
+            }
+            StartCoroutine(StunTimer());
+        }
+        if(stunned) Debug.Log(stunned);
     }
 
     protected override Queue<IEnumerator> DecideNextRoutine()
     {
         Queue<IEnumerator> nextRoutines = new Queue<IEnumerator>();
 
-        if (CheckPlayer())
+        if (!stunned && CheckPlayer())
         {
             if (MP >= MaxMP) // MP가 100상태에서 플레이어와 접촉했다
             {
@@ -68,7 +79,18 @@ public class Snail : Enemy
 
     private IEnumerator GenerateShield()
     {
-        Health += (float)(MaxHealth * 0.2); MP = 0;
+        if(shield <= 0)
+        {
+            shield = MaxHealth * 0.2f;
+            Health += shield;
+        }
+        else
+        {
+            Health -= shield;
+            shield = MaxHealth * 0.2f;
+            Health += shield;
+        }
+        MP = 0;
         yield return new WaitForSeconds(0.5f);
     }
 
@@ -80,5 +102,15 @@ public class Snail : Enemy
             yield return new WaitForSeconds(Interval);
         }
         else yield return null;
+    }
+
+    private IEnumerator StunTimer()
+    {
+        for(float i=0; i<=2; i += Time.deltaTime)
+        {
+            yield return null;
+        }
+        stunned = false;
+        yield return null;
     }
 }

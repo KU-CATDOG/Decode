@@ -20,6 +20,8 @@ public abstract class Enemy : Changable
     protected Player player;
     protected Rigidbody2D rb;
 
+    public bool onHit;
+
     protected virtual void Start()
     {
         InitializeBars();

@@ -29,7 +29,7 @@ public class Firefly : Enemy
             {
                 MP += 10f;
                 timer = 0f;
-                Debug.Log(MP);
+                //Debug.Log(MP);
             }
         }
     }
@@ -89,11 +89,12 @@ public class Firefly : Enemy
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(MP >= 100f && collision.GetComponent<Player>() != null) 
             trigger = true;
     }
+
 
     private void OnDrawGizmos()
     {

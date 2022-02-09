@@ -203,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1815368025994293013, guid: 42e80e2afc24fb449b515855e8daa518, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1815368025994293015, guid: 42e80e2afc24fb449b515855e8daa518, type: 3}
       propertyPath: m_RootOrder
@@ -408,8 +408,12 @@ PrefabInstance:
       value: Firefly
       objectReference: {fileID: 0}
     - target: {fileID: 4461728634654220648, guid: 7ebb1ec833b4eed49b66f33ee4bed39c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461728634654220648, guid: 7ebb1ec833b4eed49b66f33ee4bed39c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4461728634654220652, guid: 7ebb1ec833b4eed49b66f33ee4bed39c, type: 3}
       propertyPath: m_RootOrder
@@ -838,6 +842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  prevScene: 
 --- !u!4 &2001439370
 Transform:
   m_ObjectHideFlags: 0

@@ -21,6 +21,7 @@ public class DefaultWeapon : Weapon // 값의 더하기, 빼기를 구현하는 무기
             if (mouse == Define.MouseEvent.LClick)
             {
                 changable.ChangeVal(Define.ChangeType.Add, magnitudeOfChange[(int)changable.GetCurSelected()]);
+                collision.GetComponent<Enemy>().onHit = true;
             }
             else
             {
