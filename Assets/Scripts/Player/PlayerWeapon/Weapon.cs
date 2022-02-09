@@ -8,9 +8,6 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected int range;                                // 무기 사정거리
     protected HitBox hb;                                // 히트박스 오브젝트
-    [SerializeField]
-    protected float coolTime;                           // 공격 후 대기시간
-    protected float curCoolTime;
     protected Define.MouseEvent mouse;
     protected void Awake()
     {
@@ -19,14 +16,15 @@ public abstract class Weapon : MonoBehaviour
     protected virtual void Start()
     {
         int numOfValues = System.Enum.GetValues(typeof(Define.ChangableValue)).Length;
-        curCoolTime = 0;
+        //GameManager.Instance.player.curCoolTime = 0;
         magnitudeOfChange = new float[numOfValues];
     }
     protected void Update()
     {
-        if (curCoolTime > 0)
+        if (GameManager.Instance.player.curCoolTime > 0)
         {
-            curCoolTime = Mathf.Max(curCoolTime - Time.deltaTime, 0);
+            GameManager.Instance.player.curCoolTime 
+                = Mathf.Max(GameManager.Instance.player.curCoolTime - Time.deltaTime, 0);
         }
     }
     //충돌판정은 상속받은 class에서 각 무기에 맞게 구현함
@@ -47,12 +45,12 @@ public abstract class Weapon : MonoBehaviour
     {
         
         this.mouse = mouse;
-        if (curCoolTime > 0)
+        if (GameManager.Instance.player.curCoolTime > 0)
         {
             GameManager.Instance.player.dirLock = false;
             yield break;
         }
-        curCoolTime = coolTime;
+        GameManager.Instance.player.curCoolTime = GameManager.Instance.player.coolTime;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         hb.transform.position = (Vector2)transform.position + (mousePos - (Vector2)transform.position).normalized * range;
         hb.gameObject.SetActive(true);

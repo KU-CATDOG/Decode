@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
     private bool isCursorRight = false;
     public bool dirLock = false;
 
+    public float coolTime = 1f;                           // 공격 후 대기시간
+    public float curCoolTime = 0f;
+
     private Weapon weapon;
 
     private void OnEnable()
@@ -180,7 +183,7 @@ public class Player : MonoBehaviour
 
     private void Attack(Define.MouseEvent evt)
     {
-        if (isControllable)
+        if (isControllable && curCoolTime == 0)
         {
             dirLock = true;
             if (!isCursorRight) GetComponent<SpriteRenderer>().flipX = true;

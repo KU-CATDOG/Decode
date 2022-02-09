@@ -156,6 +156,9 @@ MonoBehaviour:
   health: 0
   rollSpeed: 7
   isInvincible: 0
+  dirLock: 0
+  coolTime: 1
+  curCoolTime: 0
 --- !u!95 &2735043694944424492
 Animator:
   serializedVersion: 4
