@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     public bool isInvincible = false;
     private bool isPlayerLookRight = true;
     private bool rolling = false;
+    private bool isCursorRight = false;
+    public bool dirLock = false;
 
     private Weapon weapon;
 
@@ -74,8 +76,8 @@ public class Player : MonoBehaviour
     {
         Vector3 cursorDir = InputManager.Instance.CursorPos - transform.position;
         float cursorAngle = Mathf.Atan2(cursorDir.y, cursorDir.x) * Mathf.Rad2Deg;
-        bool isCursorRight = cursorAngle < 90 && cursorAngle > -90;
-        PlayerLookAt(isCursorRight);
+        isCursorRight = cursorAngle < 90 && cursorAngle > -90;
+        if(!dirLock) PlayerLookAt(isCursorRight);
         //Debug.Log(isPlayerLookRight);
 
 
@@ -179,6 +181,9 @@ public class Player : MonoBehaviour
     {
         if (isControllable)
         {
+            dirLock = true;
+            if (!isCursorRight) GetComponent<SpriteRenderer>().flipX = true;
+            else GetComponent<SpriteRenderer>().flipX = false;
             anim.SetTrigger("Attack");
             StartCoroutine(weapon.AttackRoutine(evt));
         }

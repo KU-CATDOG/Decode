@@ -45,9 +45,11 @@ public abstract class Weapon : MonoBehaviour
     }*/
     public IEnumerator AttackRoutine(Define.MouseEvent mouse) // normalAttack: 좌클릭일 때 true로 전달
     {
+        
         this.mouse = mouse;
         if (curCoolTime > 0)
         {
+            GameManager.Instance.player.dirLock = false;
             yield break;
         }
         curCoolTime = coolTime;
@@ -56,6 +58,8 @@ public abstract class Weapon : MonoBehaviour
         hb.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         hb.gameObject.SetActive(false);
+        GameManager.Instance.player.dirLock = false;
+
     }
     
     

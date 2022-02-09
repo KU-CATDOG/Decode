@@ -29,7 +29,7 @@ public class Firefly : Enemy
             {
                 MP += 10f;
                 timer = 0f;
-                //Debug.Log(MP);
+                Debug.Log(MP);
             }
         }
     }
