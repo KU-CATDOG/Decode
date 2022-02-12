@@ -33,7 +33,7 @@ public class GameManager : Singleton<GameManager>
         if (player.health <= 0)
         {
             //Debug.Log("Player Dead");
-            //gameObject.SetActive(false);
+            //player.gameObject.SetActive(false);
         }
 
     }

@@ -91,7 +91,7 @@ public class Firefly : Enemy
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(MP >= 100f && collision.GetComponent<Player>() != null) 
+        if(MP >= MaxMP && collision.GetComponent<Player>() != null) 
             trigger = true;
     }
 

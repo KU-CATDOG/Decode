@@ -40,6 +40,16 @@ public abstract class Enemy : Changable
         {
             NextRoutine();
         }
+
+        if(Health <= 0f)
+        {
+            for (int i = 0; i < barofChangableValues.Length; i++)
+            {
+                Destroy(barofChangableValues[i].gameObject);
+            }
+            Destroy(gameObject);
+
+        }
     }
     private void NextRoutine()
     {

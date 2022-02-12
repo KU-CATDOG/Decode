@@ -9,12 +9,14 @@ public class Range : Enemy
     private float projectileSpeed = 3.0f;
     protected override void Start()
     {
-        base.Start();
         MaxHealth = Health = 5f;
         AttackDamage = 7f;
         MovementSpeed = 0.7f;
         Range = 15f;        // 공격 범위
         Interval = 3.0f;
+        ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
+        base.Start();
+
     }
 
     protected override Queue<IEnumerator> DecideNextRoutine()

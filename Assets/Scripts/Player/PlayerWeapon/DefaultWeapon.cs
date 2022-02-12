@@ -8,7 +8,7 @@ public class DefaultWeapon : Weapon // 값의 더하기, 빼기를 구현하는 무기
     {
         base.Start();
         magnitudeOfChange[(int)Define.ChangableValue.Hp] = -5;
-        magnitudeOfChange[(int)Define.ChangableValue.Mp] = -5;
+        magnitudeOfChange[(int)Define.ChangableValue.Mp] = -20;
         magnitudeOfChange[(int)Define.ChangableValue.Rotation] = 15;
         magnitudeOfChange[(int)Define.ChangableValue.Speed] = -5;
     }
