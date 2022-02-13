@@ -11,6 +11,7 @@ public class PCSpider : Enemy
         MovementSpeed = 1f;
         MaxMovementSpeed = 10f;
         Range = 1.5f;     // 공격 범위
+        Eyesight = 10f;
         Interval = 1.0f;
         ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
         base.Start();
@@ -22,7 +23,7 @@ public class PCSpider : Enemy
 
         if (CheckPlayer())
         {
-            if (DistToPlayer() < 10f) // 플레이어가 시야 안에 들어왔다
+            if (DistToPlayer() < Eyesight) // 플레이어가 시야 안에 들어왔다
             {
                 if(DistToPlayer() < Range)  nextRoutines.Enqueue(NewActionRoutine(AttackRoutine(AttackDamage)));
                 else

@@ -15,6 +15,7 @@ public abstract class Enemy : Changable
     public float MovementSpeed { get; protected set; }
     public float MaxMovementSpeed { get; protected set; }
     public float Range { get; protected set; }
+    public float Eyesight { get; protected set; }
     public float Interval { get; protected set; }
 
     protected Player player;

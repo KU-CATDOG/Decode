@@ -15,7 +15,7 @@ public class Firefly : Enemy
         AttackDamage = 5f;
         MP = 0f;
         MaxMP = 100f;
-        Range = 10f;    // 시야 범위
+        Eyesight = 10f;    // 시야 범위
         MovementSpeed = 1f;
         ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxMP"), typeof(Enemy).GetProperty("MP"));
         base.Start();
@@ -46,7 +46,7 @@ public class Firefly : Enemy
             }
             else
             {
-                if (DistToPlayer() < Range) // 플레이어가 시야 범위안에 들어왔다
+                if (DistToPlayer() < Eyesight) // 플레이어가 시야 범위안에 들어왔다
                 {
                     chargeMP = true;
                     nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(MovementSpeed)));
