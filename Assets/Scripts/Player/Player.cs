@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float jumpSpeed = 10f;
     public float health;
-    private float maxHealth = 10f;
+    public float maxHealth = 10f;
     [SerializeField]
     private float rollSpeed = 7f;
     public bool isInvincible = false;
