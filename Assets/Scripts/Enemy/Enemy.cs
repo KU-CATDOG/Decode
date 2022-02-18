@@ -25,7 +25,7 @@ public abstract class Enemy : Changable
 
     protected virtual void Start()
     {
-        InitializeBars();
+        InitializeBars(false);
         player = FindObjectOfType<Player>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -117,4 +117,6 @@ public abstract class Enemy : Changable
         if (FindObjectOfType<Player>() != null) return true;
         else return false;
     }
+    
+    
 }
