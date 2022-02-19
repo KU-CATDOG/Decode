@@ -151,10 +151,10 @@ MonoBehaviour:
   jumpable:
     serializedVersion: 2
     m_Bits: 64
-  speed: 5
-  jumpSpeed: 7
+  speed: 7
+  jumpSpeed: 13
   health: 0
-  rollSpeed: 7
+  rollSpeed: 10
   isInvincible: 0
   dirLock: 0
   coolTime: 1
