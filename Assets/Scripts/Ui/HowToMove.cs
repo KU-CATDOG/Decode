@@ -35,6 +35,6 @@ public class HowToMove : MonoBehaviour
             image.color = new Color(255, 255, 255, 1.0f - fadeCount);
             text.color = new Color(50, 50, 50, 1.0f - fadeCount);
         }
-        this.gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

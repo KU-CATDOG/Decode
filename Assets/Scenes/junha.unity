@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110ba78006fdbfa498c8f5a77986a1ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!1001 &441843368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110ba78006fdbfa498c8f5a77986a1ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!1001 &659653874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2014,7 +2014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110ba78006fdbfa498c8f5a77986a1ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!1001 &1477466672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3314,11 +3314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4115307456958824723, guid: fe7f2cc7e6be3634891e6c00077fdb71, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -282
+      value: -142.79
       objectReference: {fileID: 0}
     - target: {fileID: 4115307456958824723, guid: fe7f2cc7e6be3634891e6c00077fdb71, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -226
+      value: -128.1
       objectReference: {fileID: 0}
     - target: {fileID: 4115307456958824723, guid: fe7f2cc7e6be3634891e6c00077fdb71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
