@@ -67,10 +67,15 @@ public class Laser : Enemy
             }
             else
             {
-                chargeMP = false;
-                if (GetComponent<Rigidbody2D>().velocity.y >= 0)
-                    nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(MovementSpeed)));
+                if (DistToPlayer() < Eyesight)
+                {
+                    chargeMP = false;
+                    if (GetComponent<Rigidbody2D>().velocity.y >= 0)
+                        nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(MovementSpeed)));
+                    else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
+                }
                 else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
+
             }
         }
         else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));

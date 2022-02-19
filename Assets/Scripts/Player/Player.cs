@@ -147,7 +147,7 @@ public class Player : MonoBehaviour
 
     private void Roll()
     {
-        if (isControllable)
+        if (isControllable && IsGrounded())
         {
             StartCoroutine(RollRoutine(0.5f, horizontal != 0 ? (horizontal > 0) : isPlayerLookRight));
         }
