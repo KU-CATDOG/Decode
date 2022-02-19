@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float speed = 5.0f;
     [SerializeField]
-    private float jumpSpeed = 10f;
+    private float jumpSpeed = 15f;
     public float health;
     private float maxHealth = 10f;
     [SerializeField]

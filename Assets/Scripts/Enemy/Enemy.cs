@@ -95,6 +95,15 @@ public abstract class Enemy : Changable
         rb.MovePosition(rb.position + direction * speedMultiplier * Time.fixedDeltaTime);
         yield return null;
     }
+    protected IEnumerator MoveTowardPlayerHorizontal(float speedMultiplier)     // 플레이어를 향해 움직인다
+    {
+        Vector2 direction = (GetPlayerPos() - GetObjectPos()).normalized;
+        direction.y = 0;
+        rb.MovePosition(rb.position + direction * speedMultiplier * Time.fixedDeltaTime);
+        yield return null;
+        Debug.Log(1);
+
+    }
     protected IEnumerator WaitRoutine(float time)
     {
         yield return new WaitForSeconds(time);
