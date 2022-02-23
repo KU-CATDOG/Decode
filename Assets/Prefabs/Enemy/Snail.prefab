@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5241088843380107757}
   - component: {fileID: 5241088843380107756}
   - component: {fileID: 5241088843380107758}
+  - component: {fileID: 6372609431409688808}
   m_Layer: 8
   m_Name: Snail
   m_TagString: Enemy
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 1711605907
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.23309009, g: 0.509434, b: 0.25283432, a: 1}
+  m_Sprite: {fileID: 556977665, guid: f38f061440a1410408a0c92826adbb66, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,8 +104,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.012646705}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.53, y: 0.18}
+    oldSize: {x: 2.9262855, y: 2.92}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,3 +148,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHit: 0
+--- !u!95 &6372609431409688808
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241088843380107761}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf6718851acf9b142814c028e195de61, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -56,8 +56,8 @@ public class Laser : Enemy
             if (trigger)
             {
                 trigger = false;
-                MP = 0f;
                 nextRoutines.Enqueue(NewActionRoutine(LaserRoutine(Interval)));
+                MP = 0f;
             }
 
             if (DistToPlayer() < Range)
