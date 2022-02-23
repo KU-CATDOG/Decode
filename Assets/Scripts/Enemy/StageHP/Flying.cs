@@ -26,6 +26,13 @@ public class Flying : Enemy
         {
             if (DistToPlayer() < Eyesight) // 플레이어가 시야 범위안에 들어왔다
             {
+                if (!attacking)
+                {
+                    Vector3 dir = GetPlayerPos() - transform.position;
+                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                    bool isLookRight = angle < 90 && angle > -90;
+                    GetComponent<SpriteRenderer>().flipX = !isLookRight;
+                }
                 if (DistToPlayer() < Eyesight / 2)
                 {
                     nextRoutines.Enqueue(NewActionRoutine(AttackRoutine()));
