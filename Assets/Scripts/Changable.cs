@@ -78,7 +78,7 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
     /// <summary>
     /// 각 상속받은 스크립트에서 dictionary를 완성한 후 반드시 호출해줘야 하는 함수
     /// </summary>
-    protected void InitializeBars(bool isBoss)
+    protected void InitializeBars(bool isBoss = false)
     {
         canvas = FindObjectOfType<Canvas>();
         barofChangableValues = new Bar[changableValues.Count];
