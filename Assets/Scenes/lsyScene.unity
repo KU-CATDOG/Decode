@@ -1117,6 +1117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  prevScene: 
 --- !u!4 &2001439370
 Transform:
   m_ObjectHideFlags: 0
@@ -1152,6 +1153,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1395599317987114027, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1395599317987114036, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1162,7 +1167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1395599317987114036, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.06
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 1395599317987114036, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
       propertyPath: m_LocalPosition.z

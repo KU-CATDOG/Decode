@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knight : Enemy
+public class Knight : Boss
 {
     #region PhasePatternVar
     [SerializeField]
@@ -226,6 +226,8 @@ public class Knight : Enemy
             rb.velocity = Vector2.zero;
             animator.SetTrigger("EndAction");
             yield return new WaitUntil(() => animator.IsInTransition(0));
+            LookAt(player.transform.position);
+            yield return new WaitForSeconds(1.0f);
         }
     }
     /// <summary>
@@ -240,12 +242,14 @@ public class Knight : Enemy
         if (CheckPlayer())
         {
             LookAt(player.transform.position);
+            animator.SetTrigger("ReadyThrow");
+            yield return new WaitForSeconds(1f);
             animator.SetTrigger("Throwing");
-            yield return new WaitForSeconds(0.6f);
-            Debug.Log("ThrowLance");
+            yield return new WaitUntil(() => animator.IsInTransition(0));
+            yield return new WaitUntil(() => !animator.IsInTransition(0));
             Vector2 throwVec = new Vector2(player.transform.position.x - transform.position.x, 0).normalized;
             lance.gameObject.SetActive(true);
-            lance.transform.localPosition = Vector2.zero;
+            lance.transform.localPosition = Vector2.down;
             rbLance.velocity = throwVec * (50.0f);
             lance.transform.parent = null;
             HaveLance = false;
@@ -285,6 +289,8 @@ public class Knight : Enemy
             yield return new WaitUntil(() => animator.IsInTransition(0));
             isRushing = false;
             rb.velocity = Vector2.zero;
+            LookAt(player.transform.position);
+            yield return new WaitForSeconds(1.0f);
         }
     }
 
