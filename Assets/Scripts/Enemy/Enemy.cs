@@ -35,7 +35,7 @@ public abstract class Enemy : Changable
         Physics2D.IgnoreLayerCollision(7, 8);
 
     }
-    private void Update()
+    protected void Update()
     {
         if (CurrentRoutine == null)
         {

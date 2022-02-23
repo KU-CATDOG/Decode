@@ -5,6 +5,8 @@ using UnityEngine;
 public class Knight : Boss
 {
     #region PhasePatternVar
+    private bool onFirstPhase = true;
+    private bool onSecondPhase = false;
     [SerializeField]
     private float secondPhaseSpeedMultiplier;
     public float SecondPhaseSpeedMultiplier
@@ -111,7 +113,6 @@ public class Knight : Boss
         lance = GetComponentInChildren<KnightLance>();
         rbLance = lance.GetComponent<Rigidbody2D>();
         ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
-        ConnectValue(Define.ChangableValue.Speed, typeof(Enemy).GetProperty("MaxMovementSpeed"), typeof(Enemy).GetProperty("MovementSpeed"));
         base.Start();
         lance.gameObject.SetActive(false);
     }
@@ -179,6 +180,21 @@ public class Knight : Boss
         attackSpeed = attackSpeed / SecondPhaseASMultiplier * LastPhaseASMultiplier;
         dmgMultiplier = LastPhaseDamageMultiplier;
         yield return new WaitForSeconds(1.0f);
+    }
+    private new void Update()
+    {
+        base.Update();
+        if (Health <= MaxHealth * 2 / 3f && onFirstPhase)
+        {
+            StartCoroutine(SecondPhase());
+            onFirstPhase = false;
+            onSecondPhase = true;
+        }
+        if(Health<=MaxHealth/3f && onSecondPhase)
+        {
+            StartCoroutine(LastPhase());
+            onSecondPhase = false;
+        }
     }
     /// <summary>
     /// 1. 전방/후방 공격
