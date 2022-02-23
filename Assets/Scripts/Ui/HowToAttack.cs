@@ -5,7 +5,18 @@ using UnityEngine.UI;
 
 public class HowToAttack : MonoBehaviour
 {
-    [SerializeField] private Image image;
+    [SerializeField] private GameObject obj;
+    private GameObject howToAttack;
+    private Image image;
+    private Canvas canvas;
+
+    void Start()
+    {
+        canvas = FindObjectOfType<Canvas>();
+        howToAttack = Instantiate(obj, canvas.transform);
+        image = howToAttack.GetComponent<Image>();
+        howToAttack.GetComponent < HowToAttackPanel > ().enemyName = this.gameObject.name;
+    }
 
     void Update()
     {
@@ -20,9 +31,4 @@ public class HowToAttack : MonoBehaviour
             image.gameObject.SetActive(false);
     }
 
-    void FixedUpdate()
-    {
-        if (this.GetComponent<Melee>().Health <= 0)
-            image.gameObject.SetActive(false);
-    }
 }

@@ -2,29 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MpDoor : Enemy
+public class MpDoor : Structure
 {
-    protected override void Start()
+    private void Start()
     {
         MaxHealth = Health = 1000f;
         MaxMP = MP = 10f;
-        ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
-        ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxMP"), typeof(Enemy).GetProperty("MP"));
+        ConnectValue(Define.ChangableValue.Hp, typeof(Structure).GetProperty("MaxHealth"), typeof(Structure).GetProperty("Health"));
+        ConnectValue(Define.ChangableValue.Mp, typeof(Structure).GetProperty("MaxMP"), typeof(Structure).GetProperty("MP"));
         base.Start();
     }
 
-    protected override Queue<IEnumerator> DecideNextRoutine()
+    private void FixedUpdate()
     {
-        Queue<IEnumerator> nextRoutines = new Queue<IEnumerator>();
-
-        return nextRoutines;
-    }
-
-    private void Update()
-    {
-        if (MP <= 0)
+        if(MP <=0f)
         {
-            Destroy(gameObject);
+            Health = 0f;
         }
     }
 }

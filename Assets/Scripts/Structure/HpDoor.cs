@@ -2,27 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HpDoor : Enemy
+public class HpDoor : Structure
 {
-    protected override void Start()
+
+    private void Start()
     {
         MaxHealth = Health = 10f;
-        ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
+        ConnectValue(Define.ChangableValue.Hp, typeof(Structure).GetProperty("MaxHealth"), typeof(Structure).GetProperty("Health"));
         base.Start();
-    }
-
-    protected override Queue<IEnumerator> DecideNextRoutine()
-    {
-        Queue<IEnumerator> nextRoutines = new Queue<IEnumerator>();
-
-        return nextRoutines;
-    }
-
-    private void Update()
-    {
-        if (Health <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 }
