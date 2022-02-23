@@ -22,8 +22,9 @@ public class Laser : Enemy
         MaxMP = 10f;
         AttackDamage = 7f;
         MovementSpeed = 0.7f;
-        Range = 15f;        // 시야 범위
+        Range = 15f;        // 공격 범위
         Interval = 3.0f;
+        Eyesight = 20f;
 
         ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxMP"), typeof(Enemy).GetProperty("MP"));
         ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
@@ -60,23 +61,33 @@ public class Laser : Enemy
                 MP = 0f;
             }
 
-            if (DistToPlayer() < Range)
+            if (DistToPlayer() < Eyesight)
             {
-                if (!shooting) chargeMP = true;
-                nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
-            }
-            else
-            {
-                if (DistToPlayer() < Eyesight)
+ 
+                Vector3 dir = GetPlayerPos() - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                bool isLookRight = angle < 90 && angle > -90;
+                GetComponent<SpriteRenderer>().flipX = !isLookRight;
+                
+
+                if (DistToPlayer() < Range)
+                {
+                    if (!shooting) chargeMP = true;
+                    nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
+                }
+                else
                 {
                     chargeMP = false;
                     if (GetComponent<Rigidbody2D>().velocity.y >= 0)
                         nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(MovementSpeed)));
                     else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
                 }
-                else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
 
             }
+            else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
+
+
+
         }
         else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
 
@@ -92,6 +103,7 @@ public class Laser : Enemy
 
         Vector3 playerPos = GetPlayerPos();
         Vector3 shootPos = transform.position;
+        shootPos.y += 0.25f;
 
         lr.startColor = Color.red;
         lr.endColor = Color.red;
@@ -101,6 +113,11 @@ public class Laser : Enemy
 
         for(float t = 0; t < chargeTime; t += Time.deltaTime)
         {
+            Vector3 dir = GetPlayerPos() - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            bool isLookRight = angle < 90 && angle > -90;
+            GetComponent<SpriteRenderer>().flipX = !isLookRight;
+
             playerPos = GetPlayerPos();
             lr.SetPosition(0, shootPos);
             lr.SetPosition(1, playerPos);

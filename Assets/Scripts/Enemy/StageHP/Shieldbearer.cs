@@ -10,6 +10,8 @@ public class Shieldbearer : Enemy
     private float shield = 0f;
     private bool stunned = false;
 
+    bool turning = false;
+
     private Vector3 patrolPoint;
     float distToPatrol;
     Vector3 point1, point2;
@@ -18,8 +20,12 @@ public class Shieldbearer : Enemy
     [SerializeField]
     private GameObject collider;
 
+    Animator anim; 
+
     protected override void Start()
     {
+        anim = GetComponent<Animator>();
+
         MaxHealth = Health = 10f;
         AttackDamage = 5f;
         Range = 1.5f;       // 공격 범위
@@ -40,15 +46,22 @@ public class Shieldbearer : Enemy
 
         distToPatrol = Vector3.Distance(patrolPoint, GetObjectPos());
 
-        Debug.Log(DistToPlayer());
+        //Debug.Log(DistToPlayer());
 
         if (CheckPlayer())
         {
 
             if (DistToPlayer() < Eyesight) // 플레이어가 시야 안에 들어왔다
             {
+                Vector3 dir = GetPlayerPos() - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                bool isLookRight = angle < 90 && angle > -90;
+                GetComponent<SpriteRenderer>().flipX = isLookRight;
+
                 if (DistToPlayer() < Range)
                 {
+                    anim.SetBool("Moving", false);
+                    anim.SetTrigger("Attack");
                     nextRoutines.Enqueue(NewActionRoutine(AttackRoutine(AttackDamage)));
                 }
                 else
@@ -56,11 +69,19 @@ public class Shieldbearer : Enemy
                     if(distToPatrol < 5f)
                     {
                         if (GetComponent<Rigidbody2D>().velocity.y >= 0)
+                        {
+                            anim.SetBool("Moving", true);
                             nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayerHorizontal(MovementSpeed)));
-                        else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
+                        }
+                        else 
+                        { 
+                            anim.SetBool("Moving", false);
+                            nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
+                        }
                     }
                     else
                     {
+                        anim.SetBool("Moving", false);
                         nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(0.5f)));
                     }
 
@@ -68,6 +89,7 @@ public class Shieldbearer : Enemy
             }
             else
             {
+                anim.SetBool("Moving", true);
                 nextRoutines.Enqueue(NewActionRoutine(Patrol()));
 
             }

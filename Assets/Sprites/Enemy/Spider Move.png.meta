@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f96fc787ddeec454393ca9b4fad21484
+guid: 6c776fa9138cac3459698376a940d242
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,316 +104,421 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: M1a_Attack_0
+      name: Spider Move_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.53, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8786db89dfe02774a8aa0b49e6a28caf
+      internalID: -917180351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider Move_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.53, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78790aa2dd072704f87efec4868797af
+      internalID: -975144795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider Move_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.53, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d178dfe4c992142448c28f48edec6641
+      internalID: 322187711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider Move_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.53, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a259120b2cdbc7b4f9344c0cea0b6545
+      internalID: -749792035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider Move_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.53, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2e157e07537db45b9a56b1a392b3b4
+      internalID: -218692128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider Move_5
       rect:
         serializedVersion: 2
         x: 0
         y: 2048
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7732c931255df9a44870e3e5034fe47c
-      internalID: -535263555
+      spriteID: 6b2f4b767a3e0054d9e8dd1614bff324
+      internalID: 361015225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_1
+      name: Spider Move_6
       rect:
         serializedVersion: 2
         x: 1024
         y: 2048
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e9fa7905472fd640be893f5da2de421
-      internalID: 758010122
+      spriteID: 429c1c4119246b44dadd4ff2d50e506d
+      internalID: 2003506913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_2
+      name: Spider Move_7
       rect:
         serializedVersion: 2
         x: 2048
         y: 2048
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87b52cd7f71b4a643ae368ba049290eb
-      internalID: 1871676280
+      spriteID: 48a4df4b63081bb4f851ad86f8466d8e
+      internalID: 1040442910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_3
+      name: Spider Move_8
       rect:
         serializedVersion: 2
         x: 3072
         y: 2048
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6338340dbb1240458b0a3a0c1ca3d89
-      internalID: -1150951297
+      spriteID: 4d366462bbfca6d47a2a83d9d3020c30
+      internalID: 1582862457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_4
+      name: Spider Move_9
       rect:
         serializedVersion: 2
         x: 4096
         y: 2048
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e5e57d7a8cfcd24ab971a76e1a9feb8
-      internalID: -519453425
+      spriteID: ea654bbf17a706e428a8d213dbe4d2a1
+      internalID: -187284968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_5
+      name: Spider Move_10
       rect:
         serializedVersion: 2
         x: 0
         y: 1024
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da02a55ccb6896d489c84637dc31ea5d
-      internalID: -1055658984
+      spriteID: 9bdb4903cfffc2d4789272e4c4a2acac
+      internalID: -701691114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_6
+      name: Spider Move_11
       rect:
         serializedVersion: 2
         x: 1024
         y: 1024
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e8978097ef27f14d8f622ef4e7ea35a
-      internalID: 203678631
+      spriteID: ec51181fdf4f55f418f7d015dd71f130
+      internalID: 585485931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_7
+      name: Spider Move_12
       rect:
         serializedVersion: 2
         x: 2048
         y: 1024
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3eca37f18d732648b397fe73deffa11
-      internalID: -107959440
+      spriteID: abdf6f22cd0a644478a43a2b1a649122
+      internalID: -311348420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_8
+      name: Spider Move_13
       rect:
         serializedVersion: 2
         x: 3072
         y: 1024
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a57c535458a0845a68fbbb1b98fdab
-      internalID: 1557158879
+      spriteID: a170adb4fe2914943a4780be881bb96e
+      internalID: -1172459526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_9
+      name: Spider Move_14
       rect:
         serializedVersion: 2
         x: 4096
         y: 1024
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c59300ac6f7111a4db4784113813aa7c
-      internalID: -288160160
+      spriteID: 9cce39308cdeb9448ae17a1e3043e339
+      internalID: -1551482818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_10
+      name: Spider Move_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d062604a634d4fb4891aed15e03e6ab4
-      internalID: 1038735745
+      spriteID: 0e3ae9621449c86479d3bcf68cc273b1
+      internalID: -1105407814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_11
+      name: Spider Move_16
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77b68fb90c7ea56489f63b5c0ce93eb5
-      internalID: -693407061
+      spriteID: 1ac3ddfb23457de48b9f700974d476cd
+      internalID: 1399777768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_12
+      name: Spider Move_17
       rect:
         serializedVersion: 2
         x: 2048
         y: 0
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 361bccefc6c5bc14a966bd80a50b4cab
-      internalID: -148073557
+      spriteID: 39f99bbb43c48dd4894db982ac731951
+      internalID: 619632825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_13
+      name: Spider Move_18
       rect:
         serializedVersion: 2
         x: 3072
         y: 0
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a3b5532661174845a961e6add24d08d
-      internalID: 799014069
+      spriteID: 67cf3fa86aed3c24a81b8e8bc829da86
+      internalID: -25023802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_14
+      name: Spider Move_19
       rect:
         serializedVersion: 2
         x: 4096
         y: 0
         width: 1024
-        height: 1022
+        height: 1024
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85aa29914207fdd46892f4dae10e8624
-      internalID: 747165244
+      spriteID: 479fe538a1694db47b8ade75ada4370c
+      internalID: -1330666937
       vertices: []
       indices: 
       edges: []
@@ -429,21 +534,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      M1a_Attack_12: -148073557
-      M1a_Attack_9: -288160160
-      M1a_Attack_1: 758010122
-      M1a_Attack_8: 1557158879
-      M1a_Attack_4: -519453425
-      M1a_Attack_14: 747165244
-      M1a_Attack_10: 1038735745
-      M1a_Attack_6: 203678631
-      M1a_Attack_5: -1055658984
-      M1a_Attack_13: 799014069
-      M1a_Attack_11: -693407061
-      M1a_Attack_0: -535263555
-      M1a_Attack_2: 1871676280
-      M1a_Attack_3: -1150951297
-      M1a_Attack_7: -107959440
+      Spider Move_8: 1582862457
+      Spider Move_19: -1330666937
+      Spider Move_7: 1040442910
+      Spider Move_15: -1105407814
+      Spider Move_6: 2003506913
+      Spider Move_10: -701691114
+      Spider Move_16: 1399777768
+      Spider Move_5: 361015225
+      Spider Move_2: 322187711
+      Spider Move_12: -311348420
+      Spider Move_1: -975144795
+      Spider Move_17: 619632825
+      Spider Move_9: -187284968
+      Spider Move_13: -1172459526
+      Spider Move_18: -25023802
+      Spider Move_0: -917180351
+      Spider Move_3: -749792035
+      Spider Move_4: -218692128
+      Spider Move_11: 585485931
+      Spider Move_14: -1551482818
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

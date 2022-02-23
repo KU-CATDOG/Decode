@@ -9,8 +9,12 @@ public class Firefly : Enemy
     private float timer = 0f;
     private float blastRadius = 3f; // 폭발 반경
 
+    Animator anim;
+
     protected override void Start()
     {
+        anim = GetComponent<Animator>();
+
         MaxHealth = Health = 1f;
         AttackDamage = 5f;
         MP = 0f;
@@ -46,6 +50,11 @@ public class Firefly : Enemy
             }
             else
             {
+                Vector3 dir = GetPlayerPos() - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                bool isLookRight = angle < 90 && angle > -90;
+                GetComponent<SpriteRenderer>().flipX = !isLookRight;
+
                 if (DistToPlayer() < Eyesight) // 플레이어가 시야 범위안에 들어왔다
                 {
                     chargeMP = true;
@@ -71,7 +80,10 @@ public class Firefly : Enemy
         yield return new WaitForSeconds(2f);
         CheckForBlast();
         Debug.Log("Firefly: blast");
+
+        anim.SetBool("Down", true);
         yield return new WaitForSeconds(5f);
+        anim.SetBool("Down", false);
         trigger = false;
         MP = 0f;
         // particles

@@ -101,7 +101,7 @@ public abstract class Enemy : Changable
         direction.y = 0;
         rb.MovePosition(rb.position + direction * speedMultiplier * Time.fixedDeltaTime);
         yield return null;
-        Debug.Log(1);
+        //Debug.Log(1);
 
     }
     protected IEnumerator WaitRoutine(float time)

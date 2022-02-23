@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f96fc787ddeec454393ca9b4fad21484
+guid: c6544b73186452f4499c80399f413c9c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,112 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: M1a_Attack_0
+      name: laser_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8a3db7cc20a694cad98e3958558d26
+      internalID: 993193842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81237fddc170df3439812198a94f2893
+      internalID: 126655873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a70771c1863652478f10eb3db5eb054
+      internalID: 634004901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e311f708a1dc6f1479ecb737a6cc1f54
+      internalID: 1849465653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c2c935839b2a64b91bba7349e86a76
+      internalID: 1364239209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_5
       rect:
         serializedVersion: 2
         x: 0
@@ -112,20 +217,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7732c931255df9a44870e3e5034fe47c
-      internalID: -535263555
+      spriteID: a6969dcf37eeb3e488c927bb58d07381
+      internalID: -1392524588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_1
+      name: laser_6
       rect:
         serializedVersion: 2
         x: 1024
@@ -133,20 +238,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e9fa7905472fd640be893f5da2de421
-      internalID: 758010122
+      spriteID: 2d31f52185ea7864f89391fd4c8d4ac5
+      internalID: 1300721989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_2
+      name: laser_7
       rect:
         serializedVersion: 2
         x: 2048
@@ -154,20 +259,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87b52cd7f71b4a643ae368ba049290eb
-      internalID: 1871676280
+      spriteID: cb4cd3bf0136e874f967ca8ffd2b86b9
+      internalID: -472265848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_3
+      name: laser_8
       rect:
         serializedVersion: 2
         x: 3072
@@ -175,20 +280,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6338340dbb1240458b0a3a0c1ca3d89
-      internalID: -1150951297
+      spriteID: 6fb6696f35114374aa28db2f1c146d33
+      internalID: -1281702842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_4
+      name: laser_9
       rect:
         serializedVersion: 2
         x: 4096
@@ -196,20 +301,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e5e57d7a8cfcd24ab971a76e1a9feb8
-      internalID: -519453425
+      spriteID: e99cea60eee31284d926bbc8eb17919f
+      internalID: -158889617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_5
+      name: laser_10
       rect:
         serializedVersion: 2
         x: 0
@@ -217,20 +322,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da02a55ccb6896d489c84637dc31ea5d
-      internalID: -1055658984
+      spriteID: fd22090749821f6499b8c72bc5f7224d
+      internalID: 374507718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_6
+      name: laser_11
       rect:
         serializedVersion: 2
         x: 1024
@@ -238,20 +343,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e8978097ef27f14d8f622ef4e7ea35a
-      internalID: 203678631
+      spriteID: dfe3032bf772fed498652fbe6ee1221c
+      internalID: 1120459357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_7
+      name: laser_12
       rect:
         serializedVersion: 2
         x: 2048
@@ -259,20 +364,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3eca37f18d732648b397fe73deffa11
-      internalID: -107959440
+      spriteID: d1e220ae5eef7984a9f658884f892a0d
+      internalID: 1971793290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_8
+      name: laser_13
       rect:
         serializedVersion: 2
         x: 3072
@@ -280,20 +385,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a57c535458a0845a68fbbb1b98fdab
-      internalID: 1557158879
+      spriteID: e9fcdd6b4f32c564792f663d3284990e
+      internalID: 64660122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_9
+      name: laser_14
       rect:
         serializedVersion: 2
         x: 4096
@@ -301,20 +406,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c59300ac6f7111a4db4784113813aa7c
-      internalID: -288160160
+      spriteID: c8604365847fd9649b487b9424f71f5d
+      internalID: -662546149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_10
+      name: laser_15
       rect:
         serializedVersion: 2
         x: 0
@@ -322,20 +427,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d062604a634d4fb4891aed15e03e6ab4
-      internalID: 1038735745
+      spriteID: 6a12cbe7841214a4c9e9f741e9ac676a
+      internalID: -1425441452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_11
+      name: laser_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -343,20 +448,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77b68fb90c7ea56489f63b5c0ce93eb5
-      internalID: -693407061
+      spriteID: 25f29cbb928ead648a609dfa2719624f
+      internalID: 963741233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_12
+      name: laser_17
       rect:
         serializedVersion: 2
         x: 2048
@@ -364,20 +469,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 361bccefc6c5bc14a966bd80a50b4cab
-      internalID: -148073557
+      spriteID: 9d079d7ef9d886649a9dced292815766
+      internalID: 370865430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_13
+      name: laser_18
       rect:
         serializedVersion: 2
         x: 3072
@@ -385,20 +490,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a3b5532661174845a961e6add24d08d
-      internalID: 799014069
+      spriteID: 2308d3c034a2b44488b9081d12a0b472
+      internalID: 546552248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_14
+      name: laser_19
       rect:
         serializedVersion: 2
         x: 4096
@@ -406,14 +511,14 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85aa29914207fdd46892f4dae10e8624
-      internalID: 747165244
+      spriteID: ee2f9d1b8b6b53f47b7b93a543091b38
+      internalID: 1213018969
       vertices: []
       indices: 
       edges: []
@@ -429,21 +534,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      M1a_Attack_12: -148073557
-      M1a_Attack_9: -288160160
-      M1a_Attack_1: 758010122
-      M1a_Attack_8: 1557158879
-      M1a_Attack_4: -519453425
-      M1a_Attack_14: 747165244
-      M1a_Attack_10: 1038735745
-      M1a_Attack_6: 203678631
-      M1a_Attack_5: -1055658984
-      M1a_Attack_13: 799014069
-      M1a_Attack_11: -693407061
-      M1a_Attack_0: -535263555
-      M1a_Attack_2: 1871676280
-      M1a_Attack_3: -1150951297
-      M1a_Attack_7: -107959440
+      laser_9: -158889617
+      laser_7: -472265848
+      laser_10: 374507718
+      laser_15: -1425441452
+      laser_3: 1849465653
+      laser_14: -662546149
+      laser_12: 1971793290
+      laser_4: 1364239209
+      laser_0: 993193842
+      laser_2: 634004901
+      laser_11: 1120459357
+      laser_17: 370865430
+      laser_19: 1213018969
+      laser_8: -1281702842
+      laser_6: 1300721989
+      laser_16: 963741233
+      laser_18: 546552248
+      laser_5: -1392524588
+      laser_1: 126655873
+      laser_13: 64660122
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

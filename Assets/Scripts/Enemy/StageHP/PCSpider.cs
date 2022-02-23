@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PCSpider : Enemy
 {
+    Animator anim;
     protected override void Start()
     {
+        anim = GetComponent<Animator>();
+
         MaxHealth = Health = 10f;
         AttackDamage = 5f;
         MovementSpeed = 1f;
@@ -25,16 +28,29 @@ public class PCSpider : Enemy
         {
             if (DistToPlayer() < Eyesight) // 플레이어가 시야 안에 들어왔다
             {
-                if(DistToPlayer() < Range)  nextRoutines.Enqueue(NewActionRoutine(AttackRoutine(AttackDamage)));
+                Vector3 dir = GetPlayerPos() - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                bool isLookRight = angle < 90 && angle > -90;
+                GetComponent<SpriteRenderer>().flipX = isLookRight;
+
+                if (DistToPlayer() < Range) 
+                {
+                    anim.SetBool("Moving", false);
+                    anim.SetTrigger("Attack");
+                    nextRoutines.Enqueue(NewActionRoutine(AttackRoutine(AttackDamage)));
+                } 
                 else
                 {
+                    anim.SetBool("Moving", true);
+
                     if (GetComponent<Rigidbody2D>().velocity.y >= 0)
-                        nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayer(MovementSpeed)));
+                        nextRoutines.Enqueue(NewActionRoutine(MoveTowardPlayerHorizontal(MovementSpeed)));
                     else nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
                 }
             }
             else
             {
+                anim.SetBool("Moving", false);
                 nextRoutines.Enqueue(NewActionRoutine(WaitRoutine(1f)));
             }
         }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f96fc787ddeec454393ca9b4fad21484
+guid: 7cb1f7c20a28e2e439cc0c9148d55e57
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,217 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: M1a_Attack_0
+      name: Firefly Down_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c1ea1d31513ab4e88b3e79f8247a90
+      internalID: 1289569296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4096
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e311a9923bbdf4ead9241dbb987139
+      internalID: -2127508188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4096
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cb91fbb7ce95843bf93ee96d40f642
+      internalID: -28567021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4096
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0312d4f6368fb2409b46661809c5ff1
+      internalID: 975928367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4096
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f6a6dc2344ea143b7370c797659c92
+      internalID: -75658174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f6e51a02d55974f82a0acf644a1ca5
+      internalID: -1214564543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739775c67ba090441bfc0e502907b938
+      internalID: 772740683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5105c58e2c51864b9bca562c10ad6c3
+      internalID: -366095290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c8093a67fe85242bc134427d3f73cf
+      internalID: 1474108684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3072
+        width: 1024
+        height: 1022
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa823eb0f89dff4a96ae7da714782fb
+      internalID: 312507233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly Down_10
       rect:
         serializedVersion: 2
         x: 0
@@ -112,20 +322,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7732c931255df9a44870e3e5034fe47c
-      internalID: -535263555
+      spriteID: c27e674360a89d14b8b132e166e1895d
+      internalID: 1914980035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_1
+      name: Firefly Down_11
       rect:
         serializedVersion: 2
         x: 1024
@@ -133,20 +343,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e9fa7905472fd640be893f5da2de421
-      internalID: 758010122
+      spriteID: c202cd05c3fed484eb1952152f910b33
+      internalID: 324678996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_2
+      name: Firefly Down_12
       rect:
         serializedVersion: 2
         x: 2048
@@ -154,20 +364,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87b52cd7f71b4a643ae368ba049290eb
-      internalID: 1871676280
+      spriteID: 04f81e9272d032d4f9de1085e9d12766
+      internalID: 286057290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_3
+      name: Firefly Down_13
       rect:
         serializedVersion: 2
         x: 3072
@@ -175,20 +385,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6338340dbb1240458b0a3a0c1ca3d89
-      internalID: -1150951297
+      spriteID: c51618e8d8e65024fbe958b4bf46851b
+      internalID: 1975160977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_4
+      name: Firefly Down_14
       rect:
         serializedVersion: 2
         x: 4096
@@ -196,20 +406,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e5e57d7a8cfcd24ab971a76e1a9feb8
-      internalID: -519453425
+      spriteID: 4bb7535640e184541811e2f5f227a431
+      internalID: -1933203198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_5
+      name: Firefly Down_15
       rect:
         serializedVersion: 2
         x: 0
@@ -217,20 +427,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da02a55ccb6896d489c84637dc31ea5d
-      internalID: -1055658984
+      spriteID: bd93025ab61dae2429aa7a57bec5afa0
+      internalID: 1225441941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_6
+      name: Firefly Down_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -238,20 +448,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e8978097ef27f14d8f622ef4e7ea35a
-      internalID: 203678631
+      spriteID: 0d4b59090a23e8a428ffd2d428b385b0
+      internalID: -140996664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_7
+      name: Firefly Down_17
       rect:
         serializedVersion: 2
         x: 2048
@@ -259,20 +469,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3eca37f18d732648b397fe73deffa11
-      internalID: -107959440
+      spriteID: 68e9e282e7fa74c47b0937738f1ae07f
+      internalID: 534100451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_8
+      name: Firefly Down_18
       rect:
         serializedVersion: 2
         x: 3072
@@ -280,20 +490,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a57c535458a0845a68fbbb1b98fdab
-      internalID: 1557158879
+      spriteID: 4c7847c275af1754d9832fe4558bb41a
+      internalID: 195999687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_9
+      name: Firefly Down_19
       rect:
         serializedVersion: 2
         x: 4096
@@ -301,20 +511,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c59300ac6f7111a4db4784113813aa7c
-      internalID: -288160160
+      spriteID: 8047467c7a617284bb600aa64a360cfe
+      internalID: -909438468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_10
+      name: Firefly Down_20
       rect:
         serializedVersion: 2
         x: 0
@@ -322,20 +532,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d062604a634d4fb4891aed15e03e6ab4
-      internalID: 1038735745
+      spriteID: 1596ad30ed3de6c49a0b00e555dc35aa
+      internalID: 364421539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_11
+      name: Firefly Down_21
       rect:
         serializedVersion: 2
         x: 1024
@@ -343,20 +553,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77b68fb90c7ea56489f63b5c0ce93eb5
-      internalID: -693407061
+      spriteID: 4e0d0dbaa6e52e4419d6a0541a822def
+      internalID: -9310934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_12
+      name: Firefly Down_22
       rect:
         serializedVersion: 2
         x: 2048
@@ -364,41 +574,20 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 361bccefc6c5bc14a966bd80a50b4cab
-      internalID: -148073557
+      spriteID: c3dd61fcbd834604f901e3f932f7fbdf
+      internalID: -1580634553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1a_Attack_13
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 1024
-        height: 1022
-      alignment: 9
-      pivot: {x: 0.53, y: 0.18}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a3b5532661174845a961e6add24d08d
-      internalID: 799014069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: M1a_Attack_14
+      name: Firefly Down_23
       rect:
         serializedVersion: 2
         x: 4096
@@ -406,14 +595,14 @@ TextureImporter:
         width: 1024
         height: 1022
       alignment: 9
-      pivot: {x: 0.53, y: 0.18}
+      pivot: {x: 0.53, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85aa29914207fdd46892f4dae10e8624
-      internalID: 747165244
+      spriteID: 176dee9a01ea0a245b85163df5ce7215
+      internalID: -660510701
       vertices: []
       indices: 
       edges: []
@@ -429,21 +618,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      M1a_Attack_12: -148073557
-      M1a_Attack_9: -288160160
-      M1a_Attack_1: 758010122
-      M1a_Attack_8: 1557158879
-      M1a_Attack_4: -519453425
-      M1a_Attack_14: 747165244
-      M1a_Attack_10: 1038735745
-      M1a_Attack_6: 203678631
-      M1a_Attack_5: -1055658984
-      M1a_Attack_13: 799014069
-      M1a_Attack_11: -693407061
-      M1a_Attack_0: -535263555
-      M1a_Attack_2: 1871676280
-      M1a_Attack_3: -1150951297
-      M1a_Attack_7: -107959440
+      Firefly Down_15: 1225441941
+      Firefly Down_19: -909438468
+      Firefly Down_20: 364421539
+      Firefly Down_22: -1580634553
+      Firefly Down_11: 324678996
+      Firefly Down_0: 1289569296
+      Firefly Down_3: 975928367
+      Firefly Down_14: -1933203198
+      Firefly Down_7: -366095290
+      Firefly Down_10: 1914980035
+      Firefly Down_16: -140996664
+      Firefly Down_9: 312507233
+      Firefly Down_23: -660510701
+      Firefly Down_1: -2127508188
+      Firefly Down_21: -9310934
+      Firefly Down_5: -1214564543
+      Firefly Down_13: 1975160977
+      Firefly Down_4: -75658174
+      Firefly Down_2: -28567021
+      Firefly Down_17: 534100451
+      Firefly Down_6: 772740683
+      Firefly Down_18: 195999687
+      Firefly Down_8: 1474108684
+      Firefly Down_12: 286057290
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
