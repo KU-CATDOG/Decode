@@ -5,6 +5,7 @@ using UnityEngine;
 public class KnightLance : MonoBehaviour
 {
     Rigidbody2D rb;
+    Knight knight;
     bool drop = false;
     private void Start()
     {
@@ -21,9 +22,17 @@ public class KnightLance : MonoBehaviour
         {
             GameManager.Instance.GetDamaged(20);
         }
-        Knight knight;
-        if(drop && (knight = collision.GetComponent<Knight>()))
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (drop && collision.tag == "Knight")
         {
+            if (!knight)
+            {
+                knight = collision.GetComponent<Knight>();
+            }
+            if (knight.InMotion)
+                return;
             knight.animator.SetBool("HaveWeapon", true);
             knight.animator.SetTrigger("EndAction");
             transform.parent = collision.transform;

@@ -96,16 +96,24 @@ public class Knight : Boss
     private bool isRushing = false;
     private bool isLongRange = true;
     private float longRange;
+    private EnemyHitBox hb;
+    public bool InMotion { get; private set; } = false;
     public Animator animator { get; private set; }
     public bool HaveLance { get; set; }
+    private new void Awake()
+    {
+        base.Awake();
+        hb = GetComponentInChildren<EnemyHitBox>();
+        animator = GetComponent<Animator>();
+        ShortRangeAttackRoutines = new System.Func<IEnumerator>[2] { NormalAttack, ShortRush };
+        LongRangeAttackRoutines = new System.Func<IEnumerator>[2] { ThrowLance, Rush };
+    }
     protected override void Start()
     {
-        animator = GetComponent<Animator>();
-        ShortRangeAttackRoutines = new System.Func<IEnumerator>[2] { ShortRush, NormalAttack };
-        LongRangeAttackRoutines = new System.Func<IEnumerator>[2] { Rush, ThrowLance };
         attackSpeed = 0.5f;
         MaxHealth = Health = 50f * 3;
         AttackDamage = 10f;
+        hb.Dmg = (int)AttackDamage;
         MovementSpeed = 5f;
         MaxMovementSpeed = 10f;
         Range = 3.0f;
@@ -206,10 +214,12 @@ public class Knight : Boss
         {
             LookAt(player.transform.position);
             animator.SetTrigger("Stabbing");
+            hb.transform.position = transform.position + (Vector3)new Vector2((player.transform.position.x - transform.position.x < 0 ? -1 : 1) * 1.5f,-1);
+            hb.gameObject.SetActive(true);
             yield return new WaitForSeconds(0.5f);
+            hb.gameObject.SetActive(false);
             animator.SetTrigger("EndAction");
             yield return new WaitUntil(() => animator.IsInTransition(0));
-            GameManager.Instance.GetDamaged(AttackDamage);
             if(Random.value < 0.3f)
             {
                 yield return ShortRush();
@@ -259,10 +269,21 @@ public class Knight : Boss
         {
             LookAt(player.transform.position);
             animator.SetTrigger("ReadyThrow");
-            yield return new WaitForSeconds(1f);
+            float time = 0f;
+            yield return new WaitUntil(() => 
+            {
+                LookAt(player.transform.position);
+                time += Time.deltaTime;
+                if (time >= 1f)
+                {
+                    return true; 
+                }
+                else return false; 
+            });
+            InMotion = true;
             animator.SetTrigger("Throwing");
-            yield return new WaitUntil(() => animator.IsInTransition(0));
-            yield return new WaitUntil(() => !animator.IsInTransition(0));
+            yield return new WaitUntil(() => { LookAt(player.transform.position); return animator.IsInTransition(0); });
+            yield return new WaitUntil(() => { LookAt(player.transform.position); return !animator.IsInTransition(0); });
             Vector2 throwVec = new Vector2(player.transform.position.x - transform.position.x, 0).normalized;
             lance.gameObject.SetActive(true);
             lance.transform.localPosition = Vector2.down;
@@ -272,6 +293,7 @@ public class Knight : Boss
             animator.SetBool("HaveWeapon", false);
             animator.SetTrigger("Walking");
             yield return new WaitUntil(() => animator.IsInTransition(0));
+            InMotion = false;
             while (!HaveLance) // 창을 줍는 로직은 Lance에서 구현
             {
                 yield return null;

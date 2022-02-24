@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Floor
   - Wall
+  - Knight
   layers:
   - Default
   - TransparentFX
