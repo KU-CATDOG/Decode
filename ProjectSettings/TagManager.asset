@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Wall
   - Knight
+  - Gear
   layers:
   - Default
   - TransparentFX

@@ -25,6 +25,22 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/UI/Bar.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 701cdcf9cdae41d40938d8ac4b1a7ab3
+    m_Address: Assets/Prefabs/Enemy/Boss/Gear/FallingGear.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: daef07bfa9ace7641b06874740925108
+    m_Address: Assets/Prefabs/Enemy/Boss/Gear
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 902203fa6c5b943428ac19c6294a0375
+    m_Address: Assets/Prefabs/Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f6d21fdd4b73b2646944a27159ad162a
+    m_Address: Assets/Prefabs/Enemy/Boss
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 8dc5ac8f545d55b43b27a4e385d911ac, type: 2}
   m_SchemaSet:

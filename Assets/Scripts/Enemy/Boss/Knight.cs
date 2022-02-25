@@ -95,6 +95,7 @@ public class Knight : Boss
     private Rigidbody2D rbLance;
     private bool isRushing = false;
     private bool isLongRange = true;
+    private bool rushHit = false;
     private float longRange;
     private EnemyHitBox hb;
     public bool InMotion { get; private set; } = false;
@@ -152,13 +153,17 @@ public class Knight : Boss
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isRushing && collision.tag == "Player")
-        {
-            GameManager.Instance.GetDamaged(10f);
-        }
         if(collision.tag == "Floor")
         {
             rb.gravityScale = 0;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (isRushing && !rushHit && collision.tag == "Player")
+        {
+            rushHit = true;
+            GameManager.Instance.GetDamaged(10f);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -247,6 +252,7 @@ public class Knight : Boss
             animator.SetTrigger("Dashing");
             rb.velocity = rushVec;
             isRushing = true;
+            rushHit = false;
             yield return new WaitForSeconds(0.9f);
             isRushing = false;
             rb.velocity = Vector2.zero;
@@ -319,6 +325,7 @@ public class Knight : Boss
             yield return new WaitForSeconds(1.0f);
             animator.SetTrigger("FastDash");
             isRushing = true;
+            rushHit = false;
             float rushDistance = 5.0f; // 기획에 따라 변경
             float rushTime = 0.5f; // 기획에 따라 변경
             rb.velocity = new Vector2(transform.right.x * rushDistance / rushTime, 0);
