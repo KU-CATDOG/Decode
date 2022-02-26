@@ -27,8 +27,11 @@ public class Gear : Boss
     [SerializeField]
     private GameObject RazerObject;
     [SerializeField]
-    private GameObject[] Pressor;
-    private Rigidbody2D[] rbPressor;
+    private GameObject[] Presser;
+    private Rigidbody2D[] rbPresserMid;
+    private GameObject[] PresserMid;
+    private Rigidbody2D[] rbPresserBottom;
+    private GameObject[] PresserBottom;
     [SerializeField]
     private Transform[] Platforms;
     private GameObject fallingGear;
@@ -36,10 +39,17 @@ public class Gear : Boss
     {
         base.Awake();
         fallingGear = Tool.AssetLoader.LoadPrefab<GameObject>("Enemy/Boss/Gear/FallingGear");
-        rbPressor = new Rigidbody2D[4];
-        for(int i = 0; i < 4; i++)
+        PresserMid = new GameObject[4];
+        PresserBottom = new GameObject[4];
+        rbPresserMid = new Rigidbody2D[4];
+        rbPresserBottom = new Rigidbody2D[4];
+        for (int i = 0; i < 4; i++)
         {
-            rbPressor[i] = Pressor[i].GetComponent<Rigidbody2D>();
+            PresserMid[i] = Presser[i].transform.GetChild(1).gameObject;
+            rbPresserMid[i] = PresserMid[i].GetComponent<Rigidbody2D>();
+            PresserBottom[i] = Presser[i].transform.GetChild(2).gameObject;
+            rbPresserBottom[i] = PresserBottom[i].GetComponent<Rigidbody2D>();
+            Presser[i].transform.position = Platforms[i].position + new Vector3(0, 5, 0);
         }
         AttackRoutines = new System.Func<IEnumerator>[3] { NormalAttack, RazerAttack, Press };
         Rigidbody2D[] rb = GetComponentsInChildren<Rigidbody2D>();
@@ -156,22 +166,46 @@ public class Gear : Boss
     private IEnumerator Press()
     {
         OnPressAttack = true;
-        for(int i = 0; i < 4; i++)
+        bool[] pressed = new bool[4] { false, false, false, false };
+        List<int> pressList = new List<int>();
+        for(int j = 0; j < 4; j++)
         {
+            int i = Random.Range(0,4);
+            while (pressed[i])
+            {
+               i = Random.Range(0, 4);
+            }
+            pressList.Add(i);
+            pressed[i] = true;
             PressWarningArea.transform.position = Platforms[i].position;
             PressWarningArea.SetActive(true);
             yield return new WaitForSeconds(1.0f);
             PressWarningArea.SetActive(false);
-            Pressor[i].transform.position = Platforms[i].position + new Vector3(0, 5, 0);
-            Pressor[i].SetActive(true);
-            rbPressor[i].velocity = new Vector2(0, -10);
-            yield return new WaitUntil(() => rbPressor[i].position.y < Platforms[i].position.y);
-            rbPressor[i].velocity = Vector2.zero;
+            rbPresserMid[i].velocity = new Vector2(0, -5);
+            rbPresserBottom[i].velocity = new Vector2(0, -10);
+            yield return new WaitUntil(() => 
+            {
+                PresserMid[i].transform.localScale = new Vector2(1,PresserMid[i].transform.localPosition.y * -4+1);
+                return rbPresserBottom[i].position.y < Platforms[i].position.y;
+            });
+            rbPresserMid[i].velocity = Vector2.zero;
+            rbPresserBottom[i].velocity = Vector2.zero;
             yield return new WaitForSeconds(0.5f);
         }
-        for(int i = 0; i < 4; i++)
+        for(int j = 0; j < 4; j++)
         {
-            Pressor[i].SetActive(false);
+            int i = pressList[j];
+            rbPresserMid[i].velocity = new Vector2(0, 5);
+            rbPresserBottom[i].velocity = new Vector2(0, 10);
+            yield return new WaitUntil(() =>
+            {
+                PresserMid[i].transform.localScale = new Vector2(1, PresserMid[i].transform.localPosition.y * -4+1);
+                return PresserMid[i].transform.localPosition.y >= 0;
+            });
+            rbPresserMid[i].velocity = Vector2.zero;
+            rbPresserBottom[i].velocity = Vector2.zero;
+            PresserMid[i].transform.localPosition = Vector2.zero;
+            PresserBottom[i].transform.localPosition = Vector2.down * 1 / 3;
         }
         yield return new WaitForSeconds(1.0f);
         OnPressAttack = false;
@@ -199,6 +233,7 @@ public class Gear : Boss
         int tmp = Random.Range(0, 3);
         for(int i = 0; i < 3; i++)
         {
+            Debug.Log(tmp);
             if (tmp != i)
             {
                 StartCoroutine(AttackRoutines[i]());
