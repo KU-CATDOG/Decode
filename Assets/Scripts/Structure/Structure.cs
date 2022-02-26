@@ -8,6 +8,8 @@ public abstract class Structure : Changable
     public float MaxHealth { get; protected set; }
     public float MP { get; protected set; }
     public float MaxMP { get; protected set; }
+    public float MovementSpeed { get; protected set; }
+    public float MaxMovementSpeed { get; protected set; }
 
     protected Player player;
     protected Rigidbody2D rb;
@@ -19,18 +21,5 @@ public abstract class Structure : Changable
         InitializeBars();
         player = FindObjectOfType<Player>();
         rb = GetComponent<Rigidbody2D>();
-    }
-    
-    private void Update()
-    {
-        if (Health <= 0f)
-        {
-            for (int i = 0; i < barofChangableValues.Length; i++)
-            {
-                Destroy(barofChangableValues[i].gameObject);
-            }
-            Destroy(gameObject);
-
-        }
     }
 }
