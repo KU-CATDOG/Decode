@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
 
     private Camera cam;
 
-    public Player player;
+    private GameObject player;
 
     public Vector3 target;
     // Start is called before the first frame update
@@ -25,6 +25,7 @@ public class CameraController : MonoBehaviour
         //player = GameManager.Instance.player;
 
         temp = GameObject.Find("Bounds");
+        player = GameObject.Find("Player");
         
         if(temp != null)
         {
