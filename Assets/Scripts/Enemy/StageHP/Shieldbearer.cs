@@ -12,6 +12,8 @@ public class Shieldbearer : Enemy
 
     bool turning = false;
 
+    bool patrol = false;
+
     private Vector3 patrolPoint;
     float distToPatrol;
     Vector3 point1, point2;
@@ -28,7 +30,7 @@ public class Shieldbearer : Enemy
 
         MaxHealth = Health = 10f;
         AttackDamage = 5f;
-        Range = 1.5f;       // 공격 범위
+        Range = 3f;       // 공격 범위
         Eyesight = 10f;     // 시야
         MovementSpeed = 0.7f;
         Interval = 2.0f;
@@ -53,10 +55,14 @@ public class Shieldbearer : Enemy
 
             if (DistToPlayer() < Eyesight) // 플레이어가 시야 안에 들어왔다
             {
-                Vector3 dir = GetPlayerPos() - transform.position;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                bool isLookRight = angle < 90 && angle > -90;
-                GetComponent<SpriteRenderer>().flipX = isLookRight;
+                if (!patrol)
+                {
+                    Vector3 dir = GetPlayerPos() - transform.position;
+                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                    bool isLookRight = angle < 90 && angle > -90;
+                    GetComponent<SpriteRenderer>().flipX = isLookRight;
+                }
+
 
                 if (DistToPlayer() < Range)
                 {
@@ -110,21 +116,24 @@ public class Shieldbearer : Enemy
 
     private IEnumerator Patrol()
     {
+        patrol = true;
         Vector2 dir;
         if(moveRight && Mathf.Abs(transform.position.x - point2.x) < 0.1)
         {
+            GetComponent<SpriteRenderer>().flipX = false;
             moveRight = false;
             yield return new WaitForSeconds(1f);
         }
         if(!moveRight && Mathf.Abs(transform.position.x - point1.x) < 0.1)
         {
+            GetComponent<SpriteRenderer>().flipX = true;
             moveRight = true;
             yield return new WaitForSeconds(1f);
 
         }
         if (moveRight)
         {
-            dir = (point2 - GetObjectPos()).normalized;
+            dir.x = 1.0f;
             dir.y = 0;
             rb.MovePosition(rb.position + dir * MovementSpeed * Time.fixedDeltaTime);
             yield return null;
@@ -132,13 +141,15 @@ public class Shieldbearer : Enemy
         }
         else
         {
-            dir = (point1 - GetObjectPos()).normalized;
+            //dir = (point1 - GetObjectPos()).normalized;
+            dir.x = -1.0f;
             dir.y = 0;
             rb.MovePosition(rb.position + dir * MovementSpeed * Time.fixedDeltaTime);
             yield return null;
 
         }
         yield return null;
+        patrol = false;
     }
 
     private IEnumerator BackToPatrolPoint()
