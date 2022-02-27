@@ -18,6 +18,7 @@ public class InputManager : Singleton<InputManager>
 
     public Action<Define.MouseEvent> MouseAction = null;
 
+
     public Vector3 CursorPos { get { return Camera.main.ScreenToWorldPoint(Input.mousePosition); } }
 
 
@@ -75,7 +76,6 @@ public class InputManager : Singleton<InputManager>
             MouseAction?.Invoke(Define.MouseEvent.RClick);
         }
         #endregion
-
 
 
 
