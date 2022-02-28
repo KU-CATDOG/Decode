@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1
-  coolTime: 1
 --- !u!50 &1712358720
 Rigidbody2D:
   serializedVersion: 4

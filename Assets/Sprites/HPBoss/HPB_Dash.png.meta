@@ -110,7 +110,7 @@ TextureImporter:
         x: 0
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +131,7 @@ TextureImporter:
         x: 1024
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,7 +152,7 @@ TextureImporter:
         x: 2048
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,7 +173,7 @@ TextureImporter:
         x: 3072
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +194,7 @@ TextureImporter:
         x: 4096
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,7 +215,7 @@ TextureImporter:
         x: 0
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,7 +236,7 @@ TextureImporter:
         x: 1024
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,7 +257,7 @@ TextureImporter:
         x: 2048
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,7 +278,7 @@ TextureImporter:
         x: 3072
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,7 +299,7 @@ TextureImporter:
         x: 4096
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,7 +320,7 @@ TextureImporter:
         x: 0
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,7 +341,7 @@ TextureImporter:
         x: 1024
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,7 +362,7 @@ TextureImporter:
         x: 2048
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,7 +383,7 @@ TextureImporter:
         x: 3072
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,7 +404,7 @@ TextureImporter:
         x: 4096
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,7 +425,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,7 +446,7 @@ TextureImporter:
         x: 1024
         y: 0
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,7 +467,7 @@ TextureImporter:
         x: 2048
         y: 0
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,8 +499,6 @@ TextureImporter:
       HPB_Dash_6: -1931759655
       HPB_Dash_7: -409853190
       HPB_Dash_4: 977522084
-      HPB_Dash_18: -114688666
-      HPB_Dash_19: -2350687
       HPB_Dash_14: -295597474
       HPB_Dash_15: -781657156
       HPB_Dash_11: 1805713170

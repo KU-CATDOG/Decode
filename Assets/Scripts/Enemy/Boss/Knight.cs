@@ -5,6 +5,8 @@ using UnityEngine;
 public class Knight : Boss
 {
     #region PhasePatternVar
+    private bool onFirstPhase = true;
+    private bool onSecondPhase = false;
     [SerializeField]
     private float secondPhaseSpeedMultiplier;
     public float SecondPhaseSpeedMultiplier
@@ -93,17 +95,26 @@ public class Knight : Boss
     private Rigidbody2D rbLance;
     private bool isRushing = false;
     private bool isLongRange = true;
+    private bool rushHit = false;
     private float longRange;
+    private EnemyHitBox hb;
+    public bool InMotion { get; private set; } = false;
     public Animator animator { get; private set; }
     public bool HaveLance { get; set; }
+    private new void Awake()
+    {
+        base.Awake();
+        hb = GetComponentInChildren<EnemyHitBox>();
+        animator = GetComponent<Animator>();
+        ShortRangeAttackRoutines = new System.Func<IEnumerator>[2] { NormalAttack, ShortRush };
+        LongRangeAttackRoutines = new System.Func<IEnumerator>[2] { ThrowLance, Rush };
+    }
     protected override void Start()
     {
-        animator = GetComponent<Animator>();
-        ShortRangeAttackRoutines = new System.Func<IEnumerator>[2] { ShortRush, NormalAttack };
-        LongRangeAttackRoutines = new System.Func<IEnumerator>[2] { Rush, ThrowLance };
         attackSpeed = 0.5f;
         MaxHealth = Health = 50f * 3;
         AttackDamage = 10f;
+        hb.Dmg = (int)AttackDamage;
         MovementSpeed = 5f;
         MaxMovementSpeed = 10f;
         Range = 3.0f;
@@ -111,7 +122,6 @@ public class Knight : Boss
         lance = GetComponentInChildren<KnightLance>();
         rbLance = lance.GetComponent<Rigidbody2D>();
         ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
-        ConnectValue(Define.ChangableValue.Speed, typeof(Enemy).GetProperty("MaxMovementSpeed"), typeof(Enemy).GetProperty("MovementSpeed"));
         base.Start();
         lance.gameObject.SetActive(false);
     }
@@ -143,13 +153,17 @@ public class Knight : Boss
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isRushing && collision.tag == "Player")
-        {
-            GameManager.Instance.GetDamaged(10f);
-        }
         if(collision.tag == "Floor")
         {
             rb.gravityScale = 0;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (isRushing && !rushHit && collision.tag == "Player")
+        {
+            rushHit = true;
+            GameManager.Instance.GetDamaged(10f);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -180,6 +194,21 @@ public class Knight : Boss
         dmgMultiplier = LastPhaseDamageMultiplier;
         yield return new WaitForSeconds(1.0f);
     }
+    private new void Update()
+    {
+        base.Update();
+        if (Health <= MaxHealth * 2 / 3f && onFirstPhase)
+        {
+            StartCoroutine(SecondPhase());
+            onFirstPhase = false;
+            onSecondPhase = true;
+        }
+        if(Health<=MaxHealth/3f && onSecondPhase)
+        {
+            StartCoroutine(LastPhase());
+            onSecondPhase = false;
+        }
+    }
     /// <summary>
     /// 1. 전방/후방 공격
     /// 플레이어가 보스 근처에 있을때 플레이어를 바라보고 찌르기
@@ -190,10 +219,12 @@ public class Knight : Boss
         {
             LookAt(player.transform.position);
             animator.SetTrigger("Stabbing");
+            hb.transform.position = transform.position + (Vector3)new Vector2((player.transform.position.x - transform.position.x < 0 ? -1 : 1) * 1.5f,-1);
+            hb.gameObject.SetActive(true);
             yield return new WaitForSeconds(0.5f);
+            hb.gameObject.SetActive(false);
             animator.SetTrigger("EndAction");
             yield return new WaitUntil(() => animator.IsInTransition(0));
-            GameManager.Instance.GetDamaged(AttackDamage);
             if(Random.value < 0.3f)
             {
                 yield return ShortRush();
@@ -221,6 +252,7 @@ public class Knight : Boss
             animator.SetTrigger("Dashing");
             rb.velocity = rushVec;
             isRushing = true;
+            rushHit = false;
             yield return new WaitForSeconds(0.9f);
             isRushing = false;
             rb.velocity = Vector2.zero;
@@ -243,10 +275,21 @@ public class Knight : Boss
         {
             LookAt(player.transform.position);
             animator.SetTrigger("ReadyThrow");
-            yield return new WaitForSeconds(1f);
+            float time = 0f;
+            yield return new WaitUntil(() => 
+            {
+                LookAt(player.transform.position);
+                time += Time.deltaTime;
+                if (time >= 1f)
+                {
+                    return true; 
+                }
+                else return false; 
+            });
+            InMotion = true;
             animator.SetTrigger("Throwing");
-            yield return new WaitUntil(() => animator.IsInTransition(0));
-            yield return new WaitUntil(() => !animator.IsInTransition(0));
+            yield return new WaitUntil(() => { LookAt(player.transform.position); return animator.IsInTransition(0); });
+            yield return new WaitUntil(() => { LookAt(player.transform.position); return !animator.IsInTransition(0); });
             Vector2 throwVec = new Vector2(player.transform.position.x - transform.position.x, 0).normalized;
             lance.gameObject.SetActive(true);
             lance.transform.localPosition = Vector2.down;
@@ -256,6 +299,7 @@ public class Knight : Boss
             animator.SetBool("HaveWeapon", false);
             animator.SetTrigger("Walking");
             yield return new WaitUntil(() => animator.IsInTransition(0));
+            InMotion = false;
             while (!HaveLance) // 창을 줍는 로직은 Lance에서 구현
             {
                 yield return null;
@@ -281,6 +325,7 @@ public class Knight : Boss
             yield return new WaitForSeconds(1.0f);
             animator.SetTrigger("FastDash");
             isRushing = true;
+            rushHit = false;
             float rushDistance = 5.0f; // 기획에 따라 변경
             float rushTime = 0.5f; // 기획에 따라 변경
             rb.velocity = new Vector2(transform.right.x * rushDistance / rushTime, 0);

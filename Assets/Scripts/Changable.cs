@@ -57,7 +57,7 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
         dict[changableValue] = value;
         maxDict[changableValue] = maxVal;
     }
-    public void SelectValuetoChange()
+    public virtual void SelectValuetoChange()
     {
         barofChangableValues[selected].gameObject.SetActive(false);
         selected = (selected + 1) % changableValues.Count;
