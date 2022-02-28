@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Boss : Enemy
 {
+    [SerializeField]
+    private GameObject Exit;
     protected override void Start()
     {
         InitializeBars(true);
@@ -15,5 +17,23 @@ public abstract class Boss : Enemy
         Physics2D.IgnoreLayerCollision(8, 8);
         Physics2D.IgnoreLayerCollision(7, 8);
 
+    }
+
+    protected override void Update()
+    {
+        if (CurrentRoutine == null)
+        {
+            NextRoutine();
+        }
+
+        if (Health <= 0f)
+        {
+            for (int i = 0; i < barofChangableValues.Length; i++)
+            {
+                Destroy(barofChangableValues[i].gameObject);
+            }
+            Exit.SetActive(false);
+            Destroy(gameObject);
+        }
     }
 }

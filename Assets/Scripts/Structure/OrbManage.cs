@@ -7,6 +7,9 @@ public class OrbManage : MonoBehaviour
     public MpOrb[] Orbs;
     [SerializeField]
     private LineRenderer[] lr;
+
+    public GameObject door;
+
     private void Start()
     {
         for(int i=0; i < 5; i++)
@@ -29,6 +32,11 @@ public class OrbManage : MonoBehaviour
             {
                 lr[i].enabled = false;
             }
+        }
+        for(int i=0; i<5; i++)
+        {
+            if (!(Orbs[i].isActive && Orbs[(i + 1) % 5].isActive)) break;
+            if (i == 4) door.SetActive(false);
         }
     }
 }
