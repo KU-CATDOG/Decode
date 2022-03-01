@@ -78,7 +78,7 @@ public class Gear : Boss
         }
         return ret;
     }
-    
+
     private new void Start()
     {
         MaxHealth = Health = 50f;
@@ -168,12 +168,12 @@ public class Gear : Boss
         OnPressAttack = true;
         bool[] pressed = new bool[4] { false, false, false, false };
         List<int> pressList = new List<int>();
-        for(int j = 0; j < 4; j++)
+        for (int j = 0; j < 4; j++)
         {
-            int i = Random.Range(0,4);
+            int i = Random.Range(0, 4);
             while (pressed[i])
             {
-               i = Random.Range(0, 4);
+                i = Random.Range(0, 4);
             }
             pressList.Add(i);
             pressed[i] = true;
@@ -183,23 +183,23 @@ public class Gear : Boss
             PressWarningArea.SetActive(false);
             rbPresserMid[i].velocity = new Vector2(0, -5);
             rbPresserBottom[i].velocity = new Vector2(0, -10);
-            yield return new WaitUntil(() => 
+            yield return new WaitUntil(() =>
             {
-                PresserMid[i].transform.localScale = new Vector2(1,PresserMid[i].transform.localPosition.y * -4+1);
+                PresserMid[i].transform.localScale = new Vector2(1, PresserMid[i].transform.localPosition.y * -4 + 1);
                 return rbPresserBottom[i].position.y < Platforms[i].position.y;
             });
             rbPresserMid[i].velocity = Vector2.zero;
             rbPresserBottom[i].velocity = Vector2.zero;
             yield return new WaitForSeconds(0.5f);
         }
-        for(int j = 0; j < 4; j++)
+        for (int j = 0; j < 4; j++)
         {
             int i = pressList[j];
             rbPresserMid[i].velocity = new Vector2(0, 5);
             rbPresserBottom[i].velocity = new Vector2(0, 10);
             yield return new WaitUntil(() =>
             {
-                PresserMid[i].transform.localScale = new Vector2(1, PresserMid[i].transform.localPosition.y * -4+1);
+                PresserMid[i].transform.localScale = new Vector2(1, PresserMid[i].transform.localPosition.y * -4 + 1);
                 return PresserMid[i].transform.localPosition.y >= 0;
             });
             rbPresserMid[i].velocity = Vector2.zero;
@@ -218,12 +218,12 @@ public class Gear : Boss
         while (true)
         {
             int gearNum = Random.Range(3, 7);
-            for(int i = 0; i < gearNum; i++)
+            for (int i = 0; i < gearNum; i++)
             {
                 int gearSize = Random.Range(3, 7);
                 FallingGear gear = Instantiate(fallingGear).GetComponent<FallingGear>();
                 gear.transform.localScale = new Vector2(gearSize, gearSize);
-                gear.transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(Random.value,1));
+                gear.transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(Random.value, 1));
             }
             yield return new WaitForSeconds(1f);
         }
@@ -231,7 +231,7 @@ public class Gear : Boss
     private IEnumerator DoubleSkillRoutine()
     {
         int tmp = Random.Range(0, 3);
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
         {
             Debug.Log(tmp);
             if (tmp != i)
@@ -239,7 +239,7 @@ public class Gear : Boss
                 StartCoroutine(AttackRoutines[i]());
             }
         }
-        yield return new WaitUntil(()=> !OnNormalAttack&&!OnPressAttack&&!OnRazerAttack);
+        yield return new WaitUntil(() => !OnNormalAttack && !OnPressAttack && !OnRazerAttack);
     }
     private new void Update()
     {
@@ -249,7 +249,7 @@ public class Gear : Boss
             GearDrop = true;
             GearDropCoroutine = StartCoroutine(GearDropRoutine());
         }
-        else if(GearDrop && Health >= SecondPhaseHealth)
+        else if (GearDrop && Health >= SecondPhaseHealth)
         {
             GearDrop = false;
             StopCoroutine(GearDropCoroutine);
