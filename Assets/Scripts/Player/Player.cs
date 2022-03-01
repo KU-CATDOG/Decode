@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     private float horizontal;
     private bool isJumpKeyDown = false;
-    private bool isControllable = true;
+    public bool isControllable = true;
 
     [SerializeField]
     private LayerMask jumpable;
@@ -83,6 +83,9 @@ public class Player : MonoBehaviour
         isCursorRight = cursorAngle < 90 && cursorAngle > -90;
         if(!dirLock) PlayerLookAt(isCursorRight);
         //Debug.Log(isPlayerLookRight);
+
+        float a = Mathf.PingPong(Time.time, 1);
+        Debug.Log(a);
 
 
     }

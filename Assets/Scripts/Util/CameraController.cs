@@ -47,6 +47,8 @@ public class CameraController : MonoBehaviour
         target = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
         transform.position = target;
 
+        bool clamped = false;
+
         if (temp != null)
         {
             float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);

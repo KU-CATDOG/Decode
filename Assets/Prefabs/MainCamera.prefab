@@ -61,7 +61,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -102,5 +102,4 @@ MonoBehaviour:
   maxBounds: {x: 0, y: 0, z: 0}
   halfHeight: 0
   halfWidth: 0
-  player: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
