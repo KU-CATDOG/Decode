@@ -13,11 +13,16 @@ public class MpDoor : Structure
         base.Start();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if(MP <=0f)
+        if (MP <= 0f)
         {
-            Health = 0f;
+            for (int i = 0; i < barofChangableValues.Length; i++)
+            {
+                Destroy(barofChangableValues[i].gameObject);
+            }
+            Destroy(gameObject);
+
         }
     }
 }

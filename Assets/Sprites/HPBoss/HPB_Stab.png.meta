@@ -110,7 +110,7 @@ TextureImporter:
         x: 0
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +131,7 @@ TextureImporter:
         x: 1024
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,7 +152,7 @@ TextureImporter:
         x: 2048
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,7 +173,7 @@ TextureImporter:
         x: 3072
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +194,7 @@ TextureImporter:
         x: 4096
         y: 3072
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,7 +215,7 @@ TextureImporter:
         x: 0
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,7 +236,7 @@ TextureImporter:
         x: 1024
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,7 +257,7 @@ TextureImporter:
         x: 2048
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,7 +278,7 @@ TextureImporter:
         x: 3072
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,7 +299,7 @@ TextureImporter:
         x: 4096
         y: 2048
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,7 +320,7 @@ TextureImporter:
         x: 0
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,7 +341,7 @@ TextureImporter:
         x: 1024
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,7 +362,7 @@ TextureImporter:
         x: 2048
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,7 +383,7 @@ TextureImporter:
         x: 3072
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,7 +404,7 @@ TextureImporter:
         x: 4096
         y: 1024
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,7 +425,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 1024
-        height: 1024
+        height: 1018
       alignment: 9
       pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,90 +435,6 @@ TextureImporter:
       bones: []
       spriteID: 07883f9ab76db2546b6941e228f55f44
       internalID: 988010791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HPB_Stab_16
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 833fe8b9b82bde044800b120395bcf88
-      internalID: 1730376580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HPB_Stab_17
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51922a7352ebbaa40901e58727479190
-      internalID: -1428709034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HPB_Stab_18
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32536dd40a8df4441a852ca3400b56e9
-      internalID: -1609069610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HPB_Stab_19
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81e333e1544d61246af2f8e1ef9b8f96
-      internalID: -254395891
       vertices: []
       indices: 
       edges: []
@@ -537,7 +453,6 @@ TextureImporter:
       HPB_Stab_15: 988010791
       HPB_Stab_12: 1057204449
       HPB_Stab_3: 1253022945
-      HPB_Stab_18: -1609069610
       HPB_Stab_9: -1461527316
       HPB_Stab_5: -727338084
       HPB_Stab_14: 523766611
@@ -545,15 +460,12 @@ TextureImporter:
       HPB_Stab_8: -434212519
       HPB_Stab_10: 370905868
       HPB_Stab_4: 805953074
-      HPB_Stab_17: -1428709034
       HPB_Stab_13: 253439007
       HPB_Stab_6: -851414551
-      HPB_Stab_16: 1730376580
       HPB_Stab_0: -67423169
       HPB_Stab_1: 1154878321
       HPB_Stab_2: -948040776
       HPB_Stab_7: -690920944
-      HPB_Stab_19: -254395891
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
