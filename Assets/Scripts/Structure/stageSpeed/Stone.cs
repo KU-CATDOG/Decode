@@ -18,12 +18,21 @@ public class Stone : Structure
         base.Start();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void Update()
     {
-        if(other.name=="HitBox")
-        { 
-            Vector3 currentVelocity = rb.velocity;
-            rb.velocity = new Vector3(currentVelocity.x +MovementSpeed, currentVelocity.y, currentVelocity.z);
+        if (MovementSpeed >= 1)
+            rb.gravityScale = MovementSpeed;
+        else
+            rb.gravityScale = 1.0f;
+    }
+   
+
+    public void DestroyStone()
+    {
+        for (int i = 0; i < barofChangableValues.Length; i++)
+        {
+            Destroy(barofChangableValues[i].gameObject);
         }
+        Destroy(gameObject);
     }
 }

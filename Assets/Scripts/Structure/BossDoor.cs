@@ -11,7 +11,7 @@ public class BossDoor : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude);
-        if (collision.gameObject.name == "Stone")
+        if (collision.gameObject.name == "Stone(Clone)")
         {
             stone = collision.gameObject.GetComponent<Stone>();
             if (stone.MovementSpeed >= stoneSpeed)
