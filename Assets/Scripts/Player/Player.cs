@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public float curCoolTime = 0f;
 
     private Weapon weapon;
-
+    public bool[] achieveList;
     private void OnEnable()
     {
         InputManager.Instance.OnLeftKey += Move;
@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
         InputManager.Instance.OnJumpKeyUp += () => { isJumpKeyDown = false; };
 
         InputManager.Instance.MouseAction += Attack;
-
     }
 
     private void OnDisable()
@@ -85,7 +84,7 @@ public class Player : MonoBehaviour
         //Debug.Log(isPlayerLookRight);
 
         float a = Mathf.PingPong(Time.time, 1);
-        Debug.Log(a);
+        //Debug.Log(a);
 
 
     }
@@ -197,6 +196,8 @@ public class Player : MonoBehaviour
 
     }
 
-
-
+    public void ActivateAchievement(int idx)
+    {
+        achieveList[idx] = true;
+    }
 }
