@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/0 Scene.unity
     guid: cb4578775ef45f24084b20d459f554d3
+  - enabled: 1
+    path: Assets/Scenes/DM/DMScene_MPBoss.unity
+    guid: d6b513d8286b1f4489ba13a3ac021a93
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 58c3bd90292067f4a86d3cb2befb5215, type: 2}
