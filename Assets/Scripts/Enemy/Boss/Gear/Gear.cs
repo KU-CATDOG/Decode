@@ -8,6 +8,11 @@ public class Gear : Boss
     private int SecondPhaseHealth; // 톱니가 떨어지는 기준 체력
     [SerializeField]
     private int DoubleSkillMp; // 스킬을 2개 사용하게 되는 기준 마나
+    [SerializeField]
+    private Animator spring;
+    private Animator leftArm;
+    private Animator rightArm;
+    private Animator body;
     private bool DoubleSkill = false;
     private bool GearDrop = false; // 현재 톱니가 떨어지고 있는지 여부
     public bool OnNormalAttack { get; set; } = false;
@@ -57,6 +62,9 @@ public class Gear : Boss
         rbRightArm = rb[1];
         leftArmPos = rbLeftArm.position.x;
         rightArmPos = rbRightArm.position.x;
+        body = GetComponent<Animator>();
+        leftArm = rbLeftArm.GetComponent<Animator>();
+        rightArm = rbRightArm.GetComponent<Animator>();
     }
     protected override Queue<IEnumerator> DecideNextRoutine()
     {
@@ -81,18 +89,32 @@ public class Gear : Boss
     
     private new void Start()
     {
-        MaxHealth = Health = 50f;
+        MaxHealth = Health = 100f;
         MP = 0;
         MaxMP = 100f;
         AttackDamage = 10f;
-        MovementSpeed = 5f;
-        MaxMovementSpeed = 10f;
+        MovementSpeed = 0f;
+        MaxMovementSpeed = 100f;
         ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
         ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxMP"), typeof(Enemy).GetProperty("MP"));
+        //속도는 100일 때 3배가 되도록 설정한다.
         ConnectValue(Define.ChangableValue.Speed, typeof(Enemy).GetProperty("MaxMovementSpeed"), typeof(Enemy).GetProperty("MovementSpeed")); // 편의 상 이동속도를 공격속도로 사용
+        
         base.Start();
         StartCoroutine(MpRestoreRoutine());
     }
+    /// <summary>
+    /// Hp를 깎을 때 그만큼 속도가 증가
+    /// </summary>
+    protected override float AddValue(float value)
+    {
+        if(GetCurSelected() == Define.ChangableValue.Hp)
+        {
+            MovementSpeed = Mathf.Min(MaxMovementSpeed, MovementSpeed - value);
+        }
+        return base.AddValue(value);
+    }
+
     private IEnumerator MpRestoreRoutine()
     {
         while (true)
@@ -111,37 +133,37 @@ public class Gear : Boss
         OnNormalAttack = true;
         NormalAttackHit = false;
         ///왼쪽
-        rbLeftArm.velocity = new Vector2(30, 0);
+        rbLeftArm.velocity = new Vector2(30, 0) * (1+MovementSpeed/50f);
         yield return new WaitUntil(() =>
         {
             Vector2 viewPos = Camera.main.WorldToViewportPoint(rbLeftArm.position);
             return viewPos.x > 1;
         });
-        rbLeftArm.velocity = new Vector2(-20, 0);
+        rbLeftArm.velocity = new Vector2(-20, 0) * (1 + MovementSpeed / 50f);
         yield return new WaitUntil(() =>
         {
             return rbLeftArm.position.x < leftArmPos;
         });
         rbLeftArm.velocity = Vector2.zero;
         rbLeftArm.position = new Vector2(leftArmPos, rbLeftArm.position.y);
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(3.0f / (1 + MovementSpeed / 50f));
 
         NormalAttackHit = false;
         ///오른쪽
-        rbRightArm.velocity = new Vector2(-30, 0);
+        rbRightArm.velocity = new Vector2(-30, 0) * (1 + MovementSpeed / 50f);
         yield return new WaitUntil(() =>
         {
             Vector2 viewPos = Camera.main.WorldToViewportPoint(rbRightArm.position);
             return viewPos.x < 0;
         });
-        rbRightArm.velocity = new Vector2(20, 0);
+        rbRightArm.velocity = new Vector2(20, 0) * (1 + MovementSpeed / 50f);
         yield return new WaitUntil(() =>
         {
             return rbRightArm.position.x > rightArmPos;
         });
         rbRightArm.velocity = Vector2.zero;
         rbRightArm.position = new Vector2(rightArmPos, rbRightArm.position.y);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.0f / (1 + MovementSpeed / 50f));
         OnNormalAttack = false;
     }
     /// <summary>
@@ -152,11 +174,11 @@ public class Gear : Boss
     {
         OnRazerAttack = true;
         RazerWarningArea.SetActive(true);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.0f / (1 + MovementSpeed / 50f));
         RazerWarningArea.SetActive(false);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f / (1 + MovementSpeed / 50f));
         RazerObject.SetActive(true);
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitForSeconds(4.0f / (1 + MovementSpeed / 50f));
         OnRazerAttack = false;
     }
     /// <summary>
@@ -179,10 +201,10 @@ public class Gear : Boss
             pressed[i] = true;
             PressWarningArea.transform.position = Platforms[i].position;
             PressWarningArea.SetActive(true);
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(1.0f / (1 + MovementSpeed / 50f));
             PressWarningArea.SetActive(false);
-            rbPresserMid[i].velocity = new Vector2(0, -5);
-            rbPresserBottom[i].velocity = new Vector2(0, -10);
+            rbPresserMid[i].velocity = new Vector2(0, -5) * (1 + MovementSpeed / 50f);
+            rbPresserBottom[i].velocity = new Vector2(0, -10) * (1 + MovementSpeed / 50f);
             yield return new WaitUntil(() => 
             {
                 PresserMid[i].transform.localScale = new Vector2(1,PresserMid[i].transform.localPosition.y * -4+1);
@@ -190,13 +212,13 @@ public class Gear : Boss
             });
             rbPresserMid[i].velocity = Vector2.zero;
             rbPresserBottom[i].velocity = Vector2.zero;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.5f / (1 + MovementSpeed / 50f));
         }
         for(int j = 0; j < 4; j++)
         {
             int i = pressList[j];
-            rbPresserMid[i].velocity = new Vector2(0, 5);
-            rbPresserBottom[i].velocity = new Vector2(0, 10);
+            rbPresserMid[i].velocity = new Vector2(0, 5) * (1 + MovementSpeed / 50f);
+            rbPresserBottom[i].velocity = new Vector2(0, 10) * (1 + MovementSpeed / 50f);
             yield return new WaitUntil(() =>
             {
                 PresserMid[i].transform.localScale = new Vector2(1, PresserMid[i].transform.localPosition.y * -4+1);
@@ -207,7 +229,7 @@ public class Gear : Boss
             PresserMid[i].transform.localPosition = Vector2.zero;
             PresserBottom[i].transform.localPosition = Vector2.down * 1 / 3;
         }
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.0f / (1 + MovementSpeed / 50f));
         OnPressAttack = false;
     }
     /// <summary>
@@ -224,8 +246,9 @@ public class Gear : Boss
                 FallingGear gear = Instantiate(fallingGear).GetComponent<FallingGear>();
                 gear.transform.localScale = new Vector2(gearSize, gearSize);
                 gear.transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(Random.value,1));
+                gear.GetComponent<Rigidbody2D>().gravityScale = (1 + MovementSpeed / 50f);
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1f / (1 + MovementSpeed / 50f));
         }
     }
     private IEnumerator DoubleSkillRoutine()
@@ -262,6 +285,7 @@ public class Gear : Boss
         {
             DoubleSkill = false;
         }
+        body.speed = leftArm.speed = rightArm.speed = spring.speed = (1 + MovementSpeed / 50f);
     }
 
 }

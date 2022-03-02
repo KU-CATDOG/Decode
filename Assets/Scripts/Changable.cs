@@ -65,7 +65,7 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
         Debug.Log($"Select Value: {selected}");
     }
 
-    private float AddValue(float value) // 값을 단순히 더하거나 빼는 무기에서 호출되는 메서드
+    protected virtual float AddValue(float value) // 값을 단순히 더하거나 빼는 무기에서 호출되는 메서드
     {
         object nowValue = dict[changableValues[selected]].GetValue(this);
         object maxVal = maxDict[changableValues[selected]].GetValue(this);
