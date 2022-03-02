@@ -22,7 +22,6 @@ public class HpDoor : Structure
                 Destroy(barofChangableValues[i].gameObject);
             }
             Destroy(gameObject);
-
         }
     }
 }

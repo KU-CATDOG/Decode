@@ -22,9 +22,12 @@ public class Door : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Vector3 panelPos = Camera.main.WorldToScreenPoint(new Vector3(player.transform.position.x, player.transform.position.y + 2.0f, 0));
-        text.transform.position = panelPos;
-        text.gameObject.SetActive(true);
+        if (other.gameObject.tag == "Player")
+        {
+            Vector3 panelPos = Camera.main.WorldToScreenPoint(new Vector3(player.transform.position.x, player.transform.position.y + 2.0f, 0));
+            text.transform.position = panelPos;
+            text.gameObject.SetActive(true);
+        }
         if (other.gameObject.tag == "Player" && Input.GetKey(KeyCode.G))
         {
             text.gameObject.SetActive(false);
@@ -34,6 +37,7 @@ public class Door : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D other)
     {
-        text.gameObject.SetActive(false);
+        if (other.gameObject.tag == "Player")
+            text.gameObject.SetActive(false);
     }
 }
