@@ -44,18 +44,22 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
-        transform.position = target;
-
-        bool clamped = false;
-
-        if (temp != null)
+        if(GameObject.Find("Player") != null)
         {
-            float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
-            float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
+            target = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+            transform.position = target;
 
-            transform.position = new Vector3(clampedX, clampedY, transform.position.z);
+            bool clamped = false;
+
+            if (temp != null)
+            {
+                float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
+                float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
+
+                transform.position = new Vector3(clampedX, clampedY + 2, transform.position.z);
+            }
         }
+
     }
     public void UpdateCollider()
     {

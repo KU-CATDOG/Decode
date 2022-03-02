@@ -28,6 +28,7 @@ public class GameManager : Singleton<GameManager>
         {
             player.health -= damage;
             Debug.Log("Player dmg taken: " + damage);
+            StartCoroutine(player.DamagedRoutine());
 
         }
         if (player.health <= 0)
