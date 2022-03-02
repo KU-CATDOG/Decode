@@ -16,7 +16,7 @@ public class Gear : Boss
     private bool DoubleSkill = false;
     private bool GearDrop = false; // 현재 톱니가 떨어지고 있는지 여부
     public bool OnNormalAttack { get; set; } = false;
-    private bool OnRazerAttack = false;
+    private bool OnLaserAttack = false;
     private bool OnPressAttack = false;
     public bool NormalAttackHit { get; set; } = false;
     private Coroutine GearDropCoroutine; //톱니가 떨어지는 코루틴
@@ -28,9 +28,9 @@ public class Gear : Boss
     [SerializeField]
     private GameObject PressWarningArea;
     [SerializeField]
-    private GameObject RazerWarningArea;
+    private GameObject LaserWarningArea;
     [SerializeField]
-    private GameObject RazerObject;
+    private GameObject LaserObject;
     [SerializeField]
     private GameObject[] Presser;
     private Rigidbody2D[] rbPresserMid;
@@ -56,7 +56,7 @@ public class Gear : Boss
             rbPresserBottom[i] = PresserBottom[i].GetComponent<Rigidbody2D>();
             Presser[i].transform.position = Platforms[i].position + new Vector3(0, 5, 0);
         }
-        AttackRoutines = new System.Func<IEnumerator>[3] { NormalAttack, RazerAttack, Press };
+        AttackRoutines = new System.Func<IEnumerator>[3] { NormalAttack, LaserAttack, Press };
         Rigidbody2D[] rb = GetComponentsInChildren<Rigidbody2D>();
         rbLeftArm = rb[0];
         rbRightArm = rb[1];
@@ -170,16 +170,16 @@ public class Gear : Boss
     /// 측면에서 레이저 발사 (미리 범위 보여줌) 크기는 한 개 층정도
     /// </summary>
     /// <returns></returns>
-    private IEnumerator RazerAttack()
+    private IEnumerator LaserAttack()
     {
-        OnRazerAttack = true;
-        RazerWarningArea.SetActive(true);
+        OnLaserAttack = true;
+        LaserWarningArea.SetActive(true);
         yield return new WaitForSeconds(1.0f / (1 + MovementSpeed / 50f));
-        RazerWarningArea.SetActive(false);
+        LaserWarningArea.SetActive(false);
         yield return new WaitForSeconds(0.5f / (1 + MovementSpeed / 50f));
-        RazerObject.SetActive(true);
+        LaserObject.SetActive(true);
         yield return new WaitForSeconds(4.0f / (1 + MovementSpeed / 50f));
-        OnRazerAttack = false;
+        OnLaserAttack = false;
     }
     /// <summary>
     /// 프레스기로 4개 플랫폼을 하나씩 찍음 (위치 표시)
@@ -262,7 +262,7 @@ public class Gear : Boss
                 StartCoroutine(AttackRoutines[i]());
             }
         }
-        yield return new WaitUntil(()=> !OnNormalAttack&&!OnPressAttack&&!OnRazerAttack);
+        yield return new WaitUntil(()=> !OnNormalAttack&&!OnPressAttack&&!OnLaserAttack);
     }
     private new void Update()
     {

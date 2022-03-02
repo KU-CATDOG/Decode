@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Razer : MonoBehaviour
+public class GearLaser : MonoBehaviour
 {
     private Gear gear;
     private void Awake()
