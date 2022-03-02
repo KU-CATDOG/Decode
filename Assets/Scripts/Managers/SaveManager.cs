@@ -16,5 +16,12 @@ public class SaveManager : Singleton<SaveManager>
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        DataController.Instance.JsonLoad();
+        DataController.Instance.JsonSave();
+    }
+
+    private void OnApplicationQuit()
+    {
+        DataController.Instance.JsonSave();
     }
 }
