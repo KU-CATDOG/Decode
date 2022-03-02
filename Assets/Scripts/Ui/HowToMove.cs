@@ -6,35 +6,62 @@ using UnityEngine.UI;
 public class HowToMove : MonoBehaviour
 {
     [SerializeField] private Image image;
-    [SerializeField] private Text text;
-    [SerializeField] private GameObject player;
-    bool isFaded = true;
+    [SerializeField] public Text tx;
+    [SerializeField] private Player player;
 
-    void Awake()
+    private string first;
+    private string second;
+    bool isfaded = false;
+    bool isTyping = false;
+    bool typedAll = false;
+    RectTransform rectT;
+
+    void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameManager.Instance.player;
+        first = "Standard control\n\"WASD\"";
+        second = "Press Space to evade";
+        StartCoroutine(TypeEff(first));
     }
-
-    void Update()
+    private void Update()
     {
-        Vector3 panelPos = Camera.main.WorldToScreenPoint(new Vector3(player.transform.position.x, player.transform.position.y + 2.0f, 0));
-        this.transform.position = panelPos;
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && isFaded)
-            StartCoroutine(FadeOutCoroutine());
+        if (!isTyping && !typedAll)
+        {
+            StartCoroutine(TypeEff(second));
+        }
+        if (!isTyping && typedAll && !isfaded) StartCoroutine(FadeOutCoroutine());
     }
-
     IEnumerator FadeOutCoroutine()
     {
         float fadeCount = 0;
-        isFaded = false;
-        yield return new WaitForSeconds(5.0f);
+        isfaded = true;
         while (fadeCount < 1.0f)
         {
             fadeCount += 0.01f;
             yield return new WaitForSeconds(0.01f);
             image.color = new Color(255, 255, 255, 1.0f - fadeCount);
-            text.color = new Color(50, 50, 50, 1.0f - fadeCount);
+            tx.color = new Color(50, 50, 50, 1.0f - fadeCount);
         }
         Destroy(gameObject);
+    }
+
+    IEnumerator TypeEff(string str)
+    {
+        isTyping = true;
+        yield return new WaitForSeconds(1f);
+        for (int i = 0; i <= str.Length; i++)
+        {
+            tx.text = str.Substring(0, i);
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds(1f);
+
+        for (int i = second.Length; i >= 0; i--)
+        {
+            tx.text = str.Substring(0, i);
+            yield return new WaitForSeconds(0.1f);
+        }
+        isTyping = false;
+        if (str.Equals(second)) typedAll = true;
     }
 }
