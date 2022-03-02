@@ -32,7 +32,7 @@ public class SideMovingGround : Structure
         if (MP > 0)
         {
             Vector3 currentPosition = transform.position;
-            Vector3 playerCurrentPosition = player.transform.position;
+
 
             if (transform.position.x - startPoint.x >= movementMax)
                 direction = -1.0f;
