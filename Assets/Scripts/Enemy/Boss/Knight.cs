@@ -112,7 +112,7 @@ public class Knight : Boss
     protected override void Start()
     {
         attackSpeed = 0.5f;
-        MaxHealth = Health = 50f * 3;
+        MaxHealth = Health = 10f;
         AttackDamage = 10f;
         hb.Dmg = (int)AttackDamage;
         MovementSpeed = 5f;

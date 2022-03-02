@@ -56,6 +56,12 @@ public class CameraController : MonoBehaviour
 
             transform.position = new Vector3(clampedX, clampedY, transform.position.z);
         }
-
     }
+    public void UpdateCollider()
+    {
+        bounds = temp.GetComponent<BoxCollider2D>();
+        minBounds = bounds.bounds.min;
+        maxBounds = bounds.bounds.max;
+    }
+
 }
