@@ -41,8 +41,11 @@ public abstract class Enemy : Changable
         {
             NextRoutine();
         }
-
-        if(Health <= 0f)
+        Die();
+    }
+    protected virtual void Die()
+    {
+        if (Health <= 0f)
         {
             for (int i = 0; i < barofChangableValues.Length; i++)
             {

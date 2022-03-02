@@ -264,6 +264,11 @@ public class ShadowWizard : Boss
         yield return new WaitUntil(() => !animator.IsInTransition(0));
         yield break;
     }
+    protected override void Die()
+    {
+        base.Die();
+        player.Signlock = false;
+    }
     private void LookAt(Vector2 dir)
     {
         Vector2 lookVec = dir - (Vector2)transform.position;

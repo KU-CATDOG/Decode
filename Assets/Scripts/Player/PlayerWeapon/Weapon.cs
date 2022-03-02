@@ -26,7 +26,7 @@ public abstract class Weapon : MonoBehaviour
             GameManager.Instance.player.curCoolTime 
                 = Mathf.Max(GameManager.Instance.player.curCoolTime - Time.deltaTime, 0);
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (!GameManager.Instance.player.Signlock&&Input.GetKeyDown(KeyCode.R))
         {
             ChangeSign();
         }

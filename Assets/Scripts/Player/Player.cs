@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
 
     private Weapon weapon;
     public bool[] achieveList;
+
+    public bool Signlock { get; set; } = true;
     private void OnEnable()
     {
         InputManager.Instance.OnLeftKey += Move;
