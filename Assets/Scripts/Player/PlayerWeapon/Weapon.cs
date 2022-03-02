@@ -26,6 +26,10 @@ public abstract class Weapon : MonoBehaviour
             GameManager.Instance.player.curCoolTime 
                 = Mathf.Max(GameManager.Instance.player.curCoolTime - Time.deltaTime, 0);
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ChangeSign();
+        }
     }
     //충돌판정은 상속받은 class에서 각 무기에 맞게 구현함
     protected abstract void OnTriggerEnter2D(Collider2D collision);
@@ -41,6 +45,13 @@ public abstract class Weapon : MonoBehaviour
         }
 
     }*/
+    public void ChangeSign()
+    {
+        for(int i = 0; i < magnitudeOfChange.Length; i++)
+        {
+            magnitudeOfChange[i] = -magnitudeOfChange[i];
+        }
+    }
     public IEnumerator AttackRoutine(Define.MouseEvent mouse) // normalAttack: 좌클릭일 때 true로 전달
     {
         
