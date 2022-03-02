@@ -59,8 +59,11 @@ public class Gear : Boss
             PresserBottom[i] = Presser[i].transform.GetChild(2).gameObject;
             rbPresserBottom[i] = PresserBottom[i].GetComponent<Rigidbody2D>();
             colPressBottom[i] = PresserBottom[i].GetComponent<BoxCollider2D>();
-            Presser[i].transform.position = Platforms[i].position + new Vector3(0, 5, 0);
+            Presser[i].transform.position = new Vector3(Platforms[i].position.x, 13.1f, 0);
         }
+ 
+
+
         AttackRoutines = new System.Func<IEnumerator>[3] { NormalAttack, LaserAttack, Press };
         Rigidbody2D[] rb = GetComponentsInChildren<Rigidbody2D>();
         rbLeftArm = rb[0];
@@ -106,7 +109,7 @@ public class Gear : Boss
         ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxMP"), typeof(Enemy).GetProperty("MP"));
         //�ӵ��� 100�� �� 3�谡 �ǵ��� �����Ѵ�.
         ConnectValue(Define.ChangableValue.Speed, typeof(Enemy).GetProperty("MaxMovementSpeed"), typeof(Enemy).GetProperty("MovementSpeed")); // ���� �� �̵��ӵ��� ���ݼӵ��� ���
-        
+
         base.Start();
         StartCoroutine(MpRestoreRoutine());
     }
@@ -115,7 +118,7 @@ public class Gear : Boss
     /// </summary>
     protected override float AddValue(float value)
     {
-        if(GetCurSelected() == Define.ChangableValue.Hp)
+        if (GetCurSelected() == Define.ChangableValue.Hp)
         {
             MovementSpeed = Mathf.Min(MaxMovementSpeed, MovementSpeed - value);
         }
@@ -141,7 +144,7 @@ public class Gear : Boss
         NormalAttackHit = false;
         ///����
         colLeftArm.enabled = true;
-        rbLeftArm.velocity = new Vector2(30, 0) * (1+MovementSpeed/50f);
+        rbLeftArm.velocity = new Vector2(30, 0) * (1 + MovementSpeed / 50f);
         yield return new WaitUntil(() =>
         {
             Vector2 viewPos = Camera.main.WorldToViewportPoint(rbLeftArm.position);
@@ -217,7 +220,7 @@ public class Gear : Boss
             colPressBottom[i].enabled = true;
             rbPresserMid[i].velocity = new Vector2(0, -5) * (1 + MovementSpeed / 50f);
             rbPresserBottom[i].velocity = new Vector2(0, -10) * (1 + MovementSpeed / 50f);
-            yield return new WaitUntil(() => 
+            yield return new WaitUntil(() =>
             {
                 PresserMid[i].transform.localScale = new Vector2(1, PresserMid[i].transform.localPosition.y * -4 + 1);
                 return rbPresserBottom[i].position.y < Platforms[i].position.y;
@@ -253,12 +256,12 @@ public class Gear : Boss
         while (true)
         {
             int gearNum = Random.Range(1, 5);
-            for(int i = 0; i < gearNum; i++)
+            for (int i = 0; i < gearNum; i++)
             {
                 int gearSize = Random.Range(3, 7);
                 FallingGear gear = Instantiate(fallingGear).GetComponent<FallingGear>();
                 gear.transform.localScale = new Vector2(gearSize, gearSize);
-                gear.transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(Random.value,1));
+                gear.transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(Random.value, 1));
                 gear.GetComponent<Rigidbody2D>().gravityScale = (1 + MovementSpeed / 50f);
             }
             yield return new WaitForSeconds(1f / (1 + MovementSpeed / 50f));
@@ -275,7 +278,7 @@ public class Gear : Boss
                 StartCoroutine(AttackRoutines[i]());
             }
         }
-        yield return new WaitUntil(()=> !OnNormalAttack&&!OnPressAttack&&!OnLaserAttack);
+        yield return new WaitUntil(() => !OnNormalAttack && !OnPressAttack && !OnLaserAttack);
     }
     private new void Update()
     {
