@@ -1275,6 +1275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowWizard
       objectReference: {fileID: 0}
+    - target: {fileID: 8506277571749103019, guid: 288fc4e70ff483c4ea6dfcff3108cc28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8506277571749103031, guid: 288fc4e70ff483c4ea6dfcff3108cc28, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -1332,10 +1336,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear
       objectReference: {fileID: 0}
-    - target: {fileID: 9203580822119242441, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9203580822119242447, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1379,6 +1379,10 @@ PrefabInstance:
     - target: {fileID: 9203580822119242447, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203580822119242450, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
+      propertyPath: m_Offset.y
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
