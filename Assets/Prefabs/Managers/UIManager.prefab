@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColorOfValues: []
+  FadePanelPrefab: {fileID: 83764524680160240, guid: 985c57ca12fde6a4198346c050c3710c, type: 3}
   AchievementPanelPrefab: {fileID: 6076500732836321345, guid: 6fe640acdd3bf114c9388f7fa94a78e4, type: 3}
+  fadeTime: 0.5

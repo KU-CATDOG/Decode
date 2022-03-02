@@ -10,9 +10,13 @@ public class UIManager : Singleton<UIManager>
     [HideInInspector]
     public Color[] ColorOfValues;
 
+    public Image FadePanelPrefab;
     public Image AchievementPanelPrefab;
     Image AchievementPanel;
+    Image FadePanel;
     Canvas canvas;
+    [SerializeField]
+    float fadeTime;
 
     void Awake()
     {
@@ -20,12 +24,16 @@ public class UIManager : Singleton<UIManager>
         ColorOfValues[(int)Define.ChangableValue.Hp] = Color.red;
         ColorOfValues[(int)Define.ChangableValue.Mp] = new Color(0, 0, 0.5f);
         ColorOfValues[(int)Define.ChangableValue.Speed] = new Color(0, 0.5f, 0);
-        
+        FadePanel = Instantiate(FadePanelPrefab).GetComponent<Image>();
+        FadePanel.gameObject.SetActive(false);
     }
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
-        canvas = FindObjectOfType<Canvas>(); 
+        canvas = FindObjectOfType<Canvas>();
+        FadePanel.transform.SetParent(canvas.transform);
+        FadePanel.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0); 
+        StartCoroutine(FadeOut());
     }
 
     public void SetAchievementPanel(string fillin)
@@ -53,5 +61,20 @@ public class UIManager : Singleton<UIManager>
         }
         rectT.anchoredPosition = destination;
         Destroy(AchievementPanel.gameObject);
+    }
+
+    IEnumerator FadeOut()
+    {
+        Debug.Log("clear");
+        FadePanel.gameObject.SetActive(true);
+        float alpha = 1f;
+        FadePanel.color = new Color(0, 0, 0, 1);
+        for (;FadePanel.color.a > 0;)
+        {
+            alpha -= Time.deltaTime / fadeTime;
+            FadePanel.color = new Color(0, 0, 0, alpha);
+            yield return null;
+        }
+        FadePanel.gameObject.SetActive(false);
     }
 }
