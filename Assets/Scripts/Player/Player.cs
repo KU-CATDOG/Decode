@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     private bool isCursorRight = false;
     public bool dirLock = false;
 
-    public float coolTime = 1f;                           // °ø°Ý ÈÄ ´ë±â½Ã°£
+    public float coolTime = 1f;                           // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°ï¿½
     public float curCoolTime = 0f;
 
     private Weapon weapon;
@@ -82,9 +82,6 @@ public class Player : MonoBehaviour
         isCursorRight = cursorAngle < 90 && cursorAngle > -90;
         if(!dirLock) PlayerLookAt(isCursorRight);
         //Debug.Log(isPlayerLookRight);
-
-        float a = Mathf.PingPong(Time.time, 1);
-        //Debug.Log(a);
 
 
     }
