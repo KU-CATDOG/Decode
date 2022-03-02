@@ -124,10 +124,14 @@ public class Laser : Enemy
             yield return null;
         }
 
+        lr.enabled = false;
+        yield return new WaitForSeconds(0.2f);
+        lr.enabled = true;
         laserCollider.transform.position = (new Vector3(playerPos.x, playerPos.y, 0) + shootPos) / 2;
         Vector3 diff = new Vector3(playerPos.x, playerPos.y, 0) - shootPos;
         laserCollider.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
         laserCollider.transform.localScale = new Vector2(diff.magnitude, laserShootWidth);
+
         laserCollider.SetActive(true);
 
         lr.startColor = Color.yellow;
@@ -145,6 +149,7 @@ public class Laser : Enemy
             float size = Mathf.Lerp(laserShootWidth, laserReadyWidth, t / 0.2f);
             lr.startWidth = size;
             lr.endWidth = size;
+            lr.startColor = lr.endColor = new Color(lr.startColor.r, lr.startColor.g, lr.startColor.b,size);
             yield return null;
         }
 
