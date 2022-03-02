@@ -4,6 +4,13 @@ using UnityEngine;
 
 public enum AudioType
 {
+    player_attack,
+    player_hit,
+    player_jump_down,
+    player_jump_up,
+    player_roll,
+    player_slide,
+    player_walk,
     Length
 }
 
@@ -16,6 +23,7 @@ public class AudioManager : Singleton<AudioManager>
 
     Dictionary<AudioType, AudioClip> audioDictionary = new Dictionary<AudioType, AudioClip>();
     private bool bgmPlaying = false;
+    private bool loopPlaying = false;
 
     private void Awake()
     {
@@ -43,6 +51,25 @@ public class AudioManager : Singleton<AudioManager>
     }
 
     public void PlayLoop(AudioType type)
+    {
+        if (loopPlaying) return;
+        loopPlaying = true;
+        Debug.Log(type);
+        AudioSource source = loopAudioSource;
+        source.loop = true;
+        source.clip = audioDictionary[type];
+        source.Play();
+    }
+
+    public void StopLoop()
+    {
+        AudioSource source = loopAudioSource;
+        source.loop = false;
+        source.Stop();
+        loopPlaying = false;
+    }
+
+    public void PlayBGM(AudioType type)
     {
         if (bgmPlaying) return;
         bgmPlaying = true;

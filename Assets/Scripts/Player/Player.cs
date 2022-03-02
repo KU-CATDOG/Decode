@@ -41,8 +41,12 @@ public class Player : MonoBehaviour
         InputManager.Instance.OnJumpKeyDown += () => { Jump(); isJumpKeyDown = true; } ;
         InputManager.Instance.OnSpaceKeyDown += Roll;
 
-        InputManager.Instance.OnLeftKeyUp += () => { horizontal = 0; anim.SetBool("Running", false); };
-        InputManager.Instance.OnRightKeyUp += () => { horizontal = 0; anim.SetBool("Running", false); };
+        InputManager.Instance.OnLeftKeyUp += () => { horizontal = 0; anim.SetBool("Running", false);
+            //AudioManager.Instance.StopLoop();
+        };
+        InputManager.Instance.OnRightKeyUp += () => { horizontal = 0; anim.SetBool("Running", false);
+            //AudioManager.Instance.StopLoop();
+        };
         InputManager.Instance.OnJumpKeyUp += () => { isJumpKeyDown = false; };
 
         InputManager.Instance.MouseAction += Attack;
@@ -55,8 +59,12 @@ public class Player : MonoBehaviour
         InputManager.Instance.OnJumpKeyDown -= () => { Jump(); isJumpKeyDown = true; };
         InputManager.Instance.OnSpaceKeyDown -= Roll;
 
-        InputManager.Instance.OnLeftKeyUp -= () => { horizontal = 0; anim.SetBool("Running", false); };
-        InputManager.Instance.OnRightKeyUp -= () => { horizontal = 0; anim.SetBool("Running", false); };
+        InputManager.Instance.OnLeftKeyUp -= () => { horizontal = 0; anim.SetBool("Running", false);
+            //AudioManager.Instance.StopLoop();
+        };
+        InputManager.Instance.OnRightKeyUp -= () => { horizontal = 0; anim.SetBool("Running", false);
+            //AudioManager.Instance.StopLoop();
+        };
         InputManager.Instance.OnJumpKeyUp -= () => { isJumpKeyDown = false; };
 
         InputManager.Instance.MouseAction -= Attack;
@@ -130,6 +138,7 @@ public class Player : MonoBehaviour
     {
         if (isControllable)
         {
+            //AudioManager.Instance.PlayLoop(AudioType.player_walk);
             horizontal = direction.x;
             anim.SetBool("Running", true);
         }
@@ -139,6 +148,7 @@ public class Player : MonoBehaviour
     {
         if(isControllable && IsGrounded())
         {
+            AudioManager.Instance.PlayAudio(AudioType.player_jump_up);
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             anim.SetTrigger("Jump");
         }
@@ -154,6 +164,7 @@ public class Player : MonoBehaviour
 
     IEnumerator RollRoutine(float time, bool rollDir)
     {
+        AudioManager.Instance.PlayAudio(AudioType.player_roll);
         SetPlayerControllable(false);
         anim.SetTrigger("Roll");
         rolling = true;
@@ -184,6 +195,7 @@ public class Player : MonoBehaviour
     {
         if (isControllable && curCoolTime == 0)
         {
+            AudioManager.Instance.PlayAudio(AudioType.player_attack);
             dirLock = true;
             if (!isCursorRight) GetComponent<SpriteRenderer>().flipX = true;
             else GetComponent<SpriteRenderer>().flipX = false;
