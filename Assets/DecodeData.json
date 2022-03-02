@@ -1,0 +1,56 @@
+{
+    "activeDataConsole": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "activeDataConsoleSceneName": [
+        "junha 1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "playerHealth": [
+        10.0,
+        0.0,
+        0.0
+    ],
+    "dataConsoleNumber": [
+        1,
+        0,
+        0
+    ],
+    "saveScene": [
+        "junha 1",
+        "",
+        ""
+    ],
+    "lockedDoorKey": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "signlockActivated": [
+        false,
+        false,
+        false
+    ],
+    "lastSaveNumber": 1
+}
