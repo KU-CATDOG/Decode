@@ -22,6 +22,8 @@ public class Gear : Boss
     private Coroutine GearDropCoroutine; //톱니가 떨어지는 코루틴
     private Rigidbody2D rbLeftArm;
     private Rigidbody2D rbRightArm;
+    private BoxCollider2D colLeftArm;
+    private BoxCollider2D colRightArm;
     private float leftArmPos; // x값
     private float rightArmPos;// x값
     private System.Func<IEnumerator>[] AttackRoutines;
@@ -37,6 +39,7 @@ public class Gear : Boss
     private GameObject[] PresserMid;
     private Rigidbody2D[] rbPresserBottom;
     private GameObject[] PresserBottom;
+    private BoxCollider2D[] colPressBottom;
     [SerializeField]
     private Transform[] Platforms;
     private GameObject fallingGear;
@@ -48,18 +51,22 @@ public class Gear : Boss
         PresserBottom = new GameObject[4];
         rbPresserMid = new Rigidbody2D[4];
         rbPresserBottom = new Rigidbody2D[4];
+        colPressBottom = new BoxCollider2D[4];
         for (int i = 0; i < 4; i++)
         {
             PresserMid[i] = Presser[i].transform.GetChild(1).gameObject;
             rbPresserMid[i] = PresserMid[i].GetComponent<Rigidbody2D>();
             PresserBottom[i] = Presser[i].transform.GetChild(2).gameObject;
             rbPresserBottom[i] = PresserBottom[i].GetComponent<Rigidbody2D>();
+            colPressBottom[i] = PresserBottom[i].GetComponent<BoxCollider2D>();
             Presser[i].transform.position = Platforms[i].position + new Vector3(0, 5, 0);
         }
         AttackRoutines = new System.Func<IEnumerator>[3] { NormalAttack, LaserAttack, Press };
         Rigidbody2D[] rb = GetComponentsInChildren<Rigidbody2D>();
         rbLeftArm = rb[0];
         rbRightArm = rb[1];
+        colLeftArm = rbLeftArm.GetComponent<BoxCollider2D>();
+        colRightArm = rbRightArm.GetComponent<BoxCollider2D>();
         leftArmPos = rbLeftArm.position.x;
         rightArmPos = rbRightArm.position.x;
         body = GetComponent<Animator>();
@@ -133,12 +140,14 @@ public class Gear : Boss
         OnNormalAttack = true;
         NormalAttackHit = false;
         ///왼쪽
+        colLeftArm.enabled = true;
         rbLeftArm.velocity = new Vector2(30, 0) * (1+MovementSpeed/50f);
         yield return new WaitUntil(() =>
         {
             Vector2 viewPos = Camera.main.WorldToViewportPoint(rbLeftArm.position);
             return viewPos.x > 1;
         });
+        colLeftArm.enabled = false;
         rbLeftArm.velocity = new Vector2(-20, 0) * (1 + MovementSpeed / 50f);
         yield return new WaitUntil(() =>
         {
@@ -150,12 +159,14 @@ public class Gear : Boss
 
         NormalAttackHit = false;
         ///오른쪽
+        colRightArm.enabled = true;
         rbRightArm.velocity = new Vector2(-30, 0) * (1 + MovementSpeed / 50f);
         yield return new WaitUntil(() =>
         {
             Vector2 viewPos = Camera.main.WorldToViewportPoint(rbRightArm.position);
             return viewPos.x < 0;
         });
+        colLeftArm.enabled = false;
         rbRightArm.velocity = new Vector2(20, 0) * (1 + MovementSpeed / 50f);
         yield return new WaitUntil(() =>
         {
@@ -203,6 +214,7 @@ public class Gear : Boss
             PressWarningArea.SetActive(true);
             yield return new WaitForSeconds(1.0f / (1 + MovementSpeed / 50f));
             PressWarningArea.SetActive(false);
+            colPressBottom[i].enabled = true;
             rbPresserMid[i].velocity = new Vector2(0, -5) * (1 + MovementSpeed / 50f);
             rbPresserBottom[i].velocity = new Vector2(0, -10) * (1 + MovementSpeed / 50f);
             yield return new WaitUntil(() => 
@@ -212,6 +224,7 @@ public class Gear : Boss
             });
             rbPresserMid[i].velocity = Vector2.zero;
             rbPresserBottom[i].velocity = Vector2.zero;
+            colPressBottom[i].enabled = false;
             yield return new WaitForSeconds(0.5f / (1 + MovementSpeed / 50f));
         }
         for(int j = 0; j < 4; j++)
@@ -239,7 +252,7 @@ public class Gear : Boss
     {
         while (true)
         {
-            int gearNum = Random.Range(3, 7);
+            int gearNum = Random.Range(1, 5);
             for(int i = 0; i < gearNum; i++)
             {
                 int gearSize = Random.Range(3, 7);

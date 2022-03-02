@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3199845532639542371}
   - component: {fileID: 3956750070634404883}
   - component: {fileID: 9203580822630878792}
+  - component: {fileID: 1626685360}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -119,6 +120,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b982beac361e45144b5bd056b0738144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1626685360
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023025326746413907}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.29785156}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.29785156}
+  m_EdgeRadius: 0
 --- !u!1 &1850959504440637334
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +606,7 @@ GameObject:
   - component: {fileID: 2507115975637723289}
   - component: {fileID: 8343712099647865602}
   - component: {fileID: 386713973}
+  - component: {fileID: 1997690346}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -686,6 +714,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b982beac361e45144b5bd056b0738144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1997690346
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641050602301411378}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.29785156}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.29785156}
+  m_EdgeRadius: 0
 --- !u!1 &5870900482789293805
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +752,7 @@ GameObject:
   - component: {fileID: 8539345998982428058}
   - component: {fileID: 1396021572927094367}
   - component: {fileID: 129681851}
+  - component: {fileID: 198549294}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -805,6 +860,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b982beac361e45144b5bd056b0738144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &198549294
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870900482789293805}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.29785156}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.29785156}
+  m_EdgeRadius: 0
 --- !u!1 &6487684860777031152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1346,7 @@ GameObject:
   - component: {fileID: 7863130306531615636}
   - component: {fileID: 2696285236204171065}
   - component: {fileID: 483096498}
+  - component: {fileID: 1602991422}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -1372,6 +1454,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b982beac361e45144b5bd056b0738144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1602991422
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191917853645323289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.29785156}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.29785156}
+  m_EdgeRadius: 0
 --- !u!1 &9203580821116851579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,7 +1493,7 @@ GameObject:
   - component: {fileID: 9203580821116851582}
   - component: {fileID: 9203580821116851577}
   m_Layer: 0
-  m_Name: WarningRazer
+  m_Name: WarningLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1953,8 +2061,8 @@ MonoBehaviour:
   DoubleSkillMp: 50
   spring: {fileID: 9203580822157665871}
   PressWarningArea: {fileID: 9203580821280342124}
-  RazerWarningArea: {fileID: 9203580821116851579}
-  RazerObject: {fileID: 9203580823006954450}
+  LaserWarningArea: {fileID: 9203580821116851579}
+  LaserObject: {fileID: 9203580823006954450}
   Presser:
   - {fileID: 3078680758774458591}
   - {fileID: 6763144263611248547}
@@ -2109,6 +2217,7 @@ GameObject:
   - component: {fileID: 9203580822392007588}
   - component: {fileID: 9203580822392007589}
   - component: {fileID: 9203580822392007594}
+  - component: {fileID: 1483161508}
   m_Layer: 0
   m_Name: RightArm
   m_TagString: Untagged
@@ -2250,6 +2359,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1483161508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9203580822392007585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae49f05e740f7844b4aba01d0fee3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9203580822421170098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,7 +2539,7 @@ GameObject:
   - component: {fileID: 9203580823006954449}
   - component: {fileID: 9203580823006954455}
   m_Layer: 0
-  m_Name: Razer
+  m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2563,6 +2684,7 @@ GameObject:
   - component: {fileID: 9203580823152767968}
   - component: {fileID: 9203580823152767969}
   - component: {fileID: 9203580823152767974}
+  - component: {fileID: 1003778834}
   m_Layer: 0
   m_Name: LeftArm
   m_TagString: Untagged
@@ -2704,6 +2826,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1003778834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9203580823152767965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae49f05e740f7844b4aba01d0fee3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9203580823249446446
 GameObject:
   m_ObjectHideFlags: 0

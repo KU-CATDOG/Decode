@@ -1332,17 +1332,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9203580821116851579, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
-      propertyPath: m_Name
-      value: WarningLaser
-      objectReference: {fileID: 0}
     - target: {fileID: 9203580822119242441, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
       propertyPath: m_Name
       value: Gear
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203580822119242441, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9203580822119242447, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
       propertyPath: m_RootOrder
@@ -1390,11 +1382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9203580822119242450, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
       propertyPath: m_Offset.y
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203580823006954450, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}
-      propertyPath: m_Name
-      value: Laser
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e4c61741b114b4a8b88b7c3f46aa0c, type: 3}

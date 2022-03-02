@@ -7,7 +7,7 @@ public class GearArm : MonoBehaviour
     private Gear gear;
     private void Awake()
     {
-        gear = transform.parent.GetComponent<Gear>();
+        gear = transform.parent.parent.GetComponent<Gear>();
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
