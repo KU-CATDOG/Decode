@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public float curCoolTime = 0f;
 
     private Weapon weapon;
-    public bool[] achieveList;
+
     private void OnEnable()
     {
         InputManager.Instance.OnLeftKey += Move;
@@ -230,10 +230,5 @@ public class Player : MonoBehaviour
         {
             child.color = new Color(1, 1, 1, 1);
         }
-    }
-
-    public void ActivateAchievement(int idx)
-    {
-        achieveList[idx] = true;
     }
 }

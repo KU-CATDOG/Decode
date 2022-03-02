@@ -9,14 +9,26 @@ public class UIManager : Singleton<UIManager>
     /// UI에서 사용되는 값 마다의 색상
     [HideInInspector]
     public Color[] ColorOfValues;
+    [SerializeField]
+    Sprite[] achievementSprite;
+    [SerializeField]
+    Sprite UnrevealedAchievement;
 
     public Image FadePanelPrefab;
     public Image AchievementPanelPrefab;
+    public Image AchievementPopupPrefab;
+    public Image AchieveBackPrefab;
+
     Image AchievementPanel;
     Image FadePanel;
+    Image AchievementPopup;
+    Image AchieveBack;
+
+
     Canvas canvas;
     [SerializeField]
     float fadeTime;
+    bool isTrophyOn = false;
 
     void Awake()
     {
@@ -25,28 +37,42 @@ public class UIManager : Singleton<UIManager>
         ColorOfValues[(int)Define.ChangableValue.Mp] = new Color(0, 0, 0.5f);
         ColorOfValues[(int)Define.ChangableValue.Speed] = new Color(0, 0.5f, 0);
         FadePanel = Instantiate(FadePanelPrefab).GetComponent<Image>();
+        AchieveBack = Instantiate(AchieveBackPrefab).GetComponent<Image>();
         FadePanel.gameObject.SetActive(false);
+        AchieveBack.gameObject.SetActive(false);
+        achievementSprite = new Sprite[GameManager.Instance.isAchieved.Length];
     }
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
         canvas = FindObjectOfType<Canvas>();
         FadePanel.transform.SetParent(canvas.transform);
-        FadePanel.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0); 
+        FadePanel.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+        AchieveBack.transform.SetParent(canvas.transform);
+        AchieveBack.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         StartCoroutine(FadeOut());
     }
-
-    public void SetAchievementPanel(string fillin)
+    private void Update()
     {
-        StartCoroutine(AchievePanelSpawn(fillin));
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            AchieveBack.gameObject.SetActive(isTrophyOn = !isTrophyOn);
+            if(isTrophyOn) AchiveMenuOpen();
+        }
     }
 
-    public IEnumerator AchievePanelSpawn(string fillin)
+    public void SetAchievementPanel(string fillin,int idx)
+    {
+        StartCoroutine(AchievePanelSpawn(fillin,idx));
+    }
+
+    public IEnumerator AchievePanelSpawn(string fillin, int idx)
     {
         float time = 1.5f;
         AchievementPanel = Instantiate(AchievementPanelPrefab, canvas.transform);
         AchievementPanel.GetComponent<RectTransform>().anchoredPosition = new Vector3(-200, -75, 0);
         AchievementPanel.GetComponentInChildren<TextMeshProUGUI>().text = fillin;
+        AchievementPanel.transform.GetChild(2).GetComponent<Image>().sprite = achievementSprite[idx];
         RectTransform rectT = AchievementPanel.GetComponent<RectTransform>();
         rectT.anchoredPosition = new Vector3(-200, 75, 0);
         yield return new WaitForSeconds(3f);
@@ -65,7 +91,6 @@ public class UIManager : Singleton<UIManager>
 
     IEnumerator FadeOut()
     {
-        Debug.Log("clear");
         FadePanel.gameObject.SetActive(true);
         float alpha = 1f;
         FadePanel.color = new Color(0, 0, 0, 1);
@@ -77,4 +102,45 @@ public class UIManager : Singleton<UIManager>
         }
         FadePanel.gameObject.SetActive(false);
     }
+
+    public void AchiveMenuOpen()
+    {
+        if (AchieveBack.transform.GetChild(0).childCount == 0)
+        {
+            for (int i = 0; i < GameManager.Instance.isAchieved.Length; i++)
+            {
+                {
+                    Image temp = Instantiate(AchievementPopupPrefab, AchieveBack.transform.GetChild(0));
+                    if (GameManager.Instance.isAchieved[i])
+                    {
+                        temp.GetComponentsInChildren<Text>(true)[0].text = GameManager.Instance.achieveList[i, 0];
+                        temp.GetComponentsInChildren<Text>(true)[1].text = GameManager.Instance.achieveList[i, 1];
+                        temp.transform.GetChild(2).GetComponent<Image>().sprite = achievementSprite[i];
+                    }
+                    else
+                    {
+                        temp.GetComponentsInChildren<Text>(true)[0].text = "???";
+                        temp.GetComponentsInChildren<Text>(true)[1].text = "???";
+                        temp.transform.GetChild(2).GetComponent<Image>().sprite = UnrevealedAchievement;
+                    }
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < GameManager.Instance.isAchieved.Length; i++)
+            {   
+                if (GameManager.Instance.isAchieved[i])
+                {
+                    if (!GameManager.Instance.achieveList[i, 0].Equals(AchieveBack.GetComponentsInChildren<Transform>()[i].GetComponentsInChildren<Text>()[0]))
+                    {
+                        AchieveBack.transform.GetChild(0).GetChild(i).GetComponentsInChildren<Text>()[0].text = GameManager.Instance.achieveList[i, 0];
+                        AchieveBack.transform.GetChild(0).GetChild(i).GetComponentsInChildren<Text>()[1].text = GameManager.Instance.achieveList[i, 1];
+                        AchieveBack.transform.GetChild(0).GetChild(i).GetChild(2).GetComponent<Image>().sprite = achievementSprite[i];
+                    }   
+                }
+            }
+        }
+    }
+
 }

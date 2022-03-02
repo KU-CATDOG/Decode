@@ -6,11 +6,15 @@ public class GameManager : Singleton<GameManager>
 {
     public Player player;
     public string prevScene;
+    public string[,] achieveList;
+    [SerializeField]
+    public bool[] isAchieved;
 
     private void Awake()
     {
         if (GameManager.Instance != this) Destroy(this.gameObject);
         DontDestroyOnLoad(gameObject);
+        achieveList = new string[isAchieved.Length,2];
     }
     void Start()
     {
@@ -21,8 +25,6 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         InputManager.Instance.OnUpdate();
-
-
     }
 
     public void GetDamaged(float damage)
@@ -41,5 +43,4 @@ public class GameManager : Singleton<GameManager>
         }
 
     }
-    
 }
