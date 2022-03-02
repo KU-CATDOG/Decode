@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3324671774758130572}
   - component: {fileID: 4170939255310391251}
   - component: {fileID: 2735043694944424492}
+  - component: {fileID: 1603166508}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -143,7 +144,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 7
-  jumpSpeed: 13
+  jumpSpeed: 10
   health: 0
   maxHealth: 10
   rollSpeed: 10
@@ -151,6 +152,7 @@ MonoBehaviour:
   dirLock: 0
   coolTime: 1
   curCoolTime: 0
+  achieveList: 
 --- !u!95 &2735043694944424492
 Animator:
   serializedVersion: 4
@@ -171,6 +173,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &1603166508
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4170939255310391256}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
 --- !u!1001 &1955815554
 PrefabInstance:
   m_ObjectHideFlags: 0
