@@ -7,10 +7,13 @@ public class GameManager : Singleton<GameManager>
     public Player player;
     public string prevScene;
 
+    private void Awake()
+    {
+        if (GameManager.Instance != this) Destroy(this.gameObject);
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
-        //FIXME
-        DontDestroyOnLoad(gameObject);
         player = FindObjectOfType<Player>();
     }
 
