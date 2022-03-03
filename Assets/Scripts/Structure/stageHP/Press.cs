@@ -32,8 +32,8 @@ public class Press : MonoBehaviour
         {
 
             colBottom.enabled = true;
-            rbBottom.velocity = Vector2.down * velocity;
-            rbMid.velocity = Vector2.down * velocity / 2f;
+            rbBottom.velocity = Vector2.down * velocity*2;
+            rbMid.velocity = Vector2.down * velocity ;
             yield return new WaitUntil(() =>
             {
                 rbMid.transform.localScale = new Vector2(1, rbMid.transform.localPosition.y * -4.2f + 1);
