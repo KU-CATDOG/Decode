@@ -218,12 +218,12 @@ public class ShadowWizard : Boss
     }
     private IEnumerator Teleport()
     {
-        RaycastHit2D raycasthitLeft = Physics2D.Raycast(player.transform.position, Vector2.left, 15, LayerMask.GetMask("Wall") | LayerMask.GetMask("Floor"));
-        RaycastHit2D raycasthitRight = Physics2D.Raycast(player.transform.position, Vector2.right, 15, LayerMask.GetMask("Wall") | LayerMask.GetMask("Floor"));
         animator.SetTrigger("Teleport");
         yield return new WaitUntil(() => animator.IsInTransition(0));
         yield return new WaitUntil(() => !animator.IsInTransition(0));
         yield return new WaitForSeconds(2.0f);
+        RaycastHit2D raycasthitLeft = Physics2D.Raycast(player.transform.position, Vector2.left, 15, LayerMask.GetMask("Wall") | LayerMask.GetMask("Floor"));
+        RaycastHit2D raycasthitRight = Physics2D.Raycast(player.transform.position, Vector2.right, 15, LayerMask.GetMask("Wall") | LayerMask.GetMask("Floor"));
         if (!raycasthitLeft && !raycasthitRight)
         {
             int rand = Random.Range(0, 2);

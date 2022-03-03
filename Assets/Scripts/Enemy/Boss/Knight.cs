@@ -112,7 +112,7 @@ public class Knight : Boss
     protected override void Start()
     {
         attackSpeed = 0.5f;
-        MaxHealth = Health = 10f;
+        MaxHealth = Health = 50f;
         AttackDamage = 10f;
         hb.Dmg = (int)AttackDamage;
         MovementSpeed = 5f;
@@ -320,6 +320,11 @@ public class Knight : Boss
     {
         if (CheckPlayer())
         {
+            RaycastHit2D tmp = Physics2D.Raycast(transform.position, Vector3.right * (player.transform.position - transform.position).x, 5f, LayerMask.GetMask("Wall"));
+            if (tmp)
+            {
+                yield break;
+            }
             LookAt(player.transform.position);
             animator.SetTrigger("DashReady");
             yield return new WaitForSeconds(1.0f);
