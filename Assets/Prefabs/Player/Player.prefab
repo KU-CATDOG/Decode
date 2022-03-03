@@ -144,7 +144,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 7
-  jumpSpeed: 10
+  jumpSpeed: 13
   health: 0
   maxHealth: 10
   rollSpeed: 10
