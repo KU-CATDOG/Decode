@@ -33,13 +33,11 @@ public class Player : MonoBehaviour
     public float curCoolTime = 0f;
 
     private Weapon weapon;
-<<<<<<< HEAD
 
-=======
     public bool[] achieveList;
 
     public bool Signlock { get; set; } = true;
->>>>>>> origin/junha
+
     private void OnEnable()
     {
         InputManager.Instance.OnLeftKey += Move;
