@@ -1,0 +1,78 @@
+{
+    "activeDataConsole": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "activeDataConsoleSceneName": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "playerHealth": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "dataConsoleNumber": [
+        0,
+        0,
+        0
+    ],
+    "saveScene": [
+        "",
+        "",
+        ""
+    ],
+    "lockedDoorKey": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "signlockActivated": [
+        false,
+        false,
+        false
+    ],
+    "lastSaveNumber": 0
+}

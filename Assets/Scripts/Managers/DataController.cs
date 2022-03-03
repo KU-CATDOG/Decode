@@ -34,7 +34,7 @@ public class DataController : Singleton<DataController>
 
         if (!File.Exists(path))
         {
-            SaveManager.Instance.lastSaveNumber = 1;
+            SaveManager.Instance.lastSaveNumber = 0;
             JsonSave();
         }
         else

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SaveManager : Singleton<SaveManager>
 {
@@ -17,8 +19,11 @@ public class SaveManager : Singleton<SaveManager>
 
     public int lastSaveNumber;
 
+    private Player player;
+
     void Start()
     {
+        player = FindObjectOfType<Player>();
         DontDestroyOnLoad(gameObject);
         DataController.Instance.JsonLoad();
         DataController.Instance.JsonSave();
@@ -28,4 +33,13 @@ public class SaveManager : Singleton<SaveManager>
     {
         DataController.Instance.JsonSave();
     }
+
+    public void LoadSaveData(int saveNumber)
+    {
+        GameManager.Instance.prevScene = "dataConsole";
+        player.health = playerHealth[saveNumber - 1];
+        SceneManager.LoadScene(saveScene[saveNumber - 1]);
+        player.Signlock = signlockActivated[saveNumber - 1];
+    }
+
 }
