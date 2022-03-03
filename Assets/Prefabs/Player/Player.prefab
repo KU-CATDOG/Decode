@@ -153,6 +153,7 @@ MonoBehaviour:
   coolTime: 1
   curCoolTime: 0
   achieveList: 
+  isGround: 0
 --- !u!95 &2735043694944424492
 Animator:
   serializedVersion: 4
@@ -196,6 +197,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4170939255310391260}
     m_Modifications:
+    - target: {fileID: 2400375726587906765, guid: 5747b07ceea10b24a8a7ea445cf77886, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5914122924327957605, guid: 5747b07ceea10b24a8a7ea445cf77886, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -243,6 +248,14 @@ PrefabInstance:
     - target: {fileID: 6573196367966057488, guid: 5747b07ceea10b24a8a7ea445cf77886, type: 3}
       propertyPath: m_Name
       value: DefaultWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495020876324271634, guid: 5747b07ceea10b24a8a7ea445cf77886, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495020876324271634, guid: 5747b07ceea10b24a8a7ea445cf77886, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5747b07ceea10b24a8a7ea445cf77886, type: 3}

@@ -37,6 +37,14 @@ public class Saw : Structure
             direction = -1.0f;
         else if (startPoint.x - transform.position.x >= movementMax)
             direction = 1.0f;
+        if(direction == 1)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, transform.rotation.eulerAngles.z - 3f));
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, transform.rotation.eulerAngles.z + 3f));
+        }
         rb.velocity = new Vector3(MovementSpeed*direction, 0, 0);
     }
 

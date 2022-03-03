@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PressTrigger : MonoBehaviour
-{
+{/*
     private Press press;
 
     void Start()
@@ -20,5 +20,5 @@ public class PressTrigger : MonoBehaviour
             press.rb.velocity = new Vector3(0, 0, 0);
             press.rb.gravityScale = 0.0f;
         }
-    }
+    }*/
 }
