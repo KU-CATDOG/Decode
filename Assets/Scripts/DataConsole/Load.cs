@@ -13,8 +13,8 @@ public class Load : MonoBehaviour
     public void Start()
     {
         player = FindObjectOfType<Player>();
-        if (SaveManager.Instance.saveScene[loadNumber - 1] != null)
-            transform.GetChild(0).GetComponent<Text>().text = SaveManager.Instance.saveScene[loadNumber - 1];
+        if (SaveManager.Instance.playerHealth[loadNumber - 1] > 0)
+            transform.GetChild(0).GetComponent<Text>().text = loadNumber.ToString();
     }
 
     
