@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class UIManager : Singleton<UIManager>
@@ -13,7 +14,16 @@ public class UIManager : Singleton<UIManager>
     Sprite[] achievementSprite;
     [SerializeField]
     Sprite UnrevealedAchievement;
+    [SerializeField]
+    private GameObject settings;
+    [SerializeField]
+    private GameObject reload;
+    [SerializeField]
+    private GameObject cancel;
+    [SerializeField]
+    private GameObject SettingPrefab;
 
+    
     public Image FadePanelPrefab;
     public Image AchievementPanelPrefab;
     public Image AchievementPopupPrefab;
@@ -24,6 +34,16 @@ public class UIManager : Singleton<UIManager>
     Image AchievementPopup;
     Image AchieveBack;
 
+    Button settingButton;
+    Button settingReload;
+    Button settingQuit;
+    Button settingClose;
+    Button askReloadReload;
+    Button askReloadCancel;
+    Button askQuitQuit;
+    Button askQuitCancel;
+
+    GameObject SettingObject;
 
     Canvas canvas;
     [SerializeField]
@@ -41,6 +61,30 @@ public class UIManager : Singleton<UIManager>
         FadePanel.gameObject.SetActive(false);
         AchieveBack.gameObject.SetActive(false);
         achievementSprite = new Sprite[GameManager.Instance.isAchieved.Length];
+        SettingObject = Instantiate(SettingPrefab);
+
+        settings = SettingObject.transform.GetChild(1).gameObject;
+        reload = SettingObject.transform.GetChild(2).gameObject;
+        cancel = SettingObject.transform.GetChild(3).gameObject;
+
+        settingButton = SettingObject.transform.GetChild(0).GetComponent<Button>();
+        settingReload = settings.transform.GetChild(0).GetComponent<Button>();
+        settingQuit = settings.transform.GetChild(1).GetComponent<Button>();
+        settingClose = settings.transform.GetChild(2).GetComponent<Button>();
+        askReloadReload = reload.transform.GetChild(0).GetComponent<Button>();
+        askReloadCancel = reload.transform.GetChild(1).GetComponent<Button>();
+        askQuitQuit = cancel.transform.GetChild(0).GetComponent<Button>();
+        askQuitCancel = cancel.transform.GetChild(1).GetComponent<Button>();
+
+        settingButton.onClick.AddListener(SettingsButton);
+        settingReload.onClick.AddListener(RestartButton);
+        settingQuit.onClick.AddListener(ToMenuButton);
+        settingClose.onClick.AddListener(CloseSettingsButton);
+        askReloadReload.onClick.AddListener(ReloadReload);
+        askReloadCancel.onClick.AddListener(ReloadCancel);
+        askQuitQuit.onClick.AddListener(QuitQuit);
+        askQuitCancel.onClick.AddListener(QuitCancel);
+
     }
     private void Start()
     {
@@ -50,6 +94,8 @@ public class UIManager : Singleton<UIManager>
         FadePanel.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         AchieveBack.transform.SetParent(canvas.transform);
         AchieveBack.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+        SettingObject.transform.SetParent(canvas.transform);
+        SettingObject.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         StartCoroutine(FadeOut());
     }
     private void Update()
@@ -142,5 +188,60 @@ public class UIManager : Singleton<UIManager>
             }
         }
     }
+    public void SettingsButton()
+    {
+        Time.timeScale = 0;
+        settings.SetActive(true);
+        if (GameManager.Instance.player != null)
+        {
+            GameManager.Instance.player.isControllable = false;
+        }
+    }
 
+    public void CloseSettingsButton()
+    {
+        Time.timeScale = 1;
+        settings.SetActive(false);
+        if (GameManager.Instance.player != null)
+        {
+            GameManager.Instance.player.isControllable = true;
+        }
+    }
+
+    public void RestartButton()
+    {
+        settings.SetActive(false);
+        reload.SetActive(true);
+    }
+
+    public void ToMenuButton()
+    {
+        cancel.SetActive(true);
+        settings.SetActive(false);
+    }
+
+    public void ReloadReload()
+    {
+        Time.timeScale = 1;
+        if (GameManager.Instance.player != null)
+        {
+            GameManager.Instance.player.isControllable = true;
+        }
+        //SceneManager.LoadScene(sceneToLoad);
+    }
+    public void ReloadCancel()
+    {
+        settings.SetActive(true);
+        reload.SetActive(false);
+    }
+    public void QuitQuit()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void QuitCancel()
+    {
+        cancel.SetActive(false);
+        settings.SetActive(true);
+    }
 }

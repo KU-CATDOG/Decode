@@ -47,6 +47,12 @@ MonoBehaviour:
   ColorOfValues: []
   achievementSprite: []
   UnrevealedAchievement: {fileID: 7482667652216324306, guid: 2a01cfc61e76e204db4678bdaab534b5, type: 3}
+  openSettings: {fileID: 0}
+  closeSettings: {fileID: 0}
+  settings: {fileID: 0}
+  reload: {fileID: 0}
+  cancel: {fileID: 0}
+  SettingPrefab: {fileID: 8753418204782584513, guid: 15e61bb52003f3a4e8b7efca379688e4, type: 3}
   FadePanelPrefab: {fileID: 83764524680160240, guid: 985c57ca12fde6a4198346c050c3710c, type: 3}
   AchievementPanelPrefab: {fileID: 6076500732836321345, guid: 6fe640acdd3bf114c9388f7fa94a78e4, type: 3}
   AchievementPopupPrefab: {fileID: 3309135906651772918, guid: 2ec60fe3801936642aeadea80aec4be2, type: 3}
