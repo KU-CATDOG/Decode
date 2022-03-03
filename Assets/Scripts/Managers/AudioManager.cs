@@ -11,6 +11,10 @@ public enum AudioType
     player_roll,
     player_slide,
     player_walk,
+    stage1,
+    hpboss,
+    mpboss,
+    speedboss,
     Length
 }
 
