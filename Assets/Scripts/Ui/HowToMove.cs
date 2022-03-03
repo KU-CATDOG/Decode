@@ -7,29 +7,36 @@ public class HowToMove : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] public Text tx;
-    [SerializeField] private Player player;
 
     private string first;
     private string second;
+    private string third;
     bool isfaded = false;
     bool isTyping = false;
-    bool typedAll = false;
+    bool typedfirst = false;
+    bool typedsecond = false;
     RectTransform rectT;
 
     void Start()
     {
-        player = GameManager.Instance.player;
         first = "Standard control\n\"WASD\"";
         second = "Press Space to evade";
+        third = "Press G to interact with object";
         StartCoroutine(TypeEff(first));
     }
     private void Update()
     {
-        if (!isTyping && !typedAll)
+        if (!isTyping && !typedfirst)
         {
             StartCoroutine(TypeEff(second));
+            typedfirst = !typedfirst;
         }
-        if (!isTyping && typedAll && !isfaded) StartCoroutine(FadeOutCoroutine());
+        if (!isTyping && typedfirst && !typedsecond) 
+        {
+            StartCoroutine(TypeEff(third));
+            typedsecond = !typedsecond;
+        }
+        if (!isTyping && typedfirst && typedsecond && !isfaded) StartCoroutine(FadeOutCoroutine());
     }
     IEnumerator FadeOutCoroutine()
     {
@@ -54,7 +61,7 @@ public class HowToMove : MonoBehaviour
             tx.text = str.Substring(0, i);
             yield return new WaitForSeconds(0.1f);
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
         for (int i = second.Length; i >= 0; i--)
         {
@@ -62,6 +69,5 @@ public class HowToMove : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         isTyping = false;
-        if (str.Equals(second)) typedAll = true;
     }
 }
