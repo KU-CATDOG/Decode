@@ -63,6 +63,7 @@ public class PCSpider : Enemy
     {
         if (CheckPlayer())
         {
+            Debug.Log("!!!");
             GameManager.Instance.GetDamaged(dmg);
             yield return new WaitForSeconds(Interval);
         }
