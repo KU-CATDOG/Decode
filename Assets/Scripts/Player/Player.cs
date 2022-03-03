@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Singleton<Player>
 {
 
-    private float horizontal;
+    public float horizontal;
     private bool isJumpKeyDown = false;
     public bool isControllable = true;
 

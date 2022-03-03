@@ -14,6 +14,7 @@ public class MoveScene : MonoBehaviour
         {
             GameManager.Instance.prevScene = curScene;
             SceneManager.LoadScene(nextScene);
+            GameManager.Instance.player.horizontal = 0;
         }
 
     }
