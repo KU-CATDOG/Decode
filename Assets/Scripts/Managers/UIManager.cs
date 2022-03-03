@@ -62,6 +62,7 @@ public class UIManager : Singleton<UIManager>
         AchieveBack.gameObject.SetActive(false);
         achievementSprite = new Sprite[GameManager.Instance.isAchieved.Length];
         SettingObject = Instantiate(SettingPrefab);
+        DontDestroyOnLoad(SettingObject);
 
         settings = SettingObject.transform.GetChild(1).gameObject;
         reload = SettingObject.transform.GetChild(2).gameObject;
