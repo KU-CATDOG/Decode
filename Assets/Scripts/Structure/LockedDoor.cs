@@ -36,7 +36,7 @@ public class LockedDoor : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && Input.GetKey(KeyCode.G) && SaveManager.Instance.lockedDoorKey[doorNumber-1])
+        if (other.gameObject.tag == "Player" && Input.GetKey(KeyCode.G) && Player.Instance.lockedDoorKey[doorNumber-1])
         {
             Destroy(door);
         }
