@@ -46,7 +46,7 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
                 break;
         }
 
-        if (selected == (int)Define.ChangableValue.Hp && nextVal == 0)
+        if (GetCurSelected() == (int)Define.ChangableValue.Hp && nextVal == 0)
         {
             Die();
         }
