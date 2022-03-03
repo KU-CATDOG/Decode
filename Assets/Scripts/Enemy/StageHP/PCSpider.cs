@@ -13,7 +13,7 @@ public class PCSpider : Enemy
         AttackDamage = 5f;
         MovementSpeed = 1f;
         MaxMovementSpeed = 10f;
-        Range = 1.5f;     // 공격 범위
+        Range = 2.5f;     // 공격 범위
         Eyesight = 10f;
         Interval = 1.0f;
         ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
@@ -36,7 +36,6 @@ public class PCSpider : Enemy
                 if (DistToPlayer() < Range) 
                 {
                     anim.SetBool("Moving", false);
-                    anim.SetTrigger("Attack");
                     nextRoutines.Enqueue(NewActionRoutine(AttackRoutine(AttackDamage)));
                 } 
                 else
@@ -61,11 +60,17 @@ public class PCSpider : Enemy
 
     private IEnumerator AttackRoutine(float dmg)
     {
+
+        anim.SetTrigger("Attack");
+        yield return new WaitForSeconds(Interval);
+
         if (CheckPlayer())
         {
-            Debug.Log("!!!");
-            GameManager.Instance.GetDamaged(dmg);
-            yield return new WaitForSeconds(Interval);
+            if(DistToPlayer() < Range)
+            {
+                GameManager.Instance.GetDamaged(dmg);
+
+            }
         }
         else yield return null;
     }
