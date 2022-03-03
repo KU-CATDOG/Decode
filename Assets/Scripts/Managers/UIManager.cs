@@ -62,7 +62,7 @@ public class UIManager : Singleton<UIManager>
         AchieveBack.gameObject.SetActive(false);
         achievementSprite = new Sprite[GameManager.Instance.isAchieved.Length];
         SettingObject = Instantiate(SettingPrefab);
-        DontDestroyOnLoad(SettingObject);
+
 
         settings = SettingObject.transform.GetChild(1).gameObject;
         reload = SettingObject.transform.GetChild(2).gameObject;
@@ -90,6 +90,7 @@ public class UIManager : Singleton<UIManager>
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(SettingObject);
         canvas = FindObjectOfType<Canvas>();
         FadePanel.transform.SetParent(canvas.transform);
         FadePanel.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;

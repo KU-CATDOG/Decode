@@ -1,7 +1,7 @@
 {
     "activeDataConsole": [
-        false,
-        false,
+        true,
+        true,
         false,
         false,
         false,
@@ -22,8 +22,8 @@
         false
     ],
     "activeDataConsoleSceneName": [
-        "",
-        "",
+        "DMScene_MP",
+        "HPmap",
         "",
         "",
         "",
@@ -44,22 +44,22 @@
         ""
     ],
     "playerHealth": [
-        0.0,
+        833.0,
         0.0,
         0.0
     ],
     "dataConsoleNumber": [
-        0,
+        1,
         0,
         0
     ],
     "saveScene": [
-        "",
+        "DMScene_MP",
         "",
         ""
     ],
     "lockedDoorKey": [
-        false,
+        true,
         false,
         false,
         false,
@@ -84,5 +84,5 @@
         false,
         false
     ],
-    "lastSaveNumber": 0
+    "lastSaveNumber": 1
 }

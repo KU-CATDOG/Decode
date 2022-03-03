@@ -18,7 +18,8 @@ public class SideMovingGround : Structure
     private void Start()
     {
         startPoint = transform.position;
-        MaxMP = MP = mp;
+        MaxMP = 10f;
+        MP = mp;
         MovementSpeed = speed;
         MaxMovementSpeed = maxSpeed;
         direction = 1.0f;

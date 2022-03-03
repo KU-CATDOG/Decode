@@ -1253,21 +1253,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2525611691697377044, guid: da018ff72cf79ad44b83e4ef463c95ca, type: 3}
-      propertyPath: maxSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525611691697377044, guid: da018ff72cf79ad44b83e4ef463c95ca, type: 3}
-      propertyPath: movementMax
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2525611691697377051, guid: da018ff72cf79ad44b83e4ef463c95ca, type: 3}
       propertyPath: m_RootOrder
       value: 46
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525611691697377051, guid: da018ff72cf79ad44b83e4ef463c95ca, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.521676
       objectReference: {fileID: 0}
     - target: {fileID: 2525611691697377051, guid: da018ff72cf79ad44b83e4ef463c95ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1312,10 +1300,6 @@ PrefabInstance:
     - target: {fileID: 2525611691697377055, guid: da018ff72cf79ad44b83e4ef463c95ca, type: 3}
       propertyPath: m_Name
       value: SideMovigGround (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525611691697377055, guid: da018ff72cf79ad44b83e4ef463c95ca, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da018ff72cf79ad44b83e4ef463c95ca, type: 3}
@@ -9922,7 +9906,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5634896093153995504, guid: b6cb2a8f537669141ba293590abb8d2b, type: 3}
       propertyPath: speed
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5634896093153995504, guid: b6cb2a8f537669141ba293590abb8d2b, type: 3}
       propertyPath: movementMax
