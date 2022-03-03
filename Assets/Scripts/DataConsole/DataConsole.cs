@@ -34,7 +34,6 @@ public class DataConsole : MonoBehaviour
         {
             panel = Instantiate(defaultPanel, canvas.transform);
             Vector3 panelPos = Camera.main.WorldToScreenPoint(new Vector3(player.transform.position.x, player.transform.position.y + 2.0f, 0));
-            panel.gameObject.SetActive(true);
             SaveManager.Instance.activeDataConsole[consoleNumber-1] = true;
             SaveManager.Instance.activeDataConsoleSceneName[consoleNumber - 1] = sceneName;
             Time.timeScale = 0;

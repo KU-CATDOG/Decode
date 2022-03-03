@@ -21,7 +21,10 @@ public class Load : MonoBehaviour
 
     public void OnClickExit()
     {
-        Time.timeScale = 1;
-        SaveManager.Instance.LoadSaveData(loadNumber);
+        if (SaveManager.Instance.playerHealth[loadNumber - 1] > 0)
+        {
+            Time.timeScale = 1;
+            SaveManager.Instance.LoadSaveData(loadNumber);
+        }
     }
 }

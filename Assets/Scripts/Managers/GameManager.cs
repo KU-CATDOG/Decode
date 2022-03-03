@@ -40,7 +40,7 @@ public class GameManager : Singleton<GameManager>
         {
             //Debug.Log("Player Dead");
             //player.gameObject.SetActive(false);
-            //Load.Instance.LoadSaveData(SaveManager.Instance.lastSaveNumber); // 최근 저장했던 데이터 값으로 이동
+            SaveManager.Instance.LoadSaveData(SaveManager.Instance.lastSaveNumber); // 최근 저장했던 데이터 값으로 이동
         }
 
     }
