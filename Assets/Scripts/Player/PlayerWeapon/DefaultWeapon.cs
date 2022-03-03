@@ -10,7 +10,7 @@ public class DefaultWeapon : Weapon // ���� ���ϱ�, ���⸦
         magnitudeOfChange[(int)Define.ChangableValue.Hp] = -5;
         magnitudeOfChange[(int)Define.ChangableValue.Mp] = -20;
         magnitudeOfChange[(int)Define.ChangableValue.Rotation] = 15;
-        magnitudeOfChange[(int)Define.ChangableValue.Speed] = -5;
+        magnitudeOfChange[(int)Define.ChangableValue.Speed] = 5;
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
