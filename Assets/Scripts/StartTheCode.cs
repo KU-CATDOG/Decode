@@ -11,7 +11,7 @@ public class StartTheCode : MonoBehaviour
     {
         if(SaveManager.Instance.lastSaveNumber == 0)
         {
-            SceneManager.LoadScene("DMScene_tuto");
+            SceneManager.LoadScene(1);
         }
         else
         {
