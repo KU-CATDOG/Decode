@@ -40,6 +40,8 @@ public class Player : Singleton<Player>
 
     public bool Signlock { get; set; } = true;
 
+    public bool[] lockedDoorKey = new bool[9];
+
     private void OnEnable()
     {
         InputManager.Instance.OnLeftKey += Move;

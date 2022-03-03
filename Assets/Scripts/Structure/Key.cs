@@ -17,7 +17,7 @@ public class Key : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SaveManager.Instance.lockedDoorKey[keyNumber - 1] = true;
+            Player.Instance.lockedDoorKey[keyNumber - 1] = true;
             Destroy(gameObject);
         }
     }

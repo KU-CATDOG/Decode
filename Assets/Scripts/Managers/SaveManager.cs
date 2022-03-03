@@ -40,6 +40,7 @@ public class SaveManager : Singleton<SaveManager>
         if(player != null)  player.health = playerHealth[saveNumber - 1];
         SceneManager.LoadScene(saveScene[saveNumber - 1]);
         if (player != null) player.Signlock = signlockActivated[saveNumber - 1];
+        if (player != null) player.lockedDoorKey = lockedDoorKey;
     }
 
 }
