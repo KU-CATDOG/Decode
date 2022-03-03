@@ -14,6 +14,7 @@ public class StartTheCode : MonoBehaviour
         if(SaveManager.Instance.lastSaveNumber == 0)
         {
             Player.SetActive(true);
+            GameManager.Instance.prevScene = "MainMenu";
             SceneManager.LoadScene(0);
         }
         else

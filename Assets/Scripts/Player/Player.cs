@@ -83,6 +83,10 @@ public class Player : Singleton<Player>
     }
 
 
+    void Awake()
+    {
+        health = maxHealth;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -91,7 +95,6 @@ public class Player : Singleton<Player>
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
-        health = maxHealth;
 
         if (Player.Instance != this)
             Destroy(this.gameObject);

@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Build/MainMenu.unity
-    guid: 42e3fdf08104ae44fb246b0f8142f349
-  - enabled: 1
     path: Assets/Scenes/Build/DMScene_tuto.unity
     guid: e260906e40f382f4b872261d77dbc118
   - enabled: 1
@@ -32,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Build/DMScene_SPEEDBoss.unity
     guid: 1407751de011d4e478d19cb0d33ad9aa
+  - enabled: 1
+    path: Assets/Scenes/Build/MainMenu.unity
+    guid: 42e3fdf08104ae44fb246b0f8142f349
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 58c3bd90292067f4a86d3cb2befb5215, type: 2}

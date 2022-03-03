@@ -24,7 +24,6 @@ public class SaveManager : Singleton<SaveManager>
 
     void Start()
     {
-        player = FindObjectOfType<Player>();
         DontDestroyOnLoad(gameObject);
         DataController.Instance.JsonLoad();
         DataController.Instance.JsonSave();
@@ -37,13 +36,14 @@ public class SaveManager : Singleton<SaveManager>
 
     public void LoadSaveData(int saveNumber)
     {
+        player = FindObjectOfType<Player>();
         GameManager.Instance.prevScene = "dataConsole";
-        if(player != null)  player.health = playerHealth[saveNumber - 1];
+        player.health = playerHealth[saveNumber - 1];
+        player.Signlock = signlockActivated[saveNumber - 1];
+        player.MPChangeLock = mplockActivated[saveNumber - 1];
+        player.SpeedChangeLock = speedlockActivated[saveNumber - 1];
+        player.lockedDoorKey = lockedDoorKey;
         SceneManager.LoadScene(saveScene[saveNumber - 1]);
-        if (player != null) player.Signlock = signlockActivated[saveNumber - 1];
-        if (player != null) player.MPChangeLock = mplockActivated[saveNumber - 1];
-        if (player != null) player.SpeedChangeLock = speedlockActivated[saveNumber - 1];
-        if (player != null) player.lockedDoorKey = lockedDoorKey;
     }
 
 }
