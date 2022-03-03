@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DataConsole : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class DataConsole : MonoBehaviour
         canvas = FindObjectOfType<Canvas>();
         dataConsole = transform.parent.gameObject;
         player = GameObject.Find("Player");
+        sceneName = SceneManager.GetActiveScene().name;
     }
 
     private void OnTriggerStay2D(Collider2D other)
