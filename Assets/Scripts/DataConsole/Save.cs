@@ -28,6 +28,8 @@ public class Save : MonoBehaviour
         SaveManager.Instance.saveScene[saveNumber - 1] = dataConsole.sceneName;
         SaveManager.Instance.lastSaveNumber = saveNumber;
         SaveManager.Instance.signlockActivated[saveNumber-1] = player.Signlock;
+        SaveManager.Instance.mplockActivated[saveNumber - 1] = player.MPChangeLock;
+        SaveManager.Instance.speedlockActivated[saveNumber - 1] = player.SpeedChangeLock;
         SaveManager.Instance.lockedDoorKey = player.lockedDoorKey;
         transform.GetChild(0).GetComponent<Text>().text = SaveManager.Instance.saveScene[saveNumber - 1];
         savePanel.gameObject.SetActive(false);

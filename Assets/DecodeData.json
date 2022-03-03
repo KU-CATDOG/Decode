@@ -74,5 +74,15 @@
         true,
         false
     ],
+    "mplockActivated": [
+        true,
+        true,
+        false
+    ],
+    "speedlockActivated": [
+        true,
+        true,
+        false
+    ],
     "lastSaveNumber": 2
 }
