@@ -26,7 +26,7 @@ public class AudioManager : Singleton<AudioManager>
     private int sourceIndex;
 
     Dictionary<AudioType, AudioClip> audioDictionary = new Dictionary<AudioType, AudioClip>();
-    private bool bgmPlaying = false;
+    public bool bgmPlaying = false;
     private bool loopPlaying = false;
 
     private void Awake()

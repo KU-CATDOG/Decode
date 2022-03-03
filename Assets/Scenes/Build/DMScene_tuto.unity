@@ -2004,37 +2004,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &816498369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 816498370}
-  m_Layer: 0
-  m_Name: AudioPlayer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &816498370
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816498369}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5050983, y: -0.6491196, z: -0.030226037}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &833236950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5912,7 +5881,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6323114308335668821, guid: eb97955691ef9b945b27aaa8364e353b, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6323114308335668821, guid: eb97955691ef9b945b27aaa8364e353b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6226,6 +6195,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &279863102149789834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5050983
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6491196
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.030226037
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415368, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 279863101351415371, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
+      propertyPath: m_Name
+      value: AudioPlayer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22823ca56c3249c4ba1549a4171011c7, type: 3}
 --- !u!1001 &5724038390819181147
 PrefabInstance:
   m_ObjectHideFlags: 0
