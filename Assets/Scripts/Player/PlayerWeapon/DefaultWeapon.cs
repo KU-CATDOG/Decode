@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DefaultWeapon : Weapon // °ªÀÇ ´õÇÏ±â, »©±â¸¦ ±¸ÇöÇÏ´Â ¹«±â
+public class DefaultWeapon : Weapon // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½, ï¿½ï¿½ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
 {
     protected override void Start()
     {
@@ -21,7 +21,11 @@ public class DefaultWeapon : Weapon // °ªÀÇ ´õÇÏ±â, »©±â¸¦ ±¸ÇöÇÏ´Â ¹«±â
             if (mouse == Define.MouseEvent.LClick)
             {
                 changable.ChangeVal(Define.ChangeType.Add, magnitudeOfChange[(int)changable.GetCurSelected()]);
-                if(collision.GetComponent<Enemy>() != null) collision.GetComponent<Enemy>().onHit = true;
+                Enemy enemy;
+                if(enemy = collision.GetComponent<Enemy>())
+                {
+                    enemy.onHit = true;
+                }
             }
             else
             {

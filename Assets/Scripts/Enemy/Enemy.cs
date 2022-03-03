@@ -41,19 +41,6 @@ public abstract class Enemy : Changable
         {
             NextRoutine();
         }
-        Die();
-    }
-    protected virtual void Die()
-    {
-        if (Health <= 0f)
-        {
-            for (int i = 0; i < barofChangableValues.Length; i++)
-            {
-                Destroy(barofChangableValues[i].gameObject);
-            }
-            Destroy(gameObject);
-
-        }
     }
     protected void NextRoutine()
     {

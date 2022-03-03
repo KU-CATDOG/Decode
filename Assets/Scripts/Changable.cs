@@ -45,7 +45,12 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
                 nextVal = -1;
                 break;
         }
-        barofChangableValues[selected].Value = nextVal;
+
+        if (selected == (int)Define.ChangableValue.Hp && nextVal == 0)
+        {
+            Die();
+        }
+            barofChangableValues[selected].Value = nextVal;
     }
     /// <summary>
     /// property와 ChangableValue를 연결시켜주는 함수
@@ -103,7 +108,15 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
         defaultBar = Tool.AssetLoader.LoadPrefab<GameObject>("UI/Bar").GetComponent<Bar>();
     }
 
-
+    protected virtual void Die()
+    {
+        for (int i = 0; i < barofChangableValues.Length; i++)
+        {
+            Destroy(barofChangableValues[i].gameObject);
+        }
+        Destroy(gameObject);
+        
+    }
 
 
 }

@@ -6,23 +6,18 @@ public class MpDoor : Structure
 {
     private void Start()
     {
-        MaxHealth = Health = 1000f;
-        MaxMP = MP = 10f;
+        MaxHealth = Health = 10f;
+        MaxMP = MP = 20f;
         ConnectValue(Define.ChangableValue.Hp, typeof(Structure).GetProperty("MaxHealth"), typeof(Structure).GetProperty("Health"));
         ConnectValue(Define.ChangableValue.Mp, typeof(Structure).GetProperty("MaxMP"), typeof(Structure).GetProperty("MP"));
         base.Start();
     }
-
-    private void Update()
+    protected override float AddValue(float value)
     {
-        if (MP <= 0f)
+        if(GetCurSelected() == Define.ChangableValue.Hp && MP != 0)
         {
-            for (int i = 0; i < barofChangableValues.Length; i++)
-            {
-                Destroy(barofChangableValues[i].gameObject);
-            }
-            Destroy(gameObject);
-
+            return value;
         }
+        return base.AddValue(value);
     }
 }
