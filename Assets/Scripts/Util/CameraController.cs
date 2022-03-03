@@ -63,7 +63,7 @@ public class CameraController : MonoBehaviour
     }
     public void UpdateCollider()
     {
-        bounds = temp.GetComponent<BoxCollider2D>();
+        //bounds = temp.GetComponent<BoxCollider2D>();
         minBounds = bounds.bounds.min;
         maxBounds = bounds.bounds.max;
     }
