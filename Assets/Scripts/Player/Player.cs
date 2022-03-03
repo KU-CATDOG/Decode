@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
 
     public bool[] achieveList;
 
+    public bool isGround;
+
     public bool Signlock { get; set; } = true;
 
     private void OnEnable()
@@ -95,7 +97,7 @@ public class Player : MonoBehaviour
         if(!dirLock) PlayerLookAt(isCursorRight);
         //Debug.Log(isPlayerLookRight);
 
-
+        isGround = IsGrounded();
     }
 
     private void FixedUpdate()
@@ -112,6 +114,8 @@ public class Player : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * 0.5f * Time.deltaTime;
         }
+
+        //Debug.Log(rb.velocity.y);
     }
 
     private void LateUpdate()
@@ -134,8 +138,9 @@ public class Player : MonoBehaviour
     private bool IsGrounded()
     {
         Vector3 bottom = col.bounds.center - new Vector3(0, col.bounds.size.y / 2);
-        bool isGrounded = Physics2D.Raycast(bottom, Vector2.down, 0.1f, jumpable);
-        return rb.velocity.y < 0.01f && isGrounded;
+        bool isGrounded = Physics2D.Raycast(bottom, Vector2.down, 0.5f, jumpable);
+        //return rb.velocity.y < 0.01f && isGrounded;
+        return isGrounded;
     }
 
     private void Move(Vector2 direction)
