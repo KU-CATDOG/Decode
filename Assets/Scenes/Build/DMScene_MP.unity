@@ -847,6 +847,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: DMScene_MP
       objectReference: {fileID: 0}
+    - target: {fileID: 849874395944565681, guid: b2e83e8dba1bf2449aa3617cecc601f8, type: 3}
+      propertyPath: consoleNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 849874396621406376, guid: b2e83e8dba1bf2449aa3617cecc601f8, type: 3}
       propertyPath: m_RootOrder
       value: 2
