@@ -17,8 +17,8 @@ public class Save : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         dataConsole = FindObjectOfType<DataConsole>();
-        if(SaveManager.Instance.saveScene[saveNumber - 1]!=null)
-            transform.GetChild(0).GetComponent<Text>().text = SaveManager.Instance.saveScene[saveNumber - 1];
+        if (SaveManager.Instance.playerHealth[saveNumber - 1] > 0)
+            transform.GetChild(0).GetComponent<Text>().text = saveNumber.ToString();
     }
 
     public void OnClickExit()
@@ -31,7 +31,7 @@ public class Save : MonoBehaviour
         SaveManager.Instance.mplockActivated[saveNumber - 1] = player.MPChangeLock;
         SaveManager.Instance.speedlockActivated[saveNumber - 1] = player.SpeedChangeLock;
         SaveManager.Instance.lockedDoorKey = player.lockedDoorKey;
-        transform.GetChild(0).GetComponent<Text>().text = SaveManager.Instance.saveScene[saveNumber - 1];
+        transform.GetChild(0).GetComponent<Text>().text = saveNumber.ToString();
         savePanel.gameObject.SetActive(false);
         buttonPanel.gameObject.SetActive(true);
     }
