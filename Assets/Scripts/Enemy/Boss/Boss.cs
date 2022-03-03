@@ -45,4 +45,13 @@ public abstract class Boss : Enemy
             Destroy(gameObject);
         }
     }
+
+    protected override void Die()
+    {
+        Exit.SetActive(false);
+        Camera.main.GetComponent<CameraController>().bounds = clearedBound;
+        Camera.main.GetComponent<CameraController>().UpdateCollider();
+
+        base.Die();
+    }
 }

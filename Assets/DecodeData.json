@@ -1,7 +1,7 @@
 {
     "activeDataConsole": [
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -23,7 +23,7 @@
     ],
     "activeDataConsoleSceneName": [
         "DMScene_0",
-        "",
+        "HPmap",
         "",
         "",
         "",
@@ -45,17 +45,17 @@
     ],
     "playerHealth": [
         10.0,
-        0.0,
+        -495.0,
         0.0
     ],
     "dataConsoleNumber": [
         1,
-        0,
+        2,
         0
     ],
     "saveScene": [
         "DMScene_0",
-        "",
+        "HPmap",
         ""
     ],
     "lockedDoorKey": [
@@ -71,8 +71,8 @@
     ],
     "signlockActivated": [
         true,
-        false,
+        true,
         false
     ],
-    "lastSaveNumber": 1
+    "lastSaveNumber": 2
 }
