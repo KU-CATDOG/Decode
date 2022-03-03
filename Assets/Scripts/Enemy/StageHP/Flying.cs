@@ -65,7 +65,7 @@ public class Flying : Enemy
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (attacking && collision.GetComponent<Player>() != null) GameManager.Instance.GetDamaged(AttackDamage);
+        if (attacking && collision.GetComponent<Player>() != null) GameManager.Instance.GetDamaged(1f);
     }
 
 }

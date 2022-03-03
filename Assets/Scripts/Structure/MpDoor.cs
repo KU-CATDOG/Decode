@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MpDoor : Structure
 {
+    [SerializeField]
+    SpriteRenderer sprite;
     private void Start()
     {
         MaxHealth = Health = 10f;
@@ -18,6 +20,11 @@ public class MpDoor : Structure
         {
             return value;
         }
-        return base.AddValue(value);
+        float nextValue = base.AddValue(value);
+        if(nextValue == 0 && GetCurSelected() == Define.ChangableValue.Mp)
+        {
+            sprite.color = new Color(1, 0, 0, 100 / 255f);
+        }
+        return nextValue;
     }
 }

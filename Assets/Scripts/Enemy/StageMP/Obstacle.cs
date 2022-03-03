@@ -28,7 +28,7 @@ public class Obstacle : Enemy
     {
         anim = GetComponent<Animator>();
 
-        MaxHealth = Health = 10f;
+        MaxHealth = Health = 1000000f;
         MaxMovementSpeed = 10;
         AttackDamage = 5f;
         Range = 0f;         // 공격 범위
@@ -38,6 +38,7 @@ public class Obstacle : Enemy
         patrolPoint = transform.position;
         point1 = patrolPoint - new Vector3(5f, 0, 0);
         point2 = patrolPoint + new Vector3(5f, 0, 0);
+        ConnectValue(Define.ChangableValue.Hp, typeof(Enemy).GetProperty("MaxHealth"), typeof(Enemy).GetProperty("Health"));
         ConnectValue(Define.ChangableValue.Speed, typeof(Enemy).GetProperty("MaxMovementSpeed"), typeof(Enemy).GetProperty("MovementSpeed"));
 
         InitializeBars();

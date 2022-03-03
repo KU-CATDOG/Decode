@@ -1,7 +1,7 @@
 {
     "activeDataConsole": [
-        false,
-        false,
+        true,
+        true,
         false,
         false,
         false,
@@ -22,8 +22,8 @@
         false
     ],
     "activeDataConsoleSceneName": [
-        "",
-        "",
+        "DMScene_0",
+        "HPmap",
         "",
         "",
         "",
@@ -44,17 +44,17 @@
         ""
     ],
     "playerHealth": [
-        0.0,
+        -270.0,
         0.0,
         0.0
     ],
     "dataConsoleNumber": [
-        0,
+        1,
         0,
         0
     ],
     "saveScene": [
-        "",
+        "DMScene_0",
         "",
         ""
     ],
@@ -70,7 +70,7 @@
         false
     ],
     "signlockActivated": [
-        false,
+        true,
         false,
         false
     ],
@@ -80,9 +80,9 @@
         false
     ],
     "speedlockActivated": [
-        false,
+        true,
         false,
         false
     ],
-    "lastSaveNumber": 0
+    "lastSaveNumber": 1
 }

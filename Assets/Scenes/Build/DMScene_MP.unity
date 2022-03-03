@@ -2942,6 +2942,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 785832271}
     m_Modifications:
+    - target: {fileID: 4261970394271959030, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873171, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_Name
       value: HpDoor (1)
@@ -2964,7 +2968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873180, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873180, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11358,6 +11362,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 785832271}
     m_Modifications:
+    - target: {fileID: 4261970394271959030, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873171, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_Name
       value: HpDoor
@@ -11376,11 +11384,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873180, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.13
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873180, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.05
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873180, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11429,6 +11437,10 @@ PrefabInstance:
     - target: {fileID: 6197891924654873183, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176543339059797109, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
@@ -15315,6 +15327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 785832271}
     m_Modifications:
+    - target: {fileID: 4261970394271959030, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873171, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_Name
       value: HpDoor
@@ -15333,7 +15349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873180, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873180, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15390,6 +15406,10 @@ PrefabInstance:
     - target: {fileID: 6197891924654873183, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176543339059797109, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
