@@ -20,7 +20,6 @@ public abstract class Boss : Enemy
         Physics2D.IgnoreLayerCollision(8, 8);
         Physics2D.IgnoreLayerCollision(7, 8);
         Vector2 temp = clearedBound.offset;
-        bounds.GetComponent<PaintBackground>().Paint(clearedBound);
         clearedBound.offset = temp;
     }
 

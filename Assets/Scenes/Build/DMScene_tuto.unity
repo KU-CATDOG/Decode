@@ -993,6 +993,22 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8383211661899887234, guid: c6bb33b12f352f049b0171adb3a7166b, type: 3}
+      propertyPath: m_Size.x
+      value: 116.42963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383211661899887234, guid: c6bb33b12f352f049b0171adb3a7166b, type: 3}
+      propertyPath: m_Size.y
+      value: 76.40434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383211661899887234, guid: c6bb33b12f352f049b0171adb3a7166b, type: 3}
+      propertyPath: m_Offset.x
+      value: 25.523056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383211661899887234, guid: c6bb33b12f352f049b0171adb3a7166b, type: 3}
+      propertyPath: m_Offset.y
+      value: 18.291908
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6bb33b12f352f049b0171adb3a7166b, type: 3}
 --- !u!1 &381739552
@@ -5623,7 +5639,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1823592184}
   tx: {fileID: 903670504}
-  player: {fileID: 0}
 --- !u!114 &1823592184
 MonoBehaviour:
   m_ObjectHideFlags: 0
