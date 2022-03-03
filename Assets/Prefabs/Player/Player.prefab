@@ -14,14 +14,13 @@ GameObject:
   - component: {fileID: 3324671774758130572}
   - component: {fileID: 4170939255310391251}
   - component: {fileID: 2735043694944424492}
-  - component: {fileID: 1603166508}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4170939255310391260
 Transform:
   m_ObjectHideFlags: 0
@@ -150,10 +149,13 @@ MonoBehaviour:
   rollSpeed: 10
   isInvincible: 0
   dirLock: 0
+  MPChangeLock: 1
+  SpeedChangeLock: 1
   coolTime: 1
   curCoolTime: 0
   achieveList: 
   isGround: 0
+  lockedDoorKey: 000000000000000000
 --- !u!95 &2735043694944424492
 Animator:
   serializedVersion: 4
@@ -174,22 +176,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &1603166508
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4170939255310391256}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
 --- !u!1001 &1955815554
 PrefabInstance:
   m_ObjectHideFlags: 0

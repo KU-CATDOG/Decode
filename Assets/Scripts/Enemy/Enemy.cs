@@ -109,7 +109,8 @@ public abstract class Enemy : Changable
     }
     protected float DistToPlayer()
     {
-        return Vector3.Distance(GetObjectPos(), GetPlayerPos());
+        return Vector2.Distance(gameObject.transform.position, player.transform.position);
+        //return Vector3.Distance(GetObjectPos(), GetPlayerPos());
     }
     protected bool CheckPlayer()
     {
