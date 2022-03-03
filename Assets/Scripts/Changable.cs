@@ -97,7 +97,6 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
         barofChangableValues = new Bar[changableValues.Count];
         for(int i = 0; i<changableValues.Count; i++)
         {
-            Debug.Log("1");
             barofChangableValues[i] = Instantiate(defaultBar, canvas.transform);
             barofChangableValues[i].IsBoss = isBoss;
             barofChangableValues[i].Parent = transform;
