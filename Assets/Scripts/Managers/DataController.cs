@@ -12,6 +12,7 @@ public class SaveData
     public int[] dataConsoleNumber = new int[3];
     public string[] saveScene = new string[3];
     public bool[] lockedDoorKey = new bool[9];
+    public bool[] signlockActivated = new bool[3];
 
     public int lastSaveNumber;
 
@@ -51,6 +52,8 @@ public class DataController : Singleton<DataController>
                 SaveManager.Instance.saveScene = saveData.saveScene;
                 SaveManager.Instance.lockedDoorKey = saveData.lockedDoorKey;
                 SaveManager.Instance.lastSaveNumber = saveData.lastSaveNumber;
+                SaveManager.Instance.signlockActivated = saveData.signlockActivated;
+
             }
         }
     }
@@ -66,6 +69,7 @@ public class DataController : Singleton<DataController>
         saveData.saveScene = SaveManager.Instance.saveScene;
         saveData.lockedDoorKey = SaveManager.Instance.lockedDoorKey;
         saveData.lastSaveNumber = SaveManager.Instance.lastSaveNumber;
+        saveData.signlockActivated = SaveManager.Instance.signlockActivated;
 
         string json = JsonUtility.ToJson(saveData, true);
 

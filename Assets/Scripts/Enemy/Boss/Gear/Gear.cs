@@ -129,7 +129,7 @@ public class Gear : Boss
     {
         while (true)
         {
-
+            Debug.Log("!!!");
             MP = Mathf.Min(MP + 3, MaxMP);
             yield return new WaitForSeconds(1.0f);
         }

@@ -1142,6 +1142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColorOfValues: []
+  AchievementPanelPrefab: {fileID: 0}
 --- !u!1001 &1395599316079364379
 PrefabInstance:
   m_ObjectHideFlags: 0

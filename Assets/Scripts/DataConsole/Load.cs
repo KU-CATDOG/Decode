@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Load : MonoBehaviour
+public class Load : Singleton<Load>
 {
     [SerializeField] private int loadNumber;
 
@@ -22,6 +22,7 @@ public class Load : MonoBehaviour
         GameManager.Instance.prevScene = "dataConsole";
         player.health = SaveManager.Instance.playerHealth[saveNumber - 1];
         SceneManager.LoadScene(SaveManager.Instance.saveScene[saveNumber - 1]);
+        player.Signlock = SaveManager.Instance.signlockActivated[saveNumber - 1];
     }
 
     public void OnClickExit()

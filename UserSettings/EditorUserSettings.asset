@@ -6,6 +6,7 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
+<<<<<<< HEAD
       value: 515250075c0c595e5f5a5e71122159444e4e4a2f7a7d7f602f284d66b4b76661
       flags: 0
     RecentlyUsedSceneGuid-1:
@@ -16,21 +17,47 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedSceneGuid-3:
       value: 500257525301590d090d5f2041700d44174f407c782b71317d79486be0e33769
+=======
+      value: 00500d5301025c5d545b5c2313200d444e154b7d7f7f27632f2c1e63bab56060
+      flags: 0
+    RecentlyUsedSceneGuid-1:
+      value: 5b550c5153570b5e5d565a7b49700644414e412f292d22662f2a4532e6e5356d
+      flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 5253075152565b580c595d7043260a44454e4c797d2b2565292c4564e0b5326a
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 5253075152565b580c595d7043260a44454e4c797d2b2565292c4564e0b5326a
+      flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 060302565c055f5e595e0a7148715944144f4f787e7e77347a7e1931e1b16560
+>>>>>>> origin/junha
       flags: 0
     RecentlyUsedSceneGuid-4:
       value: 51025500540d0b585e0a5d7143760d4410164a7e7829226728784d67b3b1373d
       flags: 0
     RecentlyUsedSceneGuid-5:
+<<<<<<< HEAD
       value: 00500d5301025c5d545b5c2313200d444e154b7d7f7f27632f2c1e63bab56060
       flags: 0
     RecentlyUsedSceneGuid-6:
       value: 07050d57530c595f590a582046740f44124f417c287f7e332b284466b4e5316f
+=======
+      value: 500257525301590d090d5f2041700d44174f407c782b71317d79486be0e33769
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 5306520556565c585b0f542445750f44424e4a7d747827637b704a63e1b4363e
+>>>>>>> origin/junha
       flags: 0
     RecentlyUsedSceneGuid-7:
-      value: 07050d57530c595f590a582046740f44124f417c287f7e332b284466b4e5316f
+      value: 505452575c545b095c0c54204722074444164172292970312f794937b3b23760
       flags: 0
     RecentlyUsedSceneGuid-8:
+<<<<<<< HEAD
       value: 0604045751505f0f080f5f75407a5e444e151a2c7b2c7431297a1c36e0b0643b
+=======
+      value: 0254505301560c0d0b57592446260e4446161e2e74782367297d4463bab06d6a
+>>>>>>> origin/junha
       flags: 0
     RecentlyUsedSceneGuid-9:
       value: 520504515200585f085e5d7314775a44414f1c7b752b2460297a4e32e6b93539
