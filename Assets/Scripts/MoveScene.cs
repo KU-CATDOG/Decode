@@ -10,7 +10,11 @@ public class MoveScene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        GameManager.Instance.prevScene = curScene;
-        SceneManager.LoadScene(nextScene);
+        if(other.GetComponent<Player>() != null)
+        {
+            GameManager.Instance.prevScene = curScene;
+            SceneManager.LoadScene(nextScene);
+        }
+
     }
 }

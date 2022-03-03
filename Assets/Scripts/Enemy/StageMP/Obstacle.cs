@@ -29,6 +29,7 @@ public class Obstacle : Enemy
         anim = GetComponent<Animator>();
 
         MaxHealth = Health = 10f;
+        MaxMovementSpeed = 10;
         AttackDamage = 5f;
         Range = 0f;         // 공격 범위
         Eyesight = 10f;     // 시야
