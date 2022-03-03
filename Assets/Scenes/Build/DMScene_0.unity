@@ -932,7 +932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5724038391165451796, guid: 16a8bff9c0b2f8542807f3815dee36d9, type: 3}
       propertyPath: nextScene
-      value: DMScene_HP
+      value: HPmap
       objectReference: {fileID: 0}
     - target: {fileID: 5724038391165451797, guid: 16a8bff9c0b2f8542807f3815dee36d9, type: 3}
       propertyPath: m_Name
