@@ -361,4 +361,9 @@ public class Knight : Boss
         yield return new WaitUntil(() => animator.IsInTransition(0));
         rb.velocity = Vector2.zero;
     }
+    protected override void Die()
+    {
+        base.Die();
+        GameManager.Instance.player.MPChangeLock = false;
+    }
 }

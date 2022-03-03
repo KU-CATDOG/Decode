@@ -28,6 +28,10 @@ public class Player : Singleton<Player>
     private bool rolling = false;
     private bool isCursorRight = false;
     public bool dirLock = false;
+    [HideInInspector]
+    public bool MPChangeLock = true;
+    [HideInInspector]
+    public bool SpeedChangeLock = true;
 
     public float coolTime = 1f;                           // ���� �� ���ð�
     public float curCoolTime = 0f;

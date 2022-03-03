@@ -268,6 +268,7 @@ public class ShadowWizard : Boss
     {
         base.Die();
         player.Signlock = false;
+        GameManager.Instance.player.SpeedChangeLock = false;
     }
     private void LookAt(Vector2 dir)
     {

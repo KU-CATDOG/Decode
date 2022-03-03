@@ -50,7 +50,7 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
         {
             Die();
         }
-            barofChangableValues[selected].Value = nextVal;
+        barofChangableValues[selected].Value = nextVal;
     }
     /// <summary>
     /// property와 ChangableValue를 연결시켜주는 함수
@@ -64,6 +64,14 @@ public class Changable : MonoBehaviour // 값을 변경할 수 있는 object들은 이 클래
     }
     public virtual void SelectValuetoChange()
     {
+        if (changableValues[(selected + 1) % changableValues.Count] == Define.ChangableValue.Mp && GameManager.Instance.player.MPChangeLock)
+        {
+            return;
+        }
+        if (changableValues[(selected + 1) % changableValues.Count] == Define.ChangableValue.Speed && GameManager.Instance.player.SpeedChangeLock)
+        {
+            return;
+        }
         barofChangableValues[selected].gameObject.SetActive(false);
         selected = (selected + 1) % changableValues.Count;
         barofChangableValues[selected].gameObject.SetActive(true);
