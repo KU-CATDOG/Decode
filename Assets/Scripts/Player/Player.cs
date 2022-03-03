@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Singleton<Player>
 {
 
     private float horizontal;
@@ -86,6 +86,9 @@ public class Player : MonoBehaviour
         col = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         health = maxHealth;
+
+        if (Player.Instance != this)
+            Destroy(this.gameObject);
     }
 
     // Update is called once per frame

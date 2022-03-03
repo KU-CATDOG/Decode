@@ -18,7 +18,7 @@ public class GameManager : Singleton<GameManager>
     }
     void Start()
     {
-        player = FindObjectOfType<Player>();
+        //player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame

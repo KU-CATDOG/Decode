@@ -73,6 +73,6 @@ public class DataController : Singleton<DataController>
 
         string json = JsonUtility.ToJson(saveData, true);
 
-        File.WriteAllText(path, json);
+        if(path != null)    File.WriteAllText(path, json);
     }
 }

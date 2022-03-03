@@ -37,9 +37,9 @@ public class SaveManager : Singleton<SaveManager>
     public void LoadSaveData(int saveNumber)
     {
         GameManager.Instance.prevScene = "dataConsole";
-        player.health = playerHealth[saveNumber - 1];
+        if(player != null)  player.health = playerHealth[saveNumber - 1];
         SceneManager.LoadScene(saveScene[saveNumber - 1]);
-        player.Signlock = signlockActivated[saveNumber - 1];
+        if (player != null) player.Signlock = signlockActivated[saveNumber - 1];
     }
 
 }
