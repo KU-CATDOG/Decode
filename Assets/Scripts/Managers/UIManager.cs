@@ -64,11 +64,11 @@ public class UIManager : Singleton<UIManager>
         SettingObject = Instantiate(SettingPrefab);
 
 
-        settings = SettingObject.transform.GetChild(1).gameObject;
-        reload = SettingObject.transform.GetChild(2).gameObject;
-        cancel = SettingObject.transform.GetChild(3).gameObject;
+        settings = SettingObject.transform.GetChild(0).transform.GetChild(1).gameObject;
+        reload = SettingObject.transform.GetChild(0).transform.GetChild(2).gameObject;
+        cancel = SettingObject.transform.GetChild(0).transform.GetChild(3).gameObject;
 
-        settingButton = SettingObject.transform.GetChild(0).GetComponent<Button>();
+        settingButton = SettingObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Button>();
         settingReload = settings.transform.GetChild(0).GetComponent<Button>();
         settingQuit = settings.transform.GetChild(1).GetComponent<Button>();
         settingClose = settings.transform.GetChild(2).GetComponent<Button>();
@@ -89,16 +89,19 @@ public class UIManager : Singleton<UIManager>
     }
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(SettingObject);
+        Initialize();
         canvas = FindObjectOfType<Canvas>();
         FadePanel.transform.SetParent(canvas.transform);
         FadePanel.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         AchieveBack.transform.SetParent(canvas.transform);
         AchieveBack.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
-        SettingObject.transform.SetParent(canvas.transform);
-        SettingObject.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         StartCoroutine(FadeOut());
+    }
+
+    private void Initialize()
+    {
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(SettingObject);
     }
     private void Update()
     {
