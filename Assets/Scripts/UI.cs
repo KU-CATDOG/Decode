@@ -91,6 +91,7 @@ public class UI : MonoBehaviour
     public void QuitQuit()
     {
         Time.timeScale = 1;
+        GameManager.Instance.player.gameObject.SetActive(false);
         SceneManager.LoadScene("MainMenu");
     }
     public void QuitCancel()

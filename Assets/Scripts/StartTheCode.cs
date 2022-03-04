@@ -13,14 +13,17 @@ public class StartTheCode : MonoBehaviour
     {
         if(SaveManager.Instance.lastSaveNumber == 0)
         {
-            Player.SetActive(true);
             GameManager.Instance.prevScene = "MainMenu";
             SceneManager.LoadScene(1);
+            GameManager.Instance.player.gameObject.SetActive(true);
+            GameManager.Instance.player.isControllable = true;
         }
         else
         {
-            Player.SetActive(true);
+            GameManager.Instance.player.gameObject.SetActive(true);
             SaveManager.Instance.LoadSaveData(SaveManager.Instance.lastSaveNumber);
+            GameManager.Instance.player.isControllable = true;
+
         }
     }
 }
