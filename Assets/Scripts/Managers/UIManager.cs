@@ -61,7 +61,18 @@ public class UIManager : Singleton<UIManager>
         FadePanel.gameObject.SetActive(false);
         AchieveBack.gameObject.SetActive(false);
         achievementSprite = new Sprite[GameManager.Instance.isAchieved.Length];
+        
+
+    }
+    private void Start()
+    {
         SettingObject = Instantiate(SettingPrefab);
+        Initialize();
+        canvas = FindObjectOfType<Canvas>();
+        FadePanel.transform.SetParent(canvas.transform);
+        FadePanel.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+        AchieveBack.transform.SetParent(canvas.transform);
+        AchieveBack.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
 
 
         settings = SettingObject.transform.GetChild(0).transform.GetChild(1).gameObject;
@@ -86,15 +97,6 @@ public class UIManager : Singleton<UIManager>
         askQuitQuit.onClick.AddListener(QuitQuit);
         askQuitCancel.onClick.AddListener(QuitCancel);
 
-    }
-    private void Start()
-    {
-        Initialize();
-        canvas = FindObjectOfType<Canvas>();
-        FadePanel.transform.SetParent(canvas.transform);
-        FadePanel.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
-        AchieveBack.transform.SetParent(canvas.transform);
-        AchieveBack.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         StartCoroutine(FadeOut());
     }
 
