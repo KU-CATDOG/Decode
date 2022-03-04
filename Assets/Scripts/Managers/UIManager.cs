@@ -20,8 +20,6 @@ public class UIManager : Singleton<UIManager>
     private GameObject reload;
     [SerializeField]
     private GameObject cancel;
-    [SerializeField]
-    private GameObject SettingPrefab;
 
     
     public Image FadePanelPrefab;
@@ -31,19 +29,13 @@ public class UIManager : Singleton<UIManager>
 
     Image AchievementPanel;
     Image FadePanel;
-    Image AchievementPopup;
     Image AchieveBack;
 
-    Button settingButton;
-    Button settingReload;
-    Button settingQuit;
-    Button settingClose;
     Button askReloadReload;
     Button askReloadCancel;
     Button askQuitQuit;
     Button askQuitCancel;
 
-    GameObject SettingObject;
 
     Canvas canvas;
     [SerializeField]
@@ -66,7 +58,6 @@ public class UIManager : Singleton<UIManager>
     }
     private void Start()
     {
-        SettingObject = Instantiate(SettingPrefab);
         Initialize();
         canvas = FindObjectOfType<Canvas>();
         FadePanel.transform.SetParent(canvas.transform);
@@ -75,23 +66,12 @@ public class UIManager : Singleton<UIManager>
         AchieveBack.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
 
 
-        settings = SettingObject.transform.GetChild(0).transform.GetChild(1).gameObject;
-        reload = SettingObject.transform.GetChild(0).transform.GetChild(2).gameObject;
-        cancel = SettingObject.transform.GetChild(0).transform.GetChild(3).gameObject;
 
-        settingButton = SettingObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Button>();
-        settingReload = settings.transform.GetChild(0).GetComponent<Button>();
-        settingQuit = settings.transform.GetChild(1).GetComponent<Button>();
-        settingClose = settings.transform.GetChild(2).GetComponent<Button>();
         askReloadReload = reload.transform.GetChild(0).GetComponent<Button>();
         askReloadCancel = reload.transform.GetChild(1).GetComponent<Button>();
         askQuitQuit = cancel.transform.GetChild(0).GetComponent<Button>();
         askQuitCancel = cancel.transform.GetChild(1).GetComponent<Button>();
 
-        settingButton.onClick.AddListener(SettingsButton);
-        settingReload.onClick.AddListener(RestartButton);
-        settingQuit.onClick.AddListener(ToMenuButton);
-        settingClose.onClick.AddListener(CloseSettingsButton);
         askReloadReload.onClick.AddListener(ReloadReload);
         askReloadCancel.onClick.AddListener(ReloadCancel);
         askQuitQuit.onClick.AddListener(QuitQuit);
@@ -103,7 +83,6 @@ public class UIManager : Singleton<UIManager>
     private void Initialize()
     {
         DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(SettingObject);
     }
     private void Update()
     {

@@ -1,0 +1,88 @@
+{
+    "activeDataConsole": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "activeDataConsoleSceneName": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "playerHealth": [
+        10.0,
+        0.0,
+        0.0
+    ],
+    "dataConsoleNumber": [
+        0,
+        0,
+        0
+    ],
+    "saveScene": [
+        "DMScene_tuto",
+        "",
+        ""
+    ],
+    "lockedDoorKey": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "signlockActivated": [
+        true,
+        false,
+        false
+    ],
+    "mplockActivated": [
+        true,
+        false,
+        false
+    ],
+    "speedlockActivated": [
+        true,
+        false,
+        false
+    ],
+    "lastSaveNumber": 1
+}
