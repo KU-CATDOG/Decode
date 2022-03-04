@@ -20,7 +20,7 @@ public class Firefly : Enemy
         MP = 0f;
         MaxMP = 100f;
         Eyesight = 10f;    // 시야 범위
-        MovementSpeed = 1f;
+        MovementSpeed = 5f;
         ConnectValue(Define.ChangableValue.Mp, typeof(Enemy).GetProperty("MaxMP"), typeof(Enemy).GetProperty("MP"));
         base.Start();
     }
@@ -31,7 +31,7 @@ public class Firefly : Enemy
             timer += Time.deltaTime;
             if (timer >= 1.0f && MP < MaxMP)
             {
-                MP += 10f;
+                MP += 20f;
                 timer = 0f;
                 //Debug.Log(MP);
             }

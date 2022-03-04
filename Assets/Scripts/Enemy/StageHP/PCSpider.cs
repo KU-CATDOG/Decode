@@ -11,7 +11,7 @@ public class PCSpider : Enemy
 
         MaxHealth = Health = 10f;
         AttackDamage = 5f;
-        MovementSpeed = 1f;
+        MovementSpeed = 10f;
         MaxMovementSpeed = 10f;
         Range = 2.5f;     // 공격 범위
         Eyesight = 10f;

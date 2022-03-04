@@ -28,7 +28,7 @@ public class Shieldbearer : Enemy
     {
         anim = GetComponent<Animator>();
 
-        MaxHealth = Health = 10f;
+        MaxHealth = Health = 30f;
         AttackDamage = 5f;
         Range = 3f;       // 공격 범위
         Eyesight = 10f;     // 시야

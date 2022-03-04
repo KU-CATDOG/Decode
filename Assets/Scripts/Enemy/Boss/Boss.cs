@@ -48,6 +48,7 @@ public abstract class Boss : Enemy
     protected override void Die()
     {
         Exit.SetActive(false);
+        GameManager.Instance.player.health = GameManager.Instance.player.maxHealth;
         Camera.main.GetComponent<CameraController>().bounds = clearedBound;
         Camera.main.GetComponent<CameraController>().UpdateCollider();
         GetComponent<AuthorityUnlock>().Alarm();

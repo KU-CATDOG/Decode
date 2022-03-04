@@ -36,8 +36,8 @@ public class Thorn : Structure
     {
         if (other.tag == "Player")
         {
-            StartCoroutine(DamageToPlayer());
             onThorn = true;
+            StartCoroutine(DamageToPlayer());
         }
     }
 
