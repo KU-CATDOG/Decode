@@ -81,7 +81,7 @@ public class UI : MonoBehaviour
         {
             GameManager.Instance.player.isControllable = true;
         }
-        //SceneManager.LoadScene(sceneToLoad);
+        SaveManager.Instance.LoadSaveData(SaveManager.Instance.lastSaveNumber);
     }
     public void ReloadCancel()
     {

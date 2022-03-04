@@ -1,6 +1,6 @@
 {
     "activeDataConsole": [
-        false,
+        true,
         false,
         false,
         false,
@@ -22,7 +22,7 @@
         false
     ],
     "activeDataConsoleSceneName": [
-        "",
+        "DMScene_0",
         "",
         "",
         "",
@@ -45,17 +45,17 @@
     ],
     "playerHealth": [
         10.0,
-        0.0,
+        10.0,
         0.0
     ],
     "dataConsoleNumber": [
         0,
-        0,
+        1,
         0
     ],
     "saveScene": [
         "DMScene_tuto",
-        "",
+        "DMScene_0",
         ""
     ],
     "lockedDoorKey": [
@@ -71,18 +71,18 @@
     ],
     "signlockActivated": [
         true,
-        false,
+        true,
         false
     ],
     "mplockActivated": [
         true,
-        false,
+        true,
         false
     ],
     "speedlockActivated": [
         true,
-        false,
+        true,
         false
     ],
-    "lastSaveNumber": 1
+    "lastSaveNumber": 2
 }

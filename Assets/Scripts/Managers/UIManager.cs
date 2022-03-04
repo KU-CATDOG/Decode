@@ -67,15 +67,7 @@ public class UIManager : Singleton<UIManager>
 
 
 
-        askReloadReload = reload.transform.GetChild(0).GetComponent<Button>();
-        askReloadCancel = reload.transform.GetChild(1).GetComponent<Button>();
-        askQuitQuit = cancel.transform.GetChild(0).GetComponent<Button>();
-        askQuitCancel = cancel.transform.GetChild(1).GetComponent<Button>();
 
-        askReloadReload.onClick.AddListener(ReloadReload);
-        askReloadCancel.onClick.AddListener(ReloadCancel);
-        askQuitQuit.onClick.AddListener(QuitQuit);
-        askQuitCancel.onClick.AddListener(QuitCancel);
 
         StartCoroutine(FadeOut());
     }
