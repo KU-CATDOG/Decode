@@ -48,19 +48,19 @@ public class UIManager : Singleton<UIManager>
         ColorOfValues[(int)Define.ChangableValue.Hp] = Color.red;
         ColorOfValues[(int)Define.ChangableValue.Mp] = new Color(0, 0, 0.5f);
         ColorOfValues[(int)Define.ChangableValue.Speed] = new Color(0, 0.5f, 0);
-        FadePanel = Instantiate(FadePanelPrefab).GetComponent<Image>();
-        AchieveBack = Instantiate(AchieveBackPrefab).GetComponent<Image>();
-        FadePanel.gameObject.SetActive(false);
-        AchieveBack.gameObject.SetActive(false);
-        achievementSprite = new Sprite[GameManager.Instance.isAchieved.Length];
-        
 
     }
     private void Start()
     {
         Initialize();
         canvas = FindObjectOfType<Canvas>();
+
         FadePanel.transform.SetParent(canvas.transform);
+        FadePanel = Instantiate(FadePanelPrefab).GetComponent<Image>();
+        AchieveBack = Instantiate(AchieveBackPrefab).GetComponent<Image>();
+        FadePanel.gameObject.SetActive(false);
+        AchieveBack.gameObject.SetActive(false);
+
         FadePanel.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         AchieveBack.transform.SetParent(canvas.transform);
         AchieveBack.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;

@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2daa069544fb249ba3606e4c2cc9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 0
   isControllable: 1
   jumpable:
     serializedVersion: 2
@@ -145,7 +146,7 @@ MonoBehaviour:
   speed: 7
   jumpSpeed: 13
   health: 0
-  maxHealth: 10
+  maxHealth: 100
   rollSpeed: 10
   isInvincible: 0
   dirLock: 0

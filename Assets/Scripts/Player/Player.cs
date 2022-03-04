@@ -37,9 +37,6 @@ public class Player : Singleton<Player>
     public float curCoolTime = 0f;
 
     private Weapon weapon;
-
-    public bool[] achieveList;
-
     public bool isGround;
 
     public bool Signlock { get; set; } = true;
