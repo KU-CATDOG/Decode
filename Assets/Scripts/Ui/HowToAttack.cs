@@ -16,6 +16,7 @@ public class HowToAttack : MonoBehaviour
         howToAttack = Instantiate(obj, canvas.transform);
         image = howToAttack.GetComponent<Image>();
         howToAttack.GetComponent < HowToAttackPanel > ().enemyName = this.gameObject.name;
+        howToAttack.transform.SetSiblingIndex(0);
     }
 
     void Update()

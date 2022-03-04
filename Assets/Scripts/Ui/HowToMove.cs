@@ -20,8 +20,8 @@ public class HowToMove : MonoBehaviour
     void Start()
     {
         first = "Standard control\n\"WASD\"";
-        second = "Press Space to evade";
-        third = "Press G to interact with object";
+        second = "Press Space\nto evade";
+        third = "Press G to interact\nwith object";
         StartCoroutine(TypeEff(first));
     }
     private void Update()
