@@ -50,7 +50,7 @@ public abstract class Boss : Enemy
         Exit.SetActive(false);
         Camera.main.GetComponent<CameraController>().bounds = clearedBound;
         Camera.main.GetComponent<CameraController>().UpdateCollider();
-
+        GetComponent<AuthorityUnlock>().Alarm();
         base.Die();
     }
 }

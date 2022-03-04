@@ -9,24 +9,44 @@ public class AuthorityUnlock : MonoBehaviour
     private Image panel;
     [SerializeField]
     private string authority;
+    [SerializeField]
+    private string AbilityDescription;
 
+    string str1;
+    Image image;
     Canvas canvas;
 
     Text tx;
 
     private void Start()
     {
-        tx = panel.GetComponent<Text>();
         canvas = FindObjectOfType<Canvas>();
-
+        image = Instantiate(panel, canvas.transform);
+        tx = image.GetComponentInChildren<Text>();
+        Debug.Log(image.name + ", " + tx.name);
+        image.gameObject.SetActive(false);
     }
 
     public void Alarm()
     {
-        Image image = Instantiate(panel, canvas.transform);
-        string str = "Access authorized\n" + authority;
-        StartCoroutine(TypeEff(str));
+        str1 = "Access authorized\n" + authority;
+        StartCoroutine(Indicate());
     }
+
+    IEnumerator Indicate()
+    {
+        image.gameObject.SetActive(true);
+        Debug.Log(image.name + ", " + tx.name);
+        tx.text = str1;
+        yield return new WaitForSeconds(2f);
+        if(AbilityDescription != null)
+        {
+            tx.text = AbilityDescription;
+        }
+        yield return new WaitForSeconds(2f);
+        image.gameObject.SetActive(false);
+    }
+
 
     IEnumerator TypeEff(string str)
     {
