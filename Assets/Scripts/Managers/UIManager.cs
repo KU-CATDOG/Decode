@@ -66,9 +66,6 @@ public class UIManager : Singleton<UIManager>
         AchieveBack.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
 
 
-
-
-
         StartCoroutine(FadeOut());
     }
 
@@ -125,6 +122,25 @@ public class UIManager : Singleton<UIManager>
             yield return null;
         }
         FadePanel.gameObject.SetActive(false);
+    }
+
+    public void Indication(Image image,string str1, string AbilityDescription, Text tx)
+    {
+        StartCoroutine(Indicate(image, str1, AbilityDescription, tx));
+    }
+
+    IEnumerator Indicate(Image image, string str1, string AbilityDescription, Text tx)
+    {
+        image.gameObject.SetActive(true);
+        Debug.Log(image.name + ", " + tx.name);
+        tx.text = str1;
+        yield return new WaitForSeconds(3f);
+        if (AbilityDescription != null)
+        {
+            tx.text = AbilityDescription;
+        }
+        yield return new WaitForSeconds(3f);
+        image.gameObject.SetActive(false);
     }
 
     public void AchiveMenuOpen()
