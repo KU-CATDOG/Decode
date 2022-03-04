@@ -578,6 +578,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 1870407347}
   exitButton: {fileID: 1553452163}
+  openSettings: {fileID: 0}
+  closeSettings: {fileID: 0}
+  settings: {fileID: 0}
+  reload: {fileID: 0}
+  cancel: {fileID: 0}
 --- !u!114 &1221903648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,6 +1183,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 850700843750890746, guid: 10e2beb0770bd6b48a8fa00ee46218e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478729337554211656, guid: 10e2beb0770bd6b48a8fa00ee46218e2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4606744591188891749, guid: 10e2beb0770bd6b48a8fa00ee46218e2, type: 3}
