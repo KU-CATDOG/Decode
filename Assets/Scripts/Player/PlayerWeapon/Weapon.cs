@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    protected float[] magnitudeOfChange;                  // 한번에 변경하는 값 크기 ( 변경 가능한 값마다 하나씩 존재 )
+    public float[] magnitudeOfChange;                  // 한번에 변경하는 값 크기 ( 변경 가능한 값마다 하나씩 존재 )
     [SerializeField]
     protected int range;                                // 무기 사정거리
     protected HitBox hb;                                // 히트박스 오브젝트
