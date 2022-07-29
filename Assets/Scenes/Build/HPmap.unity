@@ -4011,6 +4011,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4494926772345453450, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    - target: {fileID: 4494926772345453450, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6197891924654873171, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_Name
       value: HpDoor
@@ -4058,6 +4066,14 @@ PrefabInstance:
     - target: {fileID: 6197891924654873180, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206741053522279256, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    - target: {fileID: 6206741053522279256, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb7980d3fd788c4dadd70e65e255d70, type: 3}

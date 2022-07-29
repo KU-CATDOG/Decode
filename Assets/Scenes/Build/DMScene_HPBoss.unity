@@ -778,6 +778,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4275813445233257177, guid: 674f36a297bef0d4ea59a00118c30e42, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674f36a297bef0d4ea59a00118c30e42, type: 3}
 --- !u!1 &1005255932
@@ -2087,6 +2091,30 @@ PrefabInstance:
       propertyPath: clearedBound
       value: 
       objectReference: {fileID: 1431598028}
+    - target: {fileID: 1395599317987114025, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
+      propertyPath: lastPhaseASMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395599317987114025, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
+      propertyPath: secondPhaseASMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395599317987114025, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
+      propertyPath: lastPhaseSpeedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395599317987114025, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
+      propertyPath: lastPhaseDamageMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395599317987114025, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
+      propertyPath: secondPhaseSpeedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395599317987114025, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
+      propertyPath: secondPhaseDamageMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1395599317987114027, guid: 28327ac86df03464c805fa3ce877f9e1, type: 3}
       propertyPath: m_GravityScale
       value: 0

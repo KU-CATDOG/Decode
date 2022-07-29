@@ -2076,9 +2076,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2116609564}
     - target: {fileID: 8506277571749103029, guid: 288fc4e70ff483c4ea6dfcff3108cc28, type: 3}
+      propertyPath: blade
+      value: 
+      objectReference: {fileID: 7947444159340410614, guid: 06f7b3fe4861d9840a8a5aaac727294b, type: 3}
+    - target: {fileID: 8506277571749103029, guid: 288fc4e70ff483c4ea6dfcff3108cc28, type: 3}
       propertyPath: clearedBound
       value: 
       objectReference: {fileID: 714314018}
+    - target: {fileID: 8506277571749103029, guid: 288fc4e70ff483c4ea6dfcff3108cc28, type: 3}
+      propertyPath: risingBladePrefab
+      value: 
+      objectReference: {fileID: 5584250089709844354, guid: b3af82b5a35372b4ea437cccf62e2d3f, type: 3}
+    - target: {fileID: 8506277571749103029, guid: 288fc4e70ff483c4ea6dfcff3108cc28, type: 3}
+      propertyPath: shootingBladePrefab
+      value: 
+      objectReference: {fileID: 5203757824690008381, guid: a9218f896c4a5e343865d5254ae91d4c, type: 3}
     - target: {fileID: 8506277571749103031, guid: 288fc4e70ff483c4ea6dfcff3108cc28, type: 3}
       propertyPath: m_RootOrder
       value: 4

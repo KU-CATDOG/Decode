@@ -2075,6 +2075,7 @@ MonoBehaviour:
   - {fileID: 9203580821968532737}
   - {fileID: 9203580822772861275}
   - {fileID: 9203580821719163194}
+  fallingGear: {fileID: 3465374037039703838, guid: 701cdcf9cdae41d40938d8ac4b1a7ab3, type: 3}
 --- !u!61 &9203580822119242450
 BoxCollider2D:
   m_ObjectHideFlags: 0

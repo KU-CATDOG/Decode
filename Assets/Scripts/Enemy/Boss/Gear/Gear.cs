@@ -42,11 +42,11 @@ public class Gear : Boss
     private BoxCollider2D[] colPressBottom;
     [SerializeField]
     private Transform[] Platforms;
+    [SerializeField]
     private GameObject fallingGear;
     private new void Awake()
     {
         base.Awake();
-        fallingGear = Tool.AssetLoader.LoadPrefab<GameObject>("Enemy/Boss/Gear/FallingGear");
         PresserMid = new GameObject[4];
         PresserBottom = new GameObject[4];
         rbPresserMid = new Rigidbody2D[4];

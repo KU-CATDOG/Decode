@@ -302,6 +302,7 @@ public class Knight : Boss
             InMotion = false;
             while (!HaveLance) // 창을 줍는 로직은 Lance에서 구현
             {
+                Debug.Log("!1");
                 yield return null;
                 rb.velocity = throwVec * MovementSpeed;
             }

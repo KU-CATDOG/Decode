@@ -17,8 +17,11 @@ public class ShadowWizard : Boss
     private BoxCollider2D col;
     [SerializeField]
     private GameObject risingBladeWarningField;
+    [SerializeField]
     private GameObject blade;
+    [SerializeField]
     private GameObject risingBladePrefab;
+    [SerializeField]
     private GameObject shootingBladePrefab;
     private float time; // 플레이어가 일정 거리 내에 들어와있었던 시간
     private Animator animator;
@@ -62,9 +65,6 @@ public class ShadowWizard : Boss
     private new void Awake()
     {
         base.Awake();
-        blade = Tool.AssetLoader.LoadPrefab<GameObject>("Enemy/Boss/ShadowWizard/Blade");
-        shootingBladePrefab = Tool.AssetLoader.LoadPrefab<GameObject>("Enemy/Boss/ShadowWizard/ShootingBlade");
-        risingBladePrefab = Tool.AssetLoader.LoadPrefab<GameObject>("Enemy/Boss/ShadowWizard/RisingBlade");
         animator = GetComponent<Animator>();
         col = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
